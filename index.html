@@ -286,58 +286,58 @@
 
 
         <script type="text/javascript">
-            function initSearch(searchForm, posts) {
-                const searchIndex = posts.map((post, index) => ({
-                    content: post.textContent,
-                    index
-                }))
-                searchForm.addEventListener('submit', event => {
-                    event.preventDefault()
-                    const formData = new FormData(event.target)
-                    const query = formData.get('search')
-                    const pattern = new RegExp(query, 'gi')
-                    const matchingPosts = searchIndex.filter(({ content }) => {
-                        return content.match(pattern)
-                    })
-                    posts.forEach((post, i) => {
-                        const isMatching = matchingPosts.find(({ index }) => index === i)
-                        post.classList.toggle('hidden', !isMatching)
-                    })
-                })
-            }
-
-            function initDarkMode(darkToggle) {
-                const getDarkMemory = () => JSON.parse(localStorage.getItem('dark'))
-
-                darkToggle.addEventListener('click', () => {
-                    document.body.classList.toggle('dark')
-                    const darkMemory = getDarkMemory()
-                    localStorage.setItem('dark', !darkMemory)
-                })
-
-                document.body.classList.toggle('dark', getDarkMemory())
-            }
-
-            function initPostMetadataIcons({ writCells, keyCells, writIconTmpl, keyIconTmpl }) {
-                const writIcon = writIconTmpl.content.firstElementChild
-                writCells.forEach(cell => {
-                    cell.innerHTML = writIcon.cloneNode(true).outerHTML
-                })
-
-                const keyIcon = keyIconTmpl.content.firstElementChild
-                keyCells.forEach(cell => {
-                    cell.innerHTML = keyIcon.cloneNode(true).outerHTML
-                })
-            }
-
-            function initMusicListIcons(musicListItems, { musicListIconTmpl }) {
-                const icon = musicListIconTmpl.content.firstElementChild
-                musicListItems.forEach(item => {
-                    item.prepend(icon.cloneNode(true))
-                })
-            }
-
             ;(() => {
+                function initSearch(searchForm, posts) {
+                    const searchIndex = posts.map((post, index) => ({
+                        content: post.textContent,
+                        index
+                    }))
+                    searchForm.addEventListener('submit', event => {
+                        event.preventDefault()
+                        const formData = new FormData(event.target)
+                        const query = formData.get('search')
+                        const pattern = new RegExp(query, 'gi')
+                        const matchingPosts = searchIndex.filter(({ content }) => {
+                            return content.match(pattern)
+                        })
+                        posts.forEach((post, i) => {
+                            const isMatching = matchingPosts.find(({ index }) => index === i)
+                            post.classList.toggle('hidden', !isMatching)
+                        })
+                    })
+                }
+
+                function initDarkMode(darkToggle) {
+                    const getDarkMemory = () => JSON.parse(localStorage.getItem('dark'))
+
+                    darkToggle.addEventListener('click', () => {
+                        document.body.classList.toggle('dark')
+                        const darkMemory = getDarkMemory()
+                        localStorage.setItem('dark', !darkMemory)
+                    })
+
+                    document.body.classList.toggle('dark', getDarkMemory())
+                }
+
+                function initPostMetadataIcons({ writCells, keyCells, writIconTmpl, keyIconTmpl }) {
+                    const writIcon = writIconTmpl.content.firstElementChild
+                    writCells.forEach(cell => {
+                        cell.innerHTML = writIcon.cloneNode(true).outerHTML
+                    })
+
+                    const keyIcon = keyIconTmpl.content.firstElementChild
+                    keyCells.forEach(cell => {
+                        cell.innerHTML = keyIcon.cloneNode(true).outerHTML
+                    })
+                }
+
+                function initMusicListIcons(musicListItems, { musicListIconTmpl }) {
+                    const icon = musicListIconTmpl.content.firstElementChild
+                    musicListItems.forEach(item => {
+                        item.prepend(icon.cloneNode(true))
+                    })
+                }
+
                 const UI = {
                     darkToggle: document.querySelector('#dark-toggle'),
                     searchForm: document.querySelector('#search-form'),
