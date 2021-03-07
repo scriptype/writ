@@ -5,6 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Writ</title>
         <style type="text/css">
+            :root {
+                --bg-color: #f5f5f5;
+                --container-color: #fff;
+                --text-color: #111;
+            }
+
             h1 {
                 margin: 0;
                 padding: 0;
@@ -13,15 +19,21 @@
             body {
                 margin: 0;
                 font: normal 20px/1.5 times;
-                background: #eee;
-                color: #111;
+                background: var(--bg-color);
+                color: var(--text-color);
+            }
+
+            body.dark {
+                --bg-color: #222;
+                --container-color: #32363f;
+                --text-color: #e0e3e6;
             }
 
             .container {
                 max-width: 700px;
                 margin: 0 auto;
                 padding: 3em 6em;
-                background: white;
+                background: var(--container-color);
                 min-height: 60vh;
             }
 
@@ -41,6 +53,12 @@
 
             .site-title {
                 font-size: 3em;
+                border-bottom: 0.12em double;
+                text-indent: -0.2em;
+            }
+
+            .site-title:first-letter {
+                margin-right: -0.03em;
             }
 
             .post {
@@ -58,10 +76,10 @@
 
         <div class="container">
             <nav class="topbar">
-                <h1 class="site-title">Writ</h1>
+                <h1 class="site-title" id="dark-toggle">Writ</h1>
                 <form class="search-form" id="search-form" action="">
-                    <label for="search">Search</label>
-                    <input type="search" id="search" name="search" />
+                    <input aria-label="Search box" type="search" id="search" name="search" />
+                    <button>Search</button>
                 </form>
             </nav>
 
@@ -135,6 +153,17 @@
                   post.classList.toggle('hidden', !isMatching)
                 })
               })
+
+                const getDarkMemory = () => JSON.parse(localStorage.getItem('dark'))
+
+                const darkToggle = document.querySelector('#dark-toggle')
+                darkToggle.addEventListener('click', () => {
+                    document.body.classList.toggle('dark')
+                    const darkMemory = getDarkMemory()
+                    localStorage.setItem('dark', !darkMemory)
+                })
+
+                document.body.classList.toggle('dark', getDarkMemory())
             })()
         </script>
     </body>
