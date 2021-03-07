@@ -1,0 +1,46 @@
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font: normal 20px/1.5 times;
+    background: #eee;
+    color: #111;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 3em 6em;
+    background: white;
+    min-height: 60vh;
+}
+
+@media (max-width: 940px) {
+    .container {
+        max-width: 100%;
+        padding: 2em;
+    }
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2em;
+}
+
+.site-title {
+    font-size: 3em;
+}
+
+.post {
+    transition: all .3s;
+}
+
+.post.hidden {
+    opacity: 0;
+    height: 0;
+}
