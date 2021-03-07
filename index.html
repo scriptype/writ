@@ -31,12 +31,33 @@
                 --title-color: #fff;
             }
 
+            .icon-symbols {
+                display: none;
+            }
+
+            .music-icon {
+                fill: currentColor;
+            }
+
+            .writ-icon {
+                width: 20px;
+                height: 20px;
+                fill: currentColor;
+            }
+
+            .key-icon {
+                width: 20px;
+                height: 20px;
+                fill: currentColor;
+            }
+
             .container {
                 max-width: 700px;
                 margin: 0 auto;
                 padding: 3em 6em;
                 background: var(--container-color);
                 min-height: 60vh;
+                overflow: hidden;
             }
 
             @media (max-width: 940px) {
@@ -72,6 +93,18 @@
                 opacity: 0;
                 height: 0;
             }
+
+            .post-music-list {
+                list-style: none;
+                padding: 0;
+            }
+
+            .post-music-list-icon {
+                width: 24px;
+                height: 24px;
+                margin-right: 6px;
+                vertical-align: middle;
+            }
         </style>
     </head>
 
@@ -106,11 +139,11 @@
                     <footer class="post-footer">
                         <section class="post-footer-section">
                             <table class="post-metadata">
-                                <tr class="post-metadata-time">
+                                <tr class="post-metadata-writ">
                                     <td>Writ</td>
                                     <td>07.03.2021, 01:44</td>
                                 </tr>
-                                <tr class="post-metadata-tags">
+                                <tr class="post-metadata-keys">
                                     <td>Keys</td>
                                     <td>türkçe, self, thoughts, first, drunk</td>
                                 </tr>
@@ -130,10 +163,40 @@
             </main>
         </div>
 
+        <svg class="icon-symbols">
+            <symbol id="music-icon" viewBox="0 0 64 64">
+                <path d="M23.727 16.403v24.134a8.296 8.296 0 00-4.35-1.233c-4.612 0-8.353 3.74-8.353 8.349a8.354 8.354 0 008.353 8.354c4.61 0 8.349-3.739 8.35-8.352V25.151l21.25-6.109V33.33a8.296 8.296 0 00-4.35-1.233c-4.614 0-8.353 3.739-8.353 8.348a8.354 8.354 0 008.353 8.354c4.344 0 7.914-3.325 8.31-7.57h.04V7.993l-29.25 8.41z"/>
+            </symbol>
+            <symbol id="writ-icon" viewBox="0 0 20 20">
+                <path d="M11 9.27V0l6 11-4 6H7l-4-6L9 0v9.27a2 2 0 102 0zM6 18h8v2H6v-2z"/>
+            </symbol>
+
+            <symbol id="key-icon" viewBox="0 0 500 500">
+                <path clip-rule="evenodd" d="M56.629 379.2c-14.09 14.071-14.09 36.975 0 51.055 14.08 14.087 36.981 14.087 50.965 0l10.177-10.08 42.438 42.428a18.413 18.413 0 0026.155 0l63.244-63.244a18.415 18.415 0 000-26.157l-42.429-42.427 75.586-75.682c16.174 8.357 34.61 13.075 54.059 13.075 65.234 0 118.111-52.869 118.111-118.109 0-65.232-52.877-118.111-118.111-118.111-65.238 0-118.11 52.879-118.11 118.111 0 19.449 4.721 37.886 13.077 54.06L56.629 379.2zm234.767-229.141c0-25.075 20.354-45.429 45.427-45.429 25.076 0 45.426 20.354 45.426 45.429s-20.35 45.426-45.426 45.426c-25.072 0-45.427-20.352-45.427-45.426z" fill-rule="evenodd"/>
+            </symbol>
+        </svg>
+
+        <template id="writ-icon-tmpl">
+            <svg class="writ-icon">
+                <use xlink:href="#writ-icon"></use>
+            </svg>
+        </template>
+
+        <template id="key-icon-tmpl">
+            <svg class="key-icon">
+                <use xlink:href="#key-icon"></use>
+            </svg>
+        </template>
+
+        <template id="music-list-icon-tmpl">
+            <svg class="music-icon post-music-list-icon">
+                <use xlink:href="#music-icon"></use>
+            </svg>
+        </template>
+
+
         <script type="text/javascript">
-            ;(() => {
-                const searchForm = document.querySelector('#search-form')
-                const posts = Array.from(document.querySelectorAll('.post'))
+            function initSearch(searchForm, posts) {
                 const searchIndex = posts.map((post, index) => ({
                     content: post.textContent,
                     index
@@ -151,10 +214,11 @@
                         post.classList.toggle('hidden', !isMatching)
                     })
                 })
+            }
 
+            function initDarkMode(darkToggle) {
                 const getDarkMemory = () => JSON.parse(localStorage.getItem('dark'))
 
-                const darkToggle = document.querySelector('#dark-toggle')
                 darkToggle.addEventListener('click', () => {
                     document.body.classList.toggle('dark')
                     const darkMemory = getDarkMemory()
@@ -162,6 +226,51 @@
                 })
 
                 document.body.classList.toggle('dark', getDarkMemory())
+            }
+
+            function initPostMetadataIcons({ writCells, keyCells, writIconTmpl, keyIconTmpl }) {
+                const writIcon = writIconTmpl.content.firstElementChild
+                writCells.forEach(cell => {
+                    cell.innerHTML = writIcon.cloneNode(true).outerHTML
+                })
+
+                const keyIcon = keyIconTmpl.content.firstElementChild
+                keyCells.forEach(cell => {
+                    cell.innerHTML = keyIcon.cloneNode(true).outerHTML
+                })
+            }
+
+            function initMusicListIcons(musicListItems, { musicListIconTmpl }) {
+                const icon = musicListIconTmpl.content.firstElementChild
+                musicListItems.forEach(item => {
+                    item.prepend(icon.cloneNode(true))
+                })
+            }
+
+            ;(() => {
+                const UI = {
+                    darkToggle: document.querySelector('#dark-toggle'),
+                    searchForm: document.querySelector('#search-form'),
+                    posts: Array.from(document.querySelectorAll('.post')),
+                    postMetadataWrits: Array.from(document.querySelectorAll('.post-metadata-writ td:first-child')),
+                    postMetadataKeys: Array.from(document.querySelectorAll('.post-metadata-keys td:first-child')),
+                    postMusicListItems: Array.from(document.querySelectorAll('.post-music-list li')),
+                    writIconTmpl: document.querySelector('#writ-icon-tmpl'),
+                    keyIconTmpl: document.querySelector('#key-icon-tmpl'),
+                    musicListIconTmpl: document.querySelector('#music-list-icon-tmpl'),
+                }
+
+                initSearch(UI.searchForm, UI.posts)
+                initDarkMode(UI.darkToggle)
+                initPostMetadataIcons({
+                    writCells: UI.postMetadataWrits,
+                    keyCells: UI.postMetadataKeys,
+                    writIconTmpl: UI.writIconTmpl,
+                    keyIconTmpl: UI.keyIconTmpl
+                })
+                initMusicListIcons(UI.postMusicListItems, {
+                    musicListIconTmpl: UI.musicListIconTmpl
+                })
             })()
         </script>
     </body>
