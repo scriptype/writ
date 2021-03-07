@@ -1,4 +1,5 @@
 #!/bin/sh
+git pull;
 git add -A;
 git commit -am "$1";
 git push;
