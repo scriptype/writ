@@ -4,8 +4,9 @@ const { execSync } = require('child_process')
 const Handlebars = require('handlebars')
 
 const SITE_DIR = '_site'
-
 const EXCLUDED_PATHS = /(node_modules|package.json|package-lock.json|.git|.DS_Store|.gitignore|_.*)/
+
+const readFileContent = (path) => fs.readFileSync(path, { encoding: 'utf-8' })
 
 const isContentDirectory = (path) => {
   const isDirectory = fs.lstatSync(path).isDirectory()
@@ -13,7 +14,78 @@ const isContentDirectory = (path) => {
   return isDirectory && isNotMeta
 }
 
-const readFileContent = (path) => fs.readFileSync(path, { encoding: 'utf-8' })
+const mkSiteDir = () => {
+  try {
+    execSync(`rm -rf ${SITE_DIR}`)
+  } catch (e) {
+    console.log('mkSiteDir error:', e)
+  } finally {
+    fs.mkdirSync(SITE_DIR)
+  }
+}
+
+const cpPaths = (paths) => {
+  paths
+    .filter(p => !p.match(EXCLUDED_PATHS))
+    .forEach(path => execSync(`cp -R ${path} ${SITE_DIR}`))
+}
+
+const parsePostData = ({ content, output, category, postDir }) => {
+  return {
+    title: content.match(/title="(.*)"/)[1],
+    createdAt: new Date(content.match(/writ="(.*)"/)[1]),
+    tags: content.match(/keys="(.*)"/)[1],
+    content: content.match(/\n\}\}\n(.*)\{\{\/.*\}\}\n$/s)[1],
+    get summary() {
+      const indexOfSeeMore = this.content.indexOf('{{seeMore}}')
+      if (indexOfSeeMore === -1) {
+        return this.content
+      }
+      return this.content.substring(0, indexOfSeeMore)
+    },
+    permalink: `/${category}/${postDir}`,
+    output,
+    category
+  }
+}
+
+const compileTemplate = ({ content, path, data }) => {
+  const template = Handlebars.compile(content)
+  const output = template(data || {})
+  fs.writeFileSync(path, output)
+  console.log('created:', path)
+  return output
+}
+
+const compilePost = ({ category, postDir, postFilePath }) => {
+  const content = readFileContent(`${category}/${postDir}/${postFilePath}`)
+  const newFileName = postFilePath.replace('.hbs', '.html')
+  const output = compileTemplate({
+    content,
+    path: `${SITE_DIR}/${category}/${postDir}/${newFileName}`
+  })
+  fs.rmSync(`${SITE_DIR}/${category}/${postDir}/${postFilePath}`)
+  return {
+    output,
+    content
+  }
+}
+
+const compileCategory = (category, posts) => {
+  return compileTemplate({
+    content: '{{#>category posts=posts}}{{/category}}',
+    path: `${SITE_DIR}/${category}/index.html`,
+    data: { posts }
+  })
+}
+
+const compileIndex = (posts) => {
+  return compileTemplate({
+    content: '{{#>index posts=posts}}{{/index}}',
+    path: `${SITE_DIR}/index.html`,
+    data: { posts }
+  })
+}
 
 const helpers = {
   multiLineTextList(string) {
@@ -34,87 +106,47 @@ Object.keys(helpers).forEach((key) => {
   Handlebars.registerHelper(key, helpers[key])
 })
 
-const partials = {
-  ['text-post']: readFileContent('./_partials/text-post.hbs'),
-  category: readFileContent('./_partials/category.hbs'),
-  index: readFileContent('./_partials/index.hbs'),
-  search: readFileContent('./_partials/search.hbs'),
-}
-
-Object.keys(partials).forEach((key) => {
-  Handlebars.registerPartial(key, partials[key])
+fs.readdirSync('./_partials').forEach(path => {
+  const name = path.replace('.hbs', '')
+  Handlebars.registerPartial(name, readFileContent(`./_partials/${path}`))
 })
-
-try {
-  execSync(`rm -rf ${SITE_DIR}`)
-} catch (e) {
-  console.log('e', e)
-} finally {
-  fs.mkdirSync(SITE_DIR)
-}
 
 const allPaths = fs.readdirSync('.')
 
-const pathsToCopy = allPaths.filter(p => !p.match(EXCLUDED_PATHS))
-
-pathsToCopy.forEach(path => {
-  execSync(`cp -R ${path} ${SITE_DIR}`)
-})
+mkSiteDir()
+cpPaths(allPaths)
 
 const categories = allPaths.filter(isContentDirectory)
 
-const posts = categories.reduce((postsList, category) => {
+const posts = categories.reduce((acc, category) => {
   const categoryPostDirs = fs.readdirSync(category).filter(d => isContentDirectory(`${category}/${d}`))
   const categoryPosts = []
   categoryPostDirs.forEach(postDir => {
-    const templateFiles = fs.readdirSync(`${category}/${postDir}`).filter(p => p.match(/.hbs$/))
-    templateFiles.forEach(f => {
-      const content = readFileContent(`${category}/${postDir}/${f}`)
-      const template = Handlebars.compile(content)
-      const output = template()
-      const newFileName = f.replace('.hbs', '.html')
-      fs.writeFileSync(`${SITE_DIR}/${category}/${postDir}/${newFileName}`, output)
-      fs.rmSync(`${SITE_DIR}/${category}/${postDir}/${f}`)
-      console.log('created:', `${SITE_DIR}/${category}/${postDir}/${newFileName}`)
-      if (newFileName === 'index.html') {
-        categoryPosts.push({
-          title: content.match(/title="(.*)"/)[1],
-          createdAt: new Date(content.match(/writ="(.*)"/)[1]),
-          tags: content.match(/keys="(.*)"/)[1],
-          content: content.match(/\n\}\}\n(.*)\{\{\/.*\}\}\n$/s)[1],
-          get summary() {
-            const indexOfSeeMore = this.content.indexOf('{{seeMore}}')
-            if (indexOfSeeMore === -1) {
-              return this.content
-            }
-            return this.content.substring(0, indexOfSeeMore)
-          },
-          permalink: `/${category}/${postDir}`,
-          output,
-          category
-        })
-      }
-    })
+    fs.readdirSync(`${category}/${postDir}`)
+      .filter(p => p.match(/.hbs$/))
+      .forEach(postFilePath => {
+        const { output, content } = compilePost({ category, postDir, postFilePath })
+        if (postFilePath === 'index.hbs') {
+          categoryPosts.push(
+            parsePostData({
+              content,
+              output,
+              category,
+              postDir
+            })
+          )
+        }
+      })
   })
 
   categoryPosts.sort((a, b) => b.createdAt - a.createdAt)
 
-  const categoryIndexContent = `{{#>category posts=posts}}{{/category}}`
-  const categoryIndexTemplate = Handlebars.compile(categoryIndexContent)
-  const categoryIndexOutput = categoryIndexTemplate({
-    posts: categoryPosts
-  })
-  fs.writeFileSync(`${SITE_DIR}/${category}/index.html`, categoryIndexOutput)
-  console.log('created:', `${SITE_DIR}/${category}/index.html`)
+  compileCategory(category, categoryPosts)
 
   return [
-    ...postsList,
+    ...acc,
     ...categoryPosts
   ]
 }, [])
 
-const indexContent = `{{#>index posts=posts}}{{/index}}`
-const indexTemplate = Handlebars.compile(indexContent)
-const indexOutput = indexTemplate({ posts })
-fs.writeFileSync(`${SITE_DIR}/index.html`, indexOutput)
-console.log('created:', `${SITE_DIR}/index.html`)
+compileIndex(posts)
