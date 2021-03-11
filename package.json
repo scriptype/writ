@@ -1,0 +1,23 @@
+{
+  "name": "writ",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scriptype/writ.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scriptype/writ/issues"
+  },
+  "homepage": "https://github.com/scriptype/writ#readme",
+  "devDependencies": {
+    "handlebars": "^4.7.7"
+  }
+}

@@ -1,0 +1,179 @@
+:root {
+    --bg-color: #f5f5f5;
+    --container-color: #fff;
+    --text-color: #111;
+    --title-color: #000;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font: normal 20px/1.5 times;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+body.dark {
+    --bg-color: #222;
+    --container-color: #32363f;
+    --text-color: #e0e3e6;
+    --title-color: #fff;
+}
+
+.icon-symbols {
+    display: none;
+}
+
+.search-icon {
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+    fill: currentColor;
+}
+
+.music-icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    fill: currentColor;
+}
+
+.writ-icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: text-top;
+    fill: currentColor;
+}
+
+.key-icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: text-top;
+    fill: currentColor;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 4em 6em;
+    background: var(--container-color);
+    min-height: 60vh;
+    overflow: hidden;
+}
+
+@media (max-width: 940px) {
+    .container {
+        max-width: 100%;
+        padding: 2em;
+    }
+}
+
+.topbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    padding-bottom: 1em;
+}
+
+.site-title {
+    font-size: 3em;
+    border-bottom: 0.12em double;
+    text-indent: -0.2em;
+    cursor: alias;
+}
+
+.site-title:first-letter {
+    margin-right: -0.03em;
+}
+
+.search {
+    position: relative;
+    height: 3em;
+    width: 220px;
+}
+
+.search-form {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--container-color);
+    opacity: 0;
+}
+
+.search-toggle {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    outline: none;
+    transition: all .1s;
+}
+
+.search-toggle:focus {
+    background: var(--bg-color);
+    box-shadow: 0 0 0 0.25em var(--bg-color), 0 0 4px 7px royalblue;
+}
+
+.search-toggle::-webkit-details-marker {
+    display: none;
+}
+
+.search[open] .search-toggle::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transform: translate(-50%, -25%);
+}
+
+.search[open] .search-toggle {
+    animation: fade-out .25s forwards;
+}
+
+.search[open] .search-form {
+    animation: fade-in 1s forwards;
+}
+
+@keyframes fade-out {
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fade-in {
+    to {
+        opacity: 1;
+    }
+}
+
+.post {
+    transition: all .3s;
+}
+
+.post.hidden {
+    display: none;
+}
+
+.post-metadata td {
+    padding-right: 5px;
+}
+
+.post-music-list {
+    list-style: none;
+    padding: 0;
+}
+
+.post-music-list-icon {
+    margin-right: 6px;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Writ</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <div class="container">
+            <nav class="topbar">
+                <h1 class="site-title" id="dark-toggle">Writ</h1>
+                {{>search}}
+            </nav>
+
+            <main class="content">
+                {{#each posts as |post|}}
+                    <div class="post">
+                        <h2><a href="{{post.permalink}}">{{post.title}}</a></h2>
+                        {{{post.summary}}}
+                        <p><a href="{{post.category}}">{{post.category}}</a></p>
+                    </div>
+                {{/each}}
+            </main>
+        </div>
+
+        <script type="text/javascript" src="/base.js"></script>
+    </body>
+
+</html>
