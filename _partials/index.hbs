@@ -13,6 +13,9 @@
             <nav class="topbar">
                 <h1 class="site-title" id="dark-toggle">Writ</h1>
                 {{>search}}
+                {{#each categories as |category|}}
+                    <a href="{{category.permalink}}">{{category.name}}</a>
+                {{/each}}
             </nav>
 
             <main class="content">
@@ -20,7 +23,7 @@
                     <div class="post">
                         <h2><a href="{{post.permalink}}">{{post.title}}</a></h2>
                         {{{post.summary}}}
-                        <p><a href="{{post.category}}">{{post.category}}</a></p>
+                        <p><a href="{{post.category.permalink}}">{{post.category.name}}</a></p>
                     </div>
                 {{/each}}
             </main>
