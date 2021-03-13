@@ -39,8 +39,8 @@ const cpPaths = (paths) => {
 const parsePostData = ({ content, output, category, postDir }) => {
   return {
     title: content.match(/title="(.*)"/)[1],
-    createdAt: new Date(content.match(/writ="(.*)"/)[1]),
-    tags: content.match(/keys="(.*)"/)[1],
+    publishedAt: new Date(content.match(/date="(.*)"/)[1]),
+    tags: content.match(/tags="(.*)"/)[1],
     content: content.match(/\n\}\}\n(.*)\{\{\/.*\}\}\n$/s)[1],
     get summary() {
       const indexOfSeeMore = this.content.indexOf('{{seeMore}}')
@@ -137,7 +137,8 @@ const posts = categories.reduce((acc, category) => {
         const { output, content } = compilePost({
           path: `${category.slug}/${postDir}/${postFilePath}`,
           data: {
-            site: settings.site
+            site: settings.site,
+            category
           }
         })
         if (category.visible && postFilePath === 'index.hbs') {
@@ -153,7 +154,7 @@ const posts = categories.reduce((acc, category) => {
       })
   })
 
-  categoryPosts.sort((a, b) => b.createdAt - a.createdAt)
+  categoryPosts.sort((a, b) => b.publishedAt - a.publishedAt)
 
   if (category.visible) {
     compileTemplate({
