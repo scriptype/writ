@@ -14,9 +14,14 @@
             <nav class="topbar">
                 <h1 class="site-title" id="dark-toggle">{{site.title}}</h1>
                 {{>search}}
-                {{#each categories as |category|}}
-                    <a href="{{category.permalink}}">{{category.name}}</a>
-                {{/each}}
+
+                <div class="categories">
+                    {{#each categories as |category|}}
+                        <a class="categories-item" href="{{category.permalink}}">
+                            {{category.name}}
+                        </a>
+                    {{/each}}
+                </div>
             </nav>
 
             <main class="content">

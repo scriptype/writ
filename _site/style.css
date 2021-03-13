@@ -31,7 +31,7 @@ h1 {
 
 body {
     margin: 0;
-    font: normal 20px/1.5 "Tinos", times;
+    font: normal 20px/1.5 "Tinos", times, serif;
     background: var(--bg-color);
     color: var(--text-color);
 }
@@ -103,8 +103,8 @@ body.dark {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2em;
-    padding-bottom: 1em;
+    gap: 1em;
+    padding-bottom: 2em;
 }
 
 .site-title {
@@ -179,6 +179,11 @@ body.dark {
     to {
         opacity: 1;
     }
+}
+
+.categories {
+    display: flex;
+    gap: 2em;
 }
 
 .post {
