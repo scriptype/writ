@@ -1,0 +1,30 @@
+const { execSync } = require('child_process')
+const bs = require('browser-sync').create()
+const settings = require('../settings.json')
+
+const ignored = new RegExp([
+  settings.exportDirectory,
+  '_scripts',
+  'node_modules',
+  '.git',
+  '.DS_Store',
+  'package.json',
+  'package-lock.json'
+].join('|'))
+
+const watchOptions = {
+  ignored,
+  ignoreInitial: true
+}
+
+bs.watch('.', watchOptions, (e, file) => {
+  console.log('Changed:', file)
+  execSync('node ./_scripts/build.js')
+  console.log('Rebuilt.')
+  bs.reload()
+});
+
+bs.init({
+  server: '_site',
+  watch: true
+});

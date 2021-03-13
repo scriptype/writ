@@ -1,4 +1,3 @@
-#!/bin/sh
 git pull;
 git add -A;
 if [ -z $1 ]
