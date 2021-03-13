@@ -1,0 +1,18 @@
+{
+  "site": {
+    "title": "Blog",
+    "description": "Welcome to my blog"
+  },
+  "categoryInfoFile": "category-info.json",
+  "exportDirectory": "_site",
+  "ignorePaths": [
+    "node_modules",
+    "package.json",
+    "package-lock.json",
+    ".git",
+    ".gitignore",
+    ".DS_Store",
+    "_.*",
+    "settings.json"
+  ]
+}

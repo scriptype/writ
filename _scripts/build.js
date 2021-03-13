@@ -3,8 +3,11 @@ const fs = require('fs')
 const { execSync } = require('child_process')
 const Handlebars = require('handlebars')
 
-const SITE_DIR = '_site'
-const EXCLUDED_PATHS = /(node_modules|package.json|package-lock.json|.git|.DS_Store|.gitignore|_.*)/
+const settings = require('../settings.json')
+
+const SITE_DIR = settings.exportDirectory || '_site'
+const CATEGORY_INFO_FILE = settings.categoryInfoFile || 'category-info.json'
+const EXCLUDED_PATHS = new RegExp(settings.ignorePaths.join('|'))
 
 const readFileContent = (path) => fs.readFileSync(path, { encoding: 'utf-8' })
 
@@ -15,6 +18,9 @@ const isContentDirectory = (path) => {
 }
 
 const mkSiteDir = () => {
+  if (SITE_DIR === '.' || SITE_DIR === '/' || SITE_DIR === '~') {
+    throw new Error(`Dangerous export directory: "${SITE_DIR}". Won't continue.`)
+  }
   try {
     execSync(`rm -rf ${SITE_DIR}`)
   } catch (e) {
@@ -49,16 +55,6 @@ const parsePostData = ({ content, output, category, postDir }) => {
   }
 }
 
-const parseCategoryData = ({ indexContent, categoryName }) => {
-  return {
-    name: indexContent.match(/name="(.*)"/)[1],
-    slug: categoryName,
-    permalink: `/${categoryName}`,
-    visible: true,
-    indexContent
-  }
-}
-
 const compileTemplate = ({ content, path, data }) => {
   const template = Handlebars.compile(content)
   const output = template(data || {})
@@ -67,34 +63,19 @@ const compileTemplate = ({ content, path, data }) => {
   return output
 }
 
-const compilePost = ({ path }) => {
+const compilePost = ({ path, data }) => {
   const content = readFileContent(path)
   const newPath = path.replace(/\.hbs$/, '.html')
   const output = compileTemplate({
     content,
-    path: `${SITE_DIR}/${newPath}`
+    path: `${SITE_DIR}/${newPath}`,
+    data
   })
   fs.rmSync(`${SITE_DIR}/${path}`)
   return {
     output,
     content
   }
-}
-
-const compileCategory = (category, posts) => {
-  return compileTemplate({
-    content: category.indexContent,
-    path: `${SITE_DIR}/${category.slug}/index.html`,
-    data: { posts }
-  })
-}
-
-const compileIndex = (data) => {
-  return compileTemplate({
-    content: '{{#>index posts=posts}}{{/index}}',
-    path: `${SITE_DIR}/index.html`,
-    data
-  })
 }
 
 const helpers = {
@@ -128,20 +109,22 @@ cpPaths(allPaths)
 
 const categories = allPaths
   .filter(isContentDirectory)
-  .map(categoryName => {
-    const paths = fs.readdirSync(categoryName)
-    if (!paths.includes('index.hbs')) {
+  .map(categorySlug => {
+    const paths = fs.readdirSync(categorySlug)
+    if (!paths.includes(CATEGORY_INFO_FILE)) {
       return {
         name: '',
-        slug: categoryName,
+        slug: categorySlug,
         visible: false
       }
     }
-    const indexContent = readFileContent(`${categoryName}/index.hbs`)
-    return parseCategoryData({
-      indexContent,
-      categoryName
-    })
+    const info = require(`../${categorySlug}/${CATEGORY_INFO_FILE}`)
+    return {
+      name: info.name,
+      slug: categorySlug,
+      permalink: `/${categorySlug}`,
+      visible: true
+    }
   })
 
 const posts = categories.reduce((acc, category) => {
@@ -152,7 +135,10 @@ const posts = categories.reduce((acc, category) => {
       .filter(p => p.match(/.hbs$/))
       .forEach(postFilePath => {
         const { output, content } = compilePost({
-          path: `${category.slug}/${postDir}/${postFilePath}`
+          path: `${category.slug}/${postDir}/${postFilePath}`,
+          data: {
+            site: settings.site
+          }
         })
         if (category.visible && postFilePath === 'index.hbs') {
           categoryPosts.push(
@@ -170,7 +156,15 @@ const posts = categories.reduce((acc, category) => {
   categoryPosts.sort((a, b) => b.createdAt - a.createdAt)
 
   if (category.visible) {
-    compileCategory(category, categoryPosts)
+    compileTemplate({
+      content: '{{>category}}',
+      path: `${SITE_DIR}/${category.slug}/index.html`,
+      data: {
+        site: settings.site,
+        category,
+        posts: categoryPosts
+      }
+    })
   }
 
   return [
@@ -179,7 +173,12 @@ const posts = categories.reduce((acc, category) => {
   ]
 }, [])
 
-compileIndex({
-  categories: categories.filter(c => c.visible),
-  posts
+compileTemplate({
+  content: '{{>index}}',
+  path: `${SITE_DIR}/index.html`,
+  data: {
+    site: settings.site,
+    posts,
+    categories: categories.filter(c => c.visible)
+  }
 })

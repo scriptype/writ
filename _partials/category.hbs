@@ -3,7 +3,8 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{{name}} / Writ</title>
+        <meta name="description" content="{{site.description}}" />
+        <title>{{category.name}} / {{site.title}}</title>
         <link rel="stylesheet" href="/style.css">
     </head>
 
@@ -11,18 +12,8 @@
 
         <div class="container">
             <nav class="topbar">
-                <h1 class="site-title" id="dark-toggle">Writ</h1>
-                <details class="search">
-                    <form class="search-form" id="search-form" action="">
-                        <input aria-label="Search box" type="search" id="search" name="search" />
-                        <button>Search</button>
-                    </form>
-                    <summary class="search-toggle">
-                        <svg class="search-icon">
-                            <use xlink:href="#search-icon"></use>
-                        </svg>
-                    </summary>
-                </details>
+                <h1 class="site-title" id="dark-toggle">{{site.title}}</h1>
+                {{>search}}
             </nav>
 
             <main class="content">
@@ -44,7 +35,6 @@
         </svg>
 
         <script type="text/javascript" src="/base.js"></script>
-        <script type="text/javascript" src="/searchable.js"></script>
     </body>
 
 </html>
