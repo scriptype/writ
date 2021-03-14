@@ -49,6 +49,12 @@
                             </ul>
                         </section>
                         {{/if}}
+                        {{#if prevPost}}
+                            <a href="{{prevPost.permalink}}">&laquo; {{prevPost.title}}</a>
+                        {{/if}}
+                        {{#if nextPost}}
+                            <a href="{{nextPost.permalink}}">{{nextPost.title}} &raquo;</a>
+                        {{/if}}
                     </footer>
                 </article>
             </main>

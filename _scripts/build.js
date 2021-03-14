@@ -82,6 +82,31 @@ const compileNonCategoryDirectories = (directories) => {
   })
 }
 
+const compileNonPostTemplatesInCategories = (categories) => {
+  categories.forEach(category => {
+    const directories = fs.readdirSync(category.slug).filter(d => isTargetDirectory(`${category.slug}/${d}`))
+    const directoriesWithTemplates = directories
+      .map(dir => ({
+        name: dir,
+        paths: fs.readdirSync(`${category.slug}/${dir}`)
+      }))
+      .filter(({ paths }) => paths.some(p => p.match(/.hbs$/)))
+
+    directoriesWithTemplates.forEach(dir => {
+      const templates = fs.readdirSync(`${category.slug}/${dir.name}`).filter(p => p.match(/.hbs$/) && p !== 'index.hbs')
+      templates.forEach(fileName => {
+        const content = readFileContent(`${category.slug}/${dir.name}/${fileName}`)
+        compileTemplate({
+          content,
+          path: `${SITE_DIR}/${category.slug}/${dir.name}/${fileName.replace('.hbs', '.html')}`,
+          data: { site: settings.site }
+        })
+        fs.rmSync(`${SITE_DIR}/${category.slug}/${dir.name}/${fileName}`)
+      })
+    })
+  })
+}
+
 const compileTemplate = ({ content, path, data }) => {
   const template = Handlebars.compile(content)
   const output = template(data || {})
@@ -90,41 +115,68 @@ const compileTemplate = ({ content, path, data }) => {
   return output
 }
 
-const compileCategoryPosts = (categories) => {
-  return categories.reduce((acc, category) => {
-    const categoryPostDirs = fs.readdirSync(category.slug).filter(d => isTargetDirectory(`${category.slug}/${d}`))
-    const categoryPosts = []
-    categoryPostDirs.forEach(postDir => {
-      fs.readdirSync(`${category.slug}/${postDir}`)
-        .filter(p => p.match(/.hbs$/))
-        .forEach(postFilePath => {
-          const { output, content } = compilePost({
-            path: `${category.slug}/${postDir}/${postFilePath}`,
-            data: {
-              site: settings.site,
-              category
-            }
-          })
-          if (postFilePath === 'index.hbs') {
-            categoryPosts.push(
-              parsePostData({
-                content,
-                output,
-                category,
-                postDir
-              })
-            )
-          }
-        })
+const indexCategoryPosts = (categories) => {
+  const categoryPosts = {}
+  categories.forEach(category => {
+    const directories = fs.readdirSync(category.slug).filter(d => isTargetDirectory(`${category.slug}/${d}`))
+    const directoriesWithPosts = directories
+      .map(dir => ({
+        name: dir,
+        paths: fs.readdirSync(`${category.slug}/${dir}`)
+      }))
+      .filter(({ paths }) => paths.includes('index.hbs'))
+
+    const posts = directoriesWithPosts.map(dir => {
+      const content = readFileContent(`${category.slug}/${dir.name}/index.hbs`)
+      return parsePostData({
+        content,
+        category,
+        postDir: dir.name
+      })
     })
 
-    categoryPosts.sort((a, b) => b.publishedAt - a.publishedAt)
+    posts.sort((a, b) => b.publishedAt - a.publishedAt)
 
-    return {
-      ...acc,
-      [category.slug]: categoryPosts
-    }
-  }, {})
+    categoryPosts[category.slug] = posts
+  })
+
+  return categoryPosts
+}
+
+const compileCategoryPosts = (categoryPosts) => {
+  const compiledCategoryPosts = {}
+  Object.keys(categoryPosts).forEach(categorySlug => {
+    compiledCategoryPosts[categorySlug] = []
+    const sameCategoryPosts = categoryPosts[categorySlug]
+    sameCategoryPosts.forEach((post, postIndex) => {
+      const additionalData = {}
+      if (postIndex > 0) {
+        additionalData.nextPost = {
+          title: sameCategoryPosts[postIndex - 1].title,
+          permalink: sameCategoryPosts[postIndex - 1].permalink
+        }
+      }
+      if (postIndex < sameCategoryPosts.length - 1) {
+        additionalData.prevPost = {
+          title: sameCategoryPosts[postIndex + 1].title,
+          permalink: sameCategoryPosts[postIndex + 1].permalink
+        }
+      }
+      const { output } = compilePost({
+        path: `${categorySlug}/${post.postDir}/index.hbs`,
+        data: {
+          site: settings.site,
+          category: post.category,
+          ...additionalData
+        }
+      })
+      compiledCategoryPosts[categorySlug].push({
+        ...categoryPosts[categorySlug][postIndex],
+        output
+      })
+    })
+  })
+  return compiledCategoryPosts
 }
 
 const compileCategoryIndexes = ({ categories, posts }) => {
@@ -169,7 +221,7 @@ const compileIndex = ({ categories, posts }) => {
   })
 }
 
-const parsePostData = ({ content, output, category, postDir }) => {
+const parsePostData = ({ content, category, postDir }) => {
   return {
     title: content.match(/title="(.*)"/)[1],
     publishedAt: new Date(content.match(/date="(.*)"/)[1]),
@@ -183,7 +235,7 @@ const parsePostData = ({ content, output, category, postDir }) => {
       return this.content.substring(0, indexOfSeeMore)
     },
     permalink: `/${category.slug}/${postDir}`,
-    output,
+    postDir,
     category
   }
 }
@@ -220,14 +272,16 @@ const nonCategoryDirectories = targetDirectories.filter(dir => !dir.isCategory)
 createSiteDir()
 copyPaths(allPaths)
 compileNonCategoryDirectories(nonCategoryDirectories)
+compileNonPostTemplatesInCategories(categories)
 
-const postsByCategories = compileCategoryPosts(categories)
+const postsByCategories = indexCategoryPosts(categories)
+const compiledPostsByCategories = compileCategoryPosts(postsByCategories)
 compileCategoryIndexes({
   categories,
-  posts: postsByCategories
+  posts: compiledPostsByCategories
 })
 
-const posts = Object.keys(postsByCategories)
+const posts = Object.keys(compiledPostsByCategories)
   .reduce((acc, categorySlug) => {
     return [
       ...acc,
