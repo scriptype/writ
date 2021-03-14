@@ -25,5 +25,6 @@ bs.watch('.', watchOptions, (e, file) => {
 
 bs.init({
   server: '_site',
-  watch: true
+  watch: true,
+  ui: false
 });
