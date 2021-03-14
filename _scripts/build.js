@@ -138,6 +138,7 @@ const compileCategoryIndexes = ({ categories, posts }) => {
         posts: posts[category.slug]
       }
     })
+    fs.rmSync(`${SITE_DIR}/${category.slug}/${CATEGORY_INFO_FILE}`)
   })
 }
 
