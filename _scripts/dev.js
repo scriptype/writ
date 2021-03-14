@@ -4,7 +4,6 @@ const settings = require('../settings.json')
 
 const ignored = new RegExp([
   settings.exportDirectory,
-  '_scripts',
   'node_modules',
   '.git',
   '.DS_Store',

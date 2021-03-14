@@ -6,6 +6,7 @@ const settings = require('../settings.json')
 
 const SITE_DIR = settings.exportDirectory || '_site'
 const CATEGORY_INFO_FILE = settings.categoryInfoFile || 'category-info.json'
+const POSTS_JSON_PATH = `${SITE_DIR}/posts.json`
 const EXCLUDED_PATHS = new RegExp(settings.ignorePaths.join('|'))
 
 const readFileContent = (path) => fs.readFileSync(path, { encoding: 'utf-8' })
@@ -75,6 +76,12 @@ const compilePost = ({ path, data }) => {
     output,
     content
   }
+}
+
+const createPostsJSON = ({ path, posts }) => {
+  const postsJSON = posts.map(({ content, output, ...rest }) => rest)
+  fs.writeFileSync(path, JSON.stringify(postsJSON, null, 2))
+  console.log('created:', path)
 }
 
 const helpers = {
@@ -181,4 +188,9 @@ compileTemplate({
     posts,
     categories: categories.filter(c => c.visible)
   }
+})
+
+createPostsJSON({
+  path: POSTS_JSON_PATH,
+  posts
 })
