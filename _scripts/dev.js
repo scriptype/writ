@@ -18,7 +18,9 @@ const watchOptions = {
 
 bs.watch('.', watchOptions, (e, file) => {
   console.log('Changed:', file)
-  execSync('node ./_scripts/build.js')
+  execSync('node ./_scripts/build.js', {
+    stdio: [process.stdin, process.stdout, process.stderr]
+  })
   console.log('Rebuilt.')
   bs.reload()
 });
