@@ -39,7 +39,7 @@ const parsePostData = ({ content, output, category, postDir }) => {
   return {
     title: content.match(/title="(.*)"/)[1],
     publishedAt: new Date(content.match(/date="(.*)"/)[1]),
-    tags: content.match(/tags="(.*)"/)[1],
+    tags: content.match(/tags="(.*)"/)[1].split(',').map(t => t.trim()),
     content: content.match(/\n\}\}\n(.*)\{\{\/.*\}\}\n$/s)[1],
     get summary() {
       const indexOfSeeMore = this.content.indexOf('{{seeMore}}')
