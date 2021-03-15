@@ -4,8 +4,9 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node _generator/build.js && node _scripts/dev.js",
-    "build": "node _generator/build.js"
+    "start": "node _scripts/build.js && node _scripts/dev.js",
+    "build": "node _scripts/build.js",
+    "save": "sh _scripts/save.sh"
   },
   "repository": {
     "type": "git",
