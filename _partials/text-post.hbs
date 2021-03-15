@@ -30,10 +30,12 @@
                                     <td>Published at</td>
                                     <td>{{date}}</td>
                                 </tr>
+                                {{#if category}}
                                 <tr class="post-metadata-category">
                                     <td>Category</td>
                                     <td><a href="{{category.permalink}}">{{category.name}}</a></td>
                                 </tr>
+                                {{/if}}
                                 {{#if tags}}
                                 <tr class="post-metadata-tags">
                                     <td>Tags</td>
