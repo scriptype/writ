@@ -30,8 +30,8 @@ const createSiteDir = () => {
   }
 }
 
-const copyPaths = (paths) => {
-  paths
+const copyPaths = () => {
+  fs.readdirSync('.')
     .filter(p => !p.match(EXCLUDED_PATHS))
     .forEach(path => execSync(`cp -R ${path} ${SITE_DIR}`))
 }
@@ -43,7 +43,7 @@ const createPostsJSON = ({ path, posts }) => {
 }
 
 const getTargetDirectories = (paths) => {
-  return paths
+  return fs.readdirSync('.')
     .filter(isTargetDirectory)
     .map(slug => {
       const paths = fs.readdirSync(slug)
@@ -63,47 +63,17 @@ const getTargetDirectories = (paths) => {
     })
 }
 
-const compileNonCategoryDirectories = (directories) => {
-  directories.forEach(dir => {
-    fs.readdirSync(`${dir.slug}`)
-      .filter(p => p.match(/.hbs$/))
-      .forEach(fileName => {
-        const inPath = `${dir.slug}/${fileName}`
-        const outPath = `${SITE_DIR}/${inPath.replace('.hbs', '.html')}`
-        compileTemplate({
-          content: readFileContent(inPath),
-          path: outPath,
-          data: {
-            site: settings.site
-          }
-        })
-        fs.rmSync(outPath.replace('.html', '.hbs'))
-      })
-  })
-}
-
-const compileNonPostTemplatesInCategories = (categories) => {
-  categories.forEach(category => {
-    const directories = fs.readdirSync(category.slug).filter(d => isTargetDirectory(`${category.slug}/${d}`))
-    const directoriesWithTemplates = directories
-      .map(dir => ({
-        name: dir,
-        paths: fs.readdirSync(`${category.slug}/${dir}`)
-      }))
-      .filter(({ paths }) => paths.some(p => p.match(/.hbs$/)))
-
-    directoriesWithTemplates.forEach(dir => {
-      const templates = fs.readdirSync(`${category.slug}/${dir.name}`).filter(p => p.match(/.hbs$/) && p !== 'index.hbs')
-      templates.forEach(fileName => {
-        const content = readFileContent(`${category.slug}/${dir.name}/${fileName}`)
-        compileTemplate({
-          content,
-          path: `${SITE_DIR}/${category.slug}/${dir.name}/${fileName.replace('.hbs', '.html')}`,
-          data: { site: settings.site }
-        })
-        fs.rmSync(`${SITE_DIR}/${category.slug}/${dir.name}/${fileName}`)
-      })
+const compileNonCMSTemplates = (paths) => {
+  paths.forEach(path => {
+    compileTemplate({
+      content: readFileContent(path),
+      path: path.replace('.hbs', '.html'),
+      data: {
+        site: settings.site
+      }
     })
+    console.log('created:', path.replace('.hbs', '.html'))
+    fs.rmSync(path)
   })
 }
 
@@ -113,6 +83,18 @@ const compileTemplate = ({ content, path, data }) => {
   fs.writeFileSync(path, output)
   console.log('created:', path)
   return output
+}
+
+const indexNonCMSTemplates = (parentDir, pathList = [], wasCategory) => {
+  const paths = fs.readdirSync(parentDir).map(p => `${parentDir}/${p}`)
+  const templates = paths.filter(p => p.match(/.hbs$/) && (!wasCategory || !p.match(/index.hbs/)))
+  pathList.push(...templates)
+  const directories = paths.filter(p => fs.lstatSync(p).isDirectory())
+  const isCategory = paths.some(p => p.match(CATEGORY_INFO_FILE))
+  directories.forEach(dir => {
+    indexNonCMSTemplates(dir, pathList, isCategory)
+  })
+  return pathList
 }
 
 const indexCategoryPosts = (categories) => {
@@ -264,16 +246,13 @@ fs.readdirSync('./_partials').forEach(path => {
   Handlebars.registerPartial(name, readFileContent(`./_partials/${path}`))
 })
 
-const allPaths = fs.readdirSync('.')
-const targetDirectories = getTargetDirectories(allPaths)
-const categories = targetDirectories.filter(dir => dir.isCategory)
-const nonCategoryDirectories = targetDirectories.filter(dir => !dir.isCategory)
-
 createSiteDir()
-copyPaths(allPaths)
-compileNonCategoryDirectories(nonCategoryDirectories)
-compileNonPostTemplatesInCategories(categories)
+copyPaths()
 
+const nonCMSTemplates = indexNonCMSTemplates(SITE_DIR)
+compileNonCMSTemplates(nonCMSTemplates)
+
+const categories = getTargetDirectories().filter(dir => dir.isCategory)
 const postsByCategories = indexCategoryPosts(categories)
 const compiledPostsByCategories = compileCategoryPosts(postsByCategories)
 compileCategoryIndexes({
