@@ -209,7 +209,7 @@ const compilePost = ({ path, data }) => {
   }
 }
 
-const compileIndex = ({ categories, posts }) => {
+const compileHomePage = ({ categories, posts }) => {
   compileTemplate({
     content: '{{>index}}',
     path: `${SITE_DIR}/index.html`,
@@ -289,7 +289,7 @@ const posts = Object.keys(compiledPostsByCategories)
     ]
   }, [])
 
-compileIndex({
+compileHomePage({
   categories,
   posts
 })
