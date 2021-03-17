@@ -267,6 +267,7 @@ const posts = Object.keys(compiledPostsByCategories)
       ...postsByCategories[categorySlug]
     ]
   }, [])
+  .sort((a, b) => b.publishedAt - a.publishedAt)
 
 compileHomePage({
   categories,
