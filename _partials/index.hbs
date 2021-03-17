@@ -26,11 +26,13 @@
 
             <main class="content">
                 {{#each posts as |post|}}
-                    <div class="post">
-                        <h2><a href="{{post.permalink}}">{{post.title}}</a></h2>
-                        {{{post.summary}}}
-                        <p><a href="{{post.category.permalink}}">{{post.category.name}}</a></p>
-                    </div>
+                    {{#if (isPostType 'text-post' post.type)}}
+                        <div class="post">
+                            <h2><a href="{{post.permalink}}">{{post.title}}</a></h2>
+                            {{{post.summary}}}
+                            <p><a href="{{post.category.permalink}}">{{post.category.name}}</a></p>
+                        </div>
+                    {{/if}}
                 {{/each}}
             </main>
         </div>

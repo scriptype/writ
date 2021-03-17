@@ -186,8 +186,17 @@ body.dark {
     gap: 2em;
 }
 
+.photo-thumbnail img {
+    max-width: 200px;
+    max-height: 200px;
+}
+
 .post {
     transition: all .3s;
+}
+
+.post img {
+    max-width: 100%;
 }
 
 .post.hidden {

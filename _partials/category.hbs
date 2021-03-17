@@ -18,11 +18,18 @@
 
             <main class="content">
                 {{#each posts as |post|}}
-                    <div class="post">
-                        <h2><a href="{{post.permalink}}">{{post.title}}</a></h2>
-                        {{{post.summary}}}
-                        <p>{{post.tags}}</p>
-                    </div>
+                    {{#if (isPostType 'photo-post' post.type)}}
+                        <a href="{{post.permalink}}" title="{{post.title}}" class="photo-thumbnail">
+                            <img src="{{post.permalink}}/{{post.thumbnailUrl}}" alt="{{post.title}}" />
+                        </a>
+                    {{/if}}
+                    {{#if (isPostType 'text-post' post.type)}}
+                        <div class="post">
+                            <h2><a href="{{post.permalink}}">{{post.title}}</a></h2>
+                            {{{post.summary}}}
+                            <p>{{post.tags}}</p>
+                        </div>
+                    {{/if}}
                 {{/each}}
             </main>
         </div>

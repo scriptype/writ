@@ -249,6 +249,10 @@ const helpers = {
 
   seeMore() {
     return ''
+  },
+
+  isPostType(string, type) {
+    return string === type
   }
 }
 
