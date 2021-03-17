@@ -204,10 +204,25 @@ const compileHomePage = ({ categories, posts }) => {
 }
 
 const parsePostData = ({ content, category, postDir }) => {
+  const metaBlock = content.match(/\{\{.*\n.*=".*"\n\}\}/gs)[0]
+  const type = metaBlock.match(/\{\{#>(.*)/)[1].trim()
+  const { title, date, tags, ...customMetadata } = metaBlock
+    .match(/.*=.*/g)
+    .map(s => s
+      .trim()
+      .split('=')
+      .map(k => k.replace(/"/g, ''))
+    )
+    .reduce((acc, tuple) => ({
+      ...acc,
+      [tuple[0]]: tuple[1]
+    }), {})
   return {
-    title: content.match(/title="(.*)"/)[1],
-    publishedAt: new Date(content.match(/date="(.*)"/)[1]),
-    tags: content.match(/tags="(.*)"/)[1].split(',').map(t => t.trim()),
+    ...customMetadata,
+    type,
+    title,
+    publishedAt: new Date(date),
+    tags: tags.split(',').map(t => t.trim()),
     content: content.match(/\n\}\}\n(.*)\{\{\/.*\}\}\n$/s)[1],
     get summary() {
       const indexOfSeeMore = this.content.indexOf('{{seeMore}}')
