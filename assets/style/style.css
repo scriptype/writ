@@ -169,6 +169,10 @@ body.dark {
     animation: fade-in 1s forwards;
 }
 
+.search-result-item {
+    margin-bottom: 2rem;
+}
+
 @keyframes fade-out {
     to {
         opacity: 0;
@@ -189,6 +193,15 @@ body.dark {
 .photo-thumbnail img {
     max-width: 200px;
     max-height: 200px;
+}
+
+.photo-thumbnail-mini {
+    display: inline-flex;
+    gap: 1.5rem;
+}
+
+.photo-thumbnail-mini img {
+    width: 90px;
 }
 
 .post {

@@ -24,7 +24,7 @@
                 </div>
             </nav>
 
-            <main class="content">
+            <main class="content" id="posts-container">
                 {{#each posts as |post|}}
                     {{#if (isPostType 'text-post' post.type)}}
                         <div class="post">

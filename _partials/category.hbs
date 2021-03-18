@@ -16,7 +16,7 @@
                 {{>search}}
             </nav>
 
-            <main class="content">
+            <main class="content" id="posts-container">
                 {{#each posts as |post|}}
                     {{#if (isPostType 'photo-post' post.type)}}
                         <a href="{{post.permalink}}" title="{{post.title}}" class="photo-thumbnail">
