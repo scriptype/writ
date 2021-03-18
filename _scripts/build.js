@@ -221,7 +221,11 @@ const parsePostData = ({ content, category, postDir }) => {
     ...customMetadata,
     type,
     title,
-    publishedAt: new Date(date),
+    publishedAt: new Date(date).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric'
+    }),
     tags: tags.split(',').map(t => t.trim()),
     content: content.match(/\n\}\}\n(.*)\{\{\/.*\}\}\n$/s)[1],
     get summary() {
