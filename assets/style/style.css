@@ -212,10 +212,6 @@ body.dark {
     max-width: 100%;
 }
 
-.post.hidden {
-    display: none;
-}
-
 .post-metadata td {
     padding-right: 5px;
 }
