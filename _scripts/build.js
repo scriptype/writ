@@ -149,6 +149,7 @@ const compileCategoryPosts = (categoryPosts) => {
         data: {
           site: settings.site,
           category: post.category,
+          publishedAt: post.publishedAt,
           ...additionalData
         }
       })
