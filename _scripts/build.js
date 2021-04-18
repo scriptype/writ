@@ -117,7 +117,7 @@ const indexCategoryPosts = (categories) => {
       })
     })
 
-    posts.sort((a, b) => b.publishedAt - a.publishedAt)
+    posts.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt))
 
     categoryPosts[category.slug] = posts
   })
@@ -291,7 +291,7 @@ const posts = Object.keys(compiledPostsByCategories)
       ...postsByCategories[categorySlug]
     ]
   }, [])
-  .sort((a, b) => b.publishedAt - a.publishedAt)
+  .sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt))
 
 compileHomePage({
   categories,
