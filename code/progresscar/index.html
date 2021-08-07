@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="{{site.description}}" />
-        <title>{{title}} / {{site.title}}</title>
+        <meta name="description" content="Welcome to my blog" />
+        <title>ProgressCar / Blog</title>
         <link rel="stylesheet" href="/assets/style/style.css">
     </head>
 
@@ -12,51 +12,44 @@
 
         <div class="container">
             <nav class="topbar">
-                <h1 class="site-title" id="dark-toggle">{{site.title}}</h1>
+                <h1 class="site-title" id="dark-toggle">Blog</h1>
             </nav>
 
             <main class="content">
                 <article class="post post--text">
                     <header class="post-header">
-                        <h2>{{title}}</h2>
+                        <h2>ProgressCar</h2>
                     </header>
                     <section class="post-content">
-                        {{> @partial-block }}
+                        <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="pavlovsk" data-slug-hash="YzppeYX" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="ProgressCar with Custom CSS Properties">
+                          <span>See the Pen <a href="https://codepen.io/pavlovsk/pen/YzppeYX">
+                          ProgressCar with Custom CSS Properties</a> by Mustafa Enes (<a href="https://codepen.io/pavlovsk">@pavlovsk</a>)
+                          on <a href="https://codepen.io">CodePen</a>.</span>
+                        </p>
+                        <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
                     </section>
                     <footer class="post-footer">
                         <section class="post-footer-section">
                             <table class="post-metadata">
                                 <tr class="post-metadata-date">
                                     <td>Published at</td>
-                                    <td>{{publishedAt}}</td>
+                                    <td>Mar 10, 2021</td>
                                 </tr>
-                                {{#if category}}
                                 <tr class="post-metadata-category">
                                     <td>Category</td>
-                                    <td><a href="{{category.permalink}}">{{category.name}}</a></td>
+                                    <td><a href="/code">Code</a></td>
                                 </tr>
-                                {{/if}}
-                                {{#if tags}}
                                 <tr class="post-metadata-tags">
                                     <td>Tags</td>
-                                    <td>{{tags}}</td>
+                                    <td>codepen</td>
                                 </tr>
-                                {{/if}}
                             </table>
                         </section>
-                        {{#if musiclist}}
                         <section class="post-footer-section">
                             <ul class="post-music-list">
-                                {{{multiLineTextList musiclist}}}
+                                <li>Metallica - Harvester of Sorrow</li>
                             </ul>
                         </section>
-                        {{/if}}
-                        {{#if prevPost}}
-                            <a href="{{prevPost.permalink}}">&laquo; {{prevPost.title}}</a>
-                        {{/if}}
-                        {{#if nextPost}}
-                            <a href="{{nextPost.permalink}}">{{nextPost.title}} &raquo;</a>
-                        {{/if}}
                     </footer>
                 </article>
             </main>

@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="{{site.description}}" />
-        <title>{{title}} / {{site.title}}</title>
+        <meta name="description" content="Welcome to my blog" />
+        <title>A Photo / Blog</title>
         <link rel="stylesheet" href="/assets/style/style.css">
     </head>
 
@@ -12,55 +12,43 @@
 
         <div class="container">
             <nav class="topbar">
-                <h1 class="site-title" id="dark-toggle">{{site.title}}</h1>
+                <h1 class="site-title" id="dark-toggle">Blog</h1>
             </nav>
 
             <main class="content">
                 <article class="post post--text">
                     <header class="post-header">
-                        <h2>{{title}}</h2>
+                        <h2>A Photo</h2>
                     </header>
                     <section class="post-content">
-                        <a href="{{originalUrl}}">
-                            <img src="{{mediumUrl}}" alt="a photo" />
+                        <a href="crescent-hdr.png">
+                            <img src="crescent-hdr-medium.png" alt="a photo" />
                         </a>
-                        <pre>{{exif}}</pre>
-                        {{> @partial-block }}
+                        <pre>
+    Camera: Canon EOS 1100D
+    Lens: EF 50mm f/1.8 II
+    Shot: 50mm f/3.2 1/100 ISO400
+  </pre>
+                          <p>A photo that I took while walking in the streets of Ullanlinna, Helsinki.</p>
                     </section>
                     <footer class="post-footer">
                         <section class="post-footer-section">
                             <table class="post-metadata">
                                 <tr class="post-metadata-date">
                                     <td>Published at</td>
-                                    <td>{{publishedAt}}</td>
+                                    <td>Mar 17, 2021</td>
                                 </tr>
-                                {{#if category}}
                                 <tr class="post-metadata-category">
                                     <td>Category</td>
-                                    <td><a href="{{category.permalink}}">{{category.name}}</a></td>
+                                    <td><a href="/photography">Photography</a></td>
                                 </tr>
-                                {{/if}}
-                                {{#if tags}}
                                 <tr class="post-metadata-tags">
                                     <td>Tags</td>
-                                    <td>{{tags}}</td>
+                                    <td>helsinki</td>
                                 </tr>
-                                {{/if}}
                             </table>
                         </section>
-                        {{#if musiclist}}
-                        <section class="post-footer-section">
-                            <ul class="post-music-list">
-                                {{{multiLineTextList musiclist}}}
-                            </ul>
-                        </section>
-                        {{/if}}
-                        {{#if prevPost}}
-                            <a href="{{prevPost.permalink}}">&laquo; {{prevPost.title}}</a>
-                        {{/if}}
-                        {{#if nextPost}}
-                            <a href="{{nextPost.permalink}}">{{nextPost.title}} &raquo;</a>
-                        {{/if}}
+                            <a href="/photography/another-photo">&laquo; Another Photo</a>
                     </footer>
                 </article>
             </main>
