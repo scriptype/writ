@@ -13,6 +13,7 @@
     ".gitignore",
     ".DS_Store",
     "_.*",
-    "settings.json"
+    "settings.json",
+    "README.md"
   ]
 }
