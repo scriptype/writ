@@ -1,5 +1,7 @@
 # Writ şeysi
 
+This is my new blog attempt and, along with it, my static site generator.
+
 ```sh
 # Setup
 npm install
