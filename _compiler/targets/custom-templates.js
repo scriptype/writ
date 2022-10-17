@@ -14,13 +14,40 @@ const indexCustomTemplates = (parentDir, wasCategory, pathList = []) => {
   return pathList
 }
 
+const parseTemplateData = (content) => {
+  const metaBlock = content.match(/\{\{.*\n.*=".*"\n\}\}/gs)[0]
+  const type = metaBlock.match(/\{\{#>(.*)/)[1].trim()
+  const { date, ...customMetadata } = metaBlock
+    .match(/.*=.*/g)
+    .map(s => s
+      .trim()
+      .split('=')
+      .map(k => k.replace(/"/g, ''))
+    )
+    .reduce((acc, tuple) => ({
+      ...acc,
+      [tuple[0]]: tuple[1]
+    }), {})
+  return {
+    ...customMetadata,
+    publishedAt: new Date(date).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric'
+    }),
+  }
+}
+
 const compileCustomTemplates = (paths, render) => {
   paths.forEach(path => {
+    const content = readFileContent(path)
+    const templateData = parseTemplateData(content)
     render({
-      content: readFileContent(path),
+      content,
       path: path.replace('.hbs', '.html'),
       data: {
-        site: settings.site
+        site: settings.site,
+        ...templateData
       }
     })
     console.log('created:', path.replace('.hbs', '.html'))
