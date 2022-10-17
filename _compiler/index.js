@@ -14,17 +14,14 @@ const {
 } = require('./helpers/fs')
 
 const createCompiler = (options) => {
-  let categories, compiledPosts, sortedCompiledPosts
+  let compiledPosts, sortedCompiledPosts
+  const targetDirectories = getTargetDirectories()
+  const categories = targetDirectories.filter(dir => dir.isCategory)
+  createSiteDir()
+  copyPaths()
+  Rendering.init()
 
   return {
-    scaffold() {
-      const targetDirectories = getTargetDirectories()
-      categories = targetDirectories.filter(dir => dir.isCategory)
-      createSiteDir()
-      copyPaths()
-      Rendering.init()
-    },
-
     compilePosts () {
       const compiled = compilePosts(categories, Rendering.render)
       compiledPosts = compiled.posts
@@ -54,7 +51,6 @@ const createCompiler = (options) => {
     },
 
     compileAll() {
-      this.scaffold()
       this.compileCustomTemplates()
       this.compilePosts()
       this.compileCategoryPages()
