@@ -1,15 +1,14 @@
+const forbiddenChars = 'äÄåÅÉéi̇ıİİöÖüÜçÇğĞşŞ'
+const slugChars = 'aaaaeeiiiioouuccggss'
+
 const getSlug = (string) => {
-  return string
-    .toLowerCase()
-    .replace(/ /g, '-')
-    .replace(/á/gi, 'a')
-    .replace(/é/gi, 'e')
-    .replace(/ç/gi, 'c')
-    .replace(/í/gi, 'i')
-    .replace(/ı/gi, 'i')
-    .replace(/ş/gi, 's')
-    .replace(/ö/gi, 'o')
-    .replace(/ü/gi, 'u')
+  string = string.trim()
+  string = string.replace(/\s+/g, '-')
+  for (let i = 0; i < forbiddenChars.length - 1; i++) {
+    const regex = new RegExp(forbiddenChars[i], 'gi')
+    string = string.replace(regex, slugChars[i])
+  }
+  return string.toLowerCase()
 }
 
 module.exports = {
