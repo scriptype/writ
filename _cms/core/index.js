@@ -7,55 +7,36 @@ const {
   compilePostsJSON
 } = require('./targets')
 const {
-  getTargetDirectories,
+  getCategories,
   createSiteDir,
   copyPaths,
   sluggifyTree
 } = require('./helpers/fs')
 
 const createCompiler = (options) => {
-  let compiledPosts, sortedCompiledPosts
-  const targetDirectories = getTargetDirectories()
-  const categories = targetDirectories.filter(dir => dir.isCategory)
+  const categories = getCategories()
   createSiteDir()
   copyPaths()
   Rendering.init()
 
   return {
-    compilePosts () {
-      const compiled = compilePosts(categories, Rendering.render)
-      compiledPosts = compiled.posts
-      sortedCompiledPosts = compiled.sortedPosts
-    },
+    compileAll() {
+      compileCustomTemplates(Rendering.render)
 
-    compileHomepage() {
-      compileHomepage({
-        categories,
-        posts: sortedCompiledPosts
-      }, Rendering.render)
-    },
+      const { posts, sortedPosts } = compilePosts(categories, Rendering.render)
 
-    compileCategoryPages() {
       compileCategoryPages({
         categories,
-        posts: compiledPosts
+        posts
       }, Rendering.render)
-    },
 
-    compileCustomTemplates() {
-      compileCustomTemplates(Rendering.render)
-    },
+      compileHomepage({
+        categories,
+        posts: sortedPosts
+      }, Rendering.render)
 
-    compilePostsJSON() {
-      compilePostsJSON(sortedCompiledPosts)
-    },
+      compilePostsJSON(sortedPosts)
 
-    compileAll() {
-      this.compileCustomTemplates()
-      this.compilePosts()
-      this.compileCategoryPages()
-      this.compileHomepage()
-      this.compilePostsJSON()
       sluggifyTree()
     }
   }

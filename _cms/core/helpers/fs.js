@@ -79,6 +79,10 @@ const getTargetDirectories = () => {
     })
 }
 
+const getCategories = () => {
+  return getTargetDirectories().filter(dir => dir.isCategory)
+}
+
 module.exports = {
   readFileContent,
   createSiteDir,
@@ -87,6 +91,7 @@ module.exports = {
   createPostsJSON,
   isTargetDirectory,
   getTargetDirectories,
+  getCategories,
   isDirectory,
   isCategory,
   isInCategory
