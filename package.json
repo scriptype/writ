@@ -6,7 +6,7 @@
     "start": "node _scripts/build.js && node _scripts/dev.js",
     "build": "node _scripts/build.js",
     "save": "sh _scripts/save.sh",
-    "publish": "git subtree push --prefix cms/site origin gh-pages"
+    "publish": "git subtree push --prefix _cms/site origin gh-pages"
   },
   "repository": {
     "type": "git",
