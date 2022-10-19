@@ -1,21 +1,16 @@
 {
   "name": "writ",
   "version": "1.0.0",
-  "description": "My blog and its own site generator",
-  "main": "app.js",
+  "description": "My blog",
   "scripts": {
     "start": "node _scripts/build.js && node _scripts/dev.js",
     "build": "node _scripts/build.js",
     "save": "sh _scripts/save.sh",
-    "publish": "git subtree push --prefix _site origin gh-pages"
+    "publish": "git subtree push --prefix cms/site origin gh-pages"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/scriptype/writ.git"
   },
-  "homepage": "https://github.com/scriptype/writ#readme",
-  "devDependencies": {
-    "browser-sync": "^2.27.4",
-    "handlebars": "4.7.7"
-  }
+  "homepage": "https://github.com/scriptype/writ#readme"
 }

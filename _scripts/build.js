@@ -1,1 +1,1 @@
-require('../_compiler')().compileAll()
+require('../_cms/core')().compileAll()
