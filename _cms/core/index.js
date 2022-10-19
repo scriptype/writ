@@ -21,19 +21,19 @@ const createCompiler = (options) => {
 
   return {
     compileAll() {
-      compileCustomTemplates(Rendering.render)
+      compileCustomTemplates()
 
-      const { posts, sortedPosts } = compilePosts(categories, Rendering.render)
+      const { posts, sortedPosts } = compilePosts(categories)
 
       compileCategoryPages({
         categories,
         posts
-      }, Rendering.render)
+      })
 
       compileHomepage({
         categories,
         posts: sortedPosts
-      }, Rendering.render)
+      })
 
       compilePostsJSON(sortedPosts)
 

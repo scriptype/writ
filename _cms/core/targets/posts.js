@@ -3,6 +3,7 @@ const { settings, SITE_DIR } = require('../settings')
 const { readFileContent, isTargetDirectory } = require('../helpers/fs')
 const { getSlug } = require('../helpers/string')
 const {
+  render,
   READ_MORE_DIVIDER,
   INDEX_TEMPLATE_FILE_NAME,
   getOutputPath,
@@ -82,7 +83,7 @@ const sortCompiledPosts = (categoryPosts, compiledPosts) => {
     .sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt))
 }
 
-const compilePost = ({ path, data }, render) => {
+const compilePost = ({ path, data }) => {
   const content = readFileContent(path)
   const newPath = getOutputPath(path)
   const output = render({
@@ -97,7 +98,7 @@ const compilePost = ({ path, data }, render) => {
   }
 }
 
-const compilePosts = (categoryPosts, render) => {
+const compilePosts = (categoryPosts) => {
   const compiledCategoryPosts = {}
   Object.keys(categoryPosts).forEach(categorySlug => {
     compiledCategoryPosts[categorySlug] = []
@@ -123,7 +124,7 @@ const compilePosts = (categoryPosts, render) => {
           ...post,
           ...additionalData
         }
-      }, render)
+      })
       compiledCategoryPosts[categorySlug].push({
         ...categoryPosts[categorySlug][postIndex],
         output
@@ -140,8 +141,8 @@ const compilePosts = (categoryPosts, render) => {
 }
 
 module.exports = {
-  compile(categories, render) {
+  compile(categories) {
     const indexedPosts = indexPosts(categories)
-    return compilePosts(indexedPosts, render)
+    return compilePosts(indexedPosts)
   }
 }

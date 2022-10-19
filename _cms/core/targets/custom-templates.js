@@ -1,7 +1,7 @@
 const fs = require('fs')
 const { settings, SITE_DIR } = require('../settings')
 const { readFileContent, isDirectory, isInCategory } = require('../helpers/fs')
-const { isTemplate, isIndexTemplate, getOutputPath, getTemplateMetadata } = require('../rendering')
+const { render, isTemplate, isIndexTemplate, getOutputPath, getTemplateMetadata } = require('../rendering')
 
 const indexCustomTemplates = (directory, customTemplates = []) => {
   const paths = fs.readdirSync(directory).map(path => `${directory}/${path}`)
@@ -31,7 +31,7 @@ const getTemplateData = (content) => {
   }
 }
 
-const compileCustomTemplates = (paths, render) => {
+const compileCustomTemplates = (paths) => {
   paths.forEach(path => {
     const content = readFileContent(path)
     const templateData = getTemplateData(content)
@@ -50,8 +50,8 @@ const compileCustomTemplates = (paths, render) => {
 }
 
 module.exports = {
-  compile(render) {
+  compile() {
     const indexedCustomTemplates = indexCustomTemplates(SITE_DIR)
-    return compileCustomTemplates(indexedCustomTemplates, render)
+    return compileCustomTemplates(indexedCustomTemplates)
   }
 }
