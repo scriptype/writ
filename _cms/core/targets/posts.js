@@ -1,46 +1,38 @@
 const fs = require('fs')
 const { settings, SITE_DIR } = require('../settings')
-const {
-  readFileContent,
-  isTargetDirectory,
-} = require('../helpers/fs')
+const { readFileContent, isTargetDirectory } = require('../helpers/fs')
 const { getSlug } = require('../helpers/string')
+const {
+  READ_MORE_DIVIDER,
+  INDEX_TEMPLATE_FILE_NAME,
+  getOutputPath,
+  parseTemplate
+} = require('../rendering')
 
 const parsePostData = ({ content, category, postDir }) => {
-  const metaBlock = content.match(/\{\{.*\n.*=".*"\n\}\}/gs)[0]
-  const type = metaBlock.match(/\{\{#>(.*)/)[1].trim()
-  const { date, tags, ...customMetadata } = metaBlock
-    .match(/.*=.*/g)
-    .map(s => s
-      .trim()
-      .split('=')
-      .map(k => k.replace(/"/g, ''))
-    )
-    .reduce((acc, tuple) => ({
-      ...acc,
-      [tuple[0]]: tuple[1]
-    }), {})
+  const { type, content: postContent, metadata } = parseTemplate(content)
+  const { date, tags, ...customMetadata } = metadata
   return {
     ...customMetadata,
     type,
+    title: postDir,
+    content: postContent,
+    category,
+    postDir,
+    tags: tags.split(',').map(t => t.trim()),
+    permalink: `/${category.slug}/${getSlug(postDir)}`,
     publishedAt: new Date(date).toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'short',
       day: 'numeric'
     }),
-    tags: tags.split(',').map(t => t.trim()),
-    content: content.match(/\n\}\}\n(.*)\{\{\/.*\}\}\n$/s)[1],
     get summary() {
-      const indexOfSeeMore = this.content.indexOf('{{seeMore}}')
-      if (indexOfSeeMore === -1) {
+      const indexOfReadMore = this.content.indexOf(READ_MORE_DIVIDER)
+      if (indexOfReadMore === -1) {
         return this.content
       }
-      return this.content.substring(0, indexOfSeeMore)
+      return this.content.substring(0, indexOfReadMore)
     },
-    permalink: `/${category.slug}/${getSlug(postDir)}`,
-    postDir,
-    title: postDir,
-    category
   }
 }
 
@@ -59,11 +51,11 @@ const indexPosts = (categories) => {
         name: dir,
         paths: fs.readdirSync(`${categoryPath}/${dir}`)
       }))
-      .filter(({ paths }) => paths.includes('index.hbs'))
+      .filter(({ paths }) => paths.includes(INDEX_TEMPLATE_FILE_NAME))
 
 
     const posts = directoriesWithPosts.map(dir => {
-      const content = readFileContent(`${categoryPath}/${dir.name}/index.hbs`)
+      const content = readFileContent(`${categoryPath}/${dir.name}/${INDEX_TEMPLATE_FILE_NAME}`)
       return parsePostData({
         content,
         category,
@@ -92,7 +84,7 @@ const sortCompiledPosts = (categoryPosts, compiledPosts) => {
 
 const compilePost = ({ path, data }, render) => {
   const content = readFileContent(path)
-  const newPath = path.replace(/\.hbs$/, '.html')
+  const newPath = getOutputPath(path)
   const output = render({
     content,
     path: `${SITE_DIR}/${newPath}`,
@@ -125,7 +117,7 @@ const compilePosts = (categoryPosts, render) => {
         }
       }
       const { output } = compilePost({
-        path: `${post.category.name}/${post.postDir}/index.hbs`,
+        path: `${post.category.name}/${post.postDir}/${INDEX_TEMPLATE_FILE_NAME}`,
         data: {
           site: settings.site,
           ...post,

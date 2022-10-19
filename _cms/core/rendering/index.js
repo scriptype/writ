@@ -31,13 +31,20 @@ const render = ({ content, path, data }) => {
   return output
 }
 
+const READ_MORE_DIVIDER = '{{seeMore}}'
+const INDEX_TEMPLATE_FILE_NAME = 'index.hbs'
 const isTemplate = path => path.match(/.hbs$/)
 const isIndexTemplate = path => path.match(/index.hbs$/)
-const getOutputPath = path => path.replace('.hbs', '.html')
+const getOutputPath = path => path.replace(/\.hbs$/, '.html')
 const getMetaBlock = content => content.match(/\{\{.*\n.*=".*"\n\}\}/gs)[0]
-const getTemplateMetadata = (content) => {
-  const metaBlock = getMetaBlock(content)
-  return metaBlock
+const getContent = content => content.match(/\n\}\}\n(.*)\{\{\/.*\}\}\n$/s)[1]
+
+const getPartialType = (content, metaBlock) => {
+  return (metaBlock || getMetaBlock(content)).match(/\{\{#>(.*)/)[1].trim()
+}
+
+const getTemplateMetadata = (content, metaBlock) => {
+  return (metaBlock || getMetaBlock(content))
     .match(/.*=.*/g)
     .map(s => s
       .trim()
@@ -50,12 +57,26 @@ const getTemplateMetadata = (content) => {
     }), {})
 }
 
+const parseTemplate = (content) => {
+  const metaBlock = getMetaBlock(content)
+  return {
+    type: getPartialType(content, metaBlock),
+    content: getContent(content),
+    metadata: getTemplateMetadata(content, metaBlock)
+  }
+}
+
 module.exports = {
   init,
   render,
   isTemplate,
+  READ_MORE_DIVIDER,
+  INDEX_TEMPLATE_FILE_NAME,
   isIndexTemplate,
   getOutputPath,
   getMetaBlock,
-  getTemplateMetadata
+  getContent,
+  getPartialType,
+  getTemplateMetadata,
+  parseTemplate
 }
