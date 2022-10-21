@@ -1,26 +1,29 @@
 const fs = require('fs')
-const { resolve } = require('path')
+const { resolve, basename, join } = require('path')
 const { execSync } = require('child_process')
 const { SITE_DIR, CATEGORY_FILE, EXCLUDED_PATHS } = require('../settings')
 const { getSlug } = require('./string')
 
 const readFileContent = (path) => fs.readFileSync(path, { encoding: 'utf-8' })
 const isDirectory = path => fs.lstatSync(path).isDirectory()
-const isMeta = path => path.includes('_') && !path.includes('.')
+const isMeta = path => path.startsWith('_') && !path.includes('.')
 const isCategory = path => fs.readdirSync(path).includes(CATEGORY_FILE)
-const isInCategory = (path, limit = 3) => {
+const isInCategory = (path, limit = 5) => {
   const parentDir = resolve(path, '..')
-  if (parentDir === SITE_DIR) {
-    return false
-  }
-  if (limit < 1) {
+  const isPathSiteRoot = resolve(path) === resolve(SITE_DIR)
+  const isOutsideOfSiteRoot = !resolve(path).startsWith(resolve(SITE_DIR))
+  if (isPathSiteRoot || isOutsideOfSiteRoot || limit < 1) {
     return false
   }
   return isCategory(path) || isInCategory(parentDir, limit - 1)
 }
 
 const createSiteDir = () => {
-  if (SITE_DIR === '.' || SITE_DIR === '..' || SITE_DIR === '../' || SITE_DIR === '/' || SITE_DIR === '~') {
+  if (!SITE_DIR) {
+    throw new Error('SITE_DIR is missing. Won\'t continue.')
+  }
+  const dirname = resolve(__dirname)
+  if (SITE_DIR === '.' || SITE_DIR === './' || SITE_DIR === '..' || SITE_DIR === '../' || SITE_DIR === '/' || SITE_DIR === '~') {
     throw new Error(`Dangerous export directory: "${SITE_DIR}". Won't continue.`)
   }
   try {
@@ -35,8 +38,8 @@ const createSiteDir = () => {
 const sluggifyTree = (directory = SITE_DIR) => {
   const files = fs.readdirSync(directory)
   files.forEach(fileName => {
-    const path = `${directory}/${fileName}`
-    const newPath = `${directory}/${getSlug(fileName)}`
+    const path = join(directory, fileName)
+    const newPath = join(directory, getSlug(fileName))
     if (isDirectory(path)) {
       sluggifyTree(path)
     }
@@ -56,13 +59,13 @@ const createPostsJSON = ({ path, posts }) => {
   console.log('posts.json created:', path)
 }
 
-const isTargetDirectory = (path) => {
-  return isDirectory(path) && !isMeta(path.split('/').reverse()[0])
+const shouldIncludeDirectory = (path) => {
+  return isDirectory(path) && !isMeta(basename(path))
 }
 
 const getTargetDirectories = () => {
   return fs.readdirSync('.')
-    .filter(isTargetDirectory)
+    .filter(shouldIncludeDirectory)
     .map(name => {
       const slug = getSlug(name)
       const directory = {
@@ -89,7 +92,7 @@ module.exports = {
   copyPaths,
   sluggifyTree,
   createPostsJSON,
-  isTargetDirectory,
+  shouldIncludeDirectory,
   getTargetDirectories,
   getCategories,
   isDirectory,

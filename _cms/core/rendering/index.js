@@ -1,9 +1,10 @@
 const fs = require('fs')
+const { format, basename, extname, join } = require('path')
 const Handlebars = require('handlebars')
 const handlebarsHelpers = require('./handlebars-helpers')
 const { readFileContent } = require('../helpers/fs')
 
-const PARTIALS_PATH = './_cms/partials'
+const PARTIALS_PATH = join('_cms', 'partials')
 
 const registerHelpers = () => {
   Object.keys(handlebarsHelpers).forEach((key) => {
@@ -13,8 +14,9 @@ const registerHelpers = () => {
 
 const registerPartials = () => {
   fs.readdirSync(PARTIALS_PATH).forEach(path => {
-    const name = path.replace('.hbs', '')
-    Handlebars.registerPartial(name, readFileContent(`${PARTIALS_PATH}/${path}`))
+    const name = path.replace(extname(path), '')
+    const partialsPath = join(PARTIALS_PATH, path)
+    Handlebars.registerPartial(name, readFileContent(partialsPath))
   })
 }
 
@@ -32,10 +34,10 @@ const render = ({ content, path, data }) => {
 }
 
 const READ_MORE_DIVIDER = '{{seeMore}}'
-const INDEX_TEMPLATE_FILE_NAME = 'index.hbs'
-const isTemplate = path => path.match(/.hbs$/)
-const isIndexTemplate = path => path.match(/index.hbs$/)
-const getOutputPath = path => path.replace(/\.hbs$/, '.html')
+const INDEX_TEMPLATE_FILE_NAME = format({ name: 'index', ext: '.hbs'})
+const isTemplate = path => extname(path) === '.hbs'
+const isIndexTemplate = path => basename(path) === INDEX_TEMPLATE_FILE_NAME
+const getOutputPath = path => path.replace(new RegExp(extname(path) + '\$'), '.html')
 const getMetaBlock = content => content.match(/\{\{.*\n.*=".*"\n\}\}/gs)[0]
 const getContent = content => content.match(/\n\}\}\n(.*)\{\{\/.*\}\}\n$/s)[1]
 

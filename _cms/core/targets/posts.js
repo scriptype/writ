@@ -1,6 +1,7 @@
 const fs = require('fs')
+const { join } = require('path')
 const { settings, SITE_DIR } = require('../settings')
-const { readFileContent, isTargetDirectory } = require('../helpers/fs')
+const { readFileContent, shouldIncludeDirectory } = require('../helpers/fs')
 const { getSlug } = require('../helpers/string')
 const {
   render,
@@ -41,22 +42,21 @@ const indexPosts = (categories) => {
   const index = {}
   categories.forEach(category => {
     const categoryPath = category.name
-    const directories = fs.readdirSync(categoryPath).filter(f => isTargetDirectory(`${categoryPath}/${f}`))
-    const directoriesWith = directories
-      .map(dir => ({
-        name: dir,
-        paths: fs.readdirSync(`${categoryPath}/${dir}`)
-      }))
+    const paths = fs.readdirSync(categoryPath)
+    const directories = paths.filter(path => {
+      return shouldIncludeDirectory(join(categoryPath, path))
+    })
     const directoriesWithPosts = directories
       .map(dir => ({
         name: dir,
-        paths: fs.readdirSync(`${categoryPath}/${dir}`)
+        paths: fs.readdirSync(join(categoryPath, dir))
       }))
       .filter(({ paths }) => paths.includes(INDEX_TEMPLATE_FILE_NAME))
 
 
     const posts = directoriesWithPosts.map(dir => {
-      const content = readFileContent(`${categoryPath}/${dir.name}/${INDEX_TEMPLATE_FILE_NAME}`)
+      const path = join(categoryPath, dir.name, INDEX_TEMPLATE_FILE_NAME)
+      const content = readFileContent(path)
       return parsePostData({
         content,
         category,
@@ -85,13 +85,14 @@ const sortCompiledPosts = (categoryPosts, compiledPosts) => {
 
 const compilePost = ({ path, data }) => {
   const content = readFileContent(path)
-  const newPath = getOutputPath(path)
+  const templateFilePath = join(SITE_DIR, path)
+  const outputFilePath = join(SITE_DIR, getOutputPath(path))
   const output = render({
     content,
-    path: `${SITE_DIR}/${newPath}`,
+    path: outputFilePath,
     data
   })
-  fs.rmSync(`${SITE_DIR}/${path}`)
+  fs.rmSync(templateFilePath)
   return {
     output,
     content
@@ -118,7 +119,7 @@ const compilePosts = (categoryPosts) => {
         }
       }
       const { output } = compilePost({
-        path: `${post.category.name}/${post.postDir}/${INDEX_TEMPLATE_FILE_NAME}`,
+        path: join(post.category.name, post.postDir, INDEX_TEMPLATE_FILE_NAME),
         data: {
           site: settings.site,
           ...post,

@@ -1,13 +1,14 @@
 const fs = require('fs')
+const { join } = require('path')
 const { settings, SITE_DIR } = require('../settings')
 const { readFileContent, isDirectory, isInCategory } = require('../helpers/fs')
 const { render, isTemplate, isIndexTemplate, getOutputPath, getTemplateMetadata } = require('../rendering')
 
 const indexCustomTemplates = (directory, customTemplates = []) => {
-  const paths = fs.readdirSync(directory).map(path => `${directory}/${path}`)
-  const isCategoryDirectory = isInCategory(directory)
+  const paths = fs.readdirSync(directory).map(path => join(directory, path))
+  const isInCategoryDirectory = isInCategory(directory)
   const templates = paths.filter(isTemplate).filter(path => {
-    if (isCategoryDirectory) {
+    if (isInCategoryDirectory) {
       return !isIndexTemplate(path)
     }
     return true
