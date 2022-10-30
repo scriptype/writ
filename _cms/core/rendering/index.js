@@ -46,6 +46,11 @@ const getOutputPath = path => {
   }
   return newPath.replace(new RegExp(extname(path) + '\$'), '.html')
 }
+const getSubPageOutputPath = path => {
+  return path
+    .replace(new RegExp(extname(path) + '\$'), '.html')
+    .replace(/^pages\//, '')
+}
 const getMetaBlock = content => content.match(/\{\{.*\n.*=".*"\n\}\}/gs)[0]
 const getContent = content => content.match(/\n\}\}\n(.*)\{\{\/.*\}\}\n$/s)[1]
 
@@ -86,6 +91,7 @@ module.exports = {
   isIndexTemplate,
   getPostNameFromTemplateFileName,
   getOutputPath,
+  getSubPageOutputPath,
   getMetaBlock,
   getContent,
   getPartialType,

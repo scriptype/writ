@@ -1,7 +1,8 @@
 const fs = require('fs')
-const { settings } = require('../settings')
+const { join } = require('path')
+const { settings, SITE_DIR } = require('../settings')
 const { readFileContent } = require('../helpers/fs')
-const { render, getOutputPath, getTemplateMetadata } = require('../rendering')
+const { render, getSubPageOutputPath, getOutputPath, getTemplateMetadata } = require('../rendering')
 
 const getTemplateData = (content) => {
   const { date, ...customMetadata } = getTemplateMetadata(content)
@@ -15,11 +16,11 @@ const getTemplateData = (content) => {
   }
 }
 
-const compileSubPages = (paths) => {
-  paths.forEach(path => {
+const compileSubPages = (subPagePaths) => {
+  subPagePaths.forEach(path => {
     const content = readFileContent(path)
     const templateData = getTemplateData(content)
-    const outputPath = getOutputPath(path)
+    const outputPath = join(SITE_DIR, getSubPageOutputPath(path))
     render({
       content,
       path: outputPath,
@@ -28,8 +29,7 @@ const compileSubPages = (paths) => {
         ...templateData
       }
     })
-    console.log('subpage created:', outputPath)
-    fs.rmSync(path)
+    console.log('subpage rendered:', outputPath)
   })
 }
 
