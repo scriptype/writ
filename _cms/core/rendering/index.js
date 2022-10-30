@@ -39,7 +39,13 @@ const SUBFOLDER_POST_FILE_NAME = format({ name: 'post', ext: '.hbs'})
 const isTemplate = path => extname(path) === '.hbs'
 const getPostNameFromTemplateFileName = fileName => fileName.replace(extname(fileName), '')
 const isIndexTemplate = path => basename(path) === INDEX_TEMPLATE_FILE_NAME
-const getOutputPath = path => path.replace(new RegExp(extname(path) + '\$'), '.html')
+const getOutputPath = path => {
+  let newPath = path
+  if (basename(path) === SUBFOLDER_POST_FILE_NAME) {
+    newPath = path.replace(new RegExp(basename(path)), 'index.html')
+  }
+  return newPath.replace(new RegExp(extname(path) + '\$'), '.html')
+}
 const getMetaBlock = content => content.match(/\{\{.*\n.*=".*"\n\}\}/gs)[0]
 const getContent = content => content.match(/\n\}\}\n(.*)\{\{\/.*\}\}\n$/s)[1]
 
