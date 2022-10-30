@@ -2,7 +2,8 @@ const fs = require('fs')
 const { join } = require('path')
 const { settings, SITE_DIR } = require('../settings')
 const { readFileContent } = require('../helpers/fs')
-const { render, getSubPageOutputPath, getOutputPath, getTemplateMetadata } = require('../rendering')
+const { getSubPageOutputPath, getOutputPath, getTemplateMetadata } = require('../helpers/rendering')
+const { render } = require('../rendering')
 
 const getTemplateData = (content) => {
   const { date, ...customMetadata } = getTemplateMetadata(content)

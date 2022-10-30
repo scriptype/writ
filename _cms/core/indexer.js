@@ -13,7 +13,7 @@ const {
   READ_MORE_DIVIDER,
   INDEX_TEMPLATE_FILE_NAME,
   SUBFOLDER_POST_FILE_NAME
-} = require('./rendering')
+} = require('./helpers/rendering')
 
 const fetchAssets = (assetsPath) => {
   return fs.readdirSync(assetsPath).map(path => ({

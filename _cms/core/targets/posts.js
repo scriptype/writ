@@ -2,7 +2,8 @@ const fs = require('fs')
 const { join } = require('path')
 const { settings, SITE_DIR } = require('../settings')
 const { readFileContent } = require('../helpers/fs')
-const { render, INDEX_TEMPLATE_FILE_NAME, getOutputPath, } = require('../rendering')
+const { INDEX_TEMPLATE_FILE_NAME, getOutputPath, } = require('../helpers/rendering')
+const { render } = require('../rendering')
 
 const compilePost = ({ path, data }) => {
   const content = readFileContent(path)

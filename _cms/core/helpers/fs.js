@@ -1,7 +1,7 @@
 const fs = require('fs')
 const { resolve, basename, join } = require('path')
 const { execSync } = require('child_process')
-const { SITE_DIR, CATEGORY_FILE, EXCLUDED_PATHS } = require('../settings')
+const { SITE_DIR, EXCLUDED_PATHS } = require('../settings')
 const { getSlug } = require('./string')
 
 const readFileContent = (path) => fs.readFileSync(path, { encoding: 'utf-8' })
