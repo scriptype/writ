@@ -1,15 +1,35 @@
 [
   {
     "musiclist": "",
+    "path": "Türkçe/Herhangi bir text post.hbs",
+    "type": "text-post",
+    "title": "Herhangi bir text post",
+    "category": {
+      "name": "Türkçe",
+      "slug": "turkce",
+      "permalink": "/turkce",
+      "path": "Türkçe"
+    },
+    "tags": [
+      "random",
+      "bir",
+      "post"
+    ],
+    "permalink": "/turkce/herhangi-bir-text-post",
+    "publishedAt": "Oct 19, 2022",
+    "summary": "  <p>Herhangi bir random post</p>\n  "
+  },
+  {
+    "musiclist": "",
+    "path": "Writings/In your eyes/index.hbs",
     "type": "text-post",
     "title": "In your eyes",
     "category": {
       "name": "Writings",
       "slug": "writings",
       "permalink": "/writings",
-      "isCategory": true
+      "path": "Writings"
     },
-    "postDir": "In your eyes",
     "tags": [
       "memories"
     ],
@@ -19,15 +39,15 @@
   },
   {
     "musiclist": "",
+    "path": "Türkçe/Bu andaydım/index.hbs",
     "type": "text-post",
     "title": "Bu andaydım",
     "category": {
       "name": "Türkçe",
       "slug": "turkce",
       "permalink": "/turkce",
-      "isCategory": true
+      "path": "Türkçe"
     },
-    "postDir": "Bu andaydım",
     "tags": [
       "kendim",
       "düşünceler"
@@ -38,15 +58,15 @@
   },
   {
     "musiclist": "",
+    "path": "Türkçe/Kabanla Yürünen Deniz Kenarları/index.hbs",
     "type": "text-post",
     "title": "Kabanla Yürünen Deniz Kenarları",
     "category": {
       "name": "Türkçe",
       "slug": "turkce",
       "permalink": "/turkce",
-      "isCategory": true
+      "path": "Türkçe"
     },
-    "postDir": "Kabanla Yürünen Deniz Kenarları",
     "tags": [
       "kendim",
       "düşünceler",
@@ -58,15 +78,15 @@
   },
   {
     "musiclist": "",
+    "path": "Türkçe/Hepsi Buymuş/index.hbs",
     "type": "text-post",
     "title": "Hepsi Buymuş",
     "category": {
       "name": "Türkçe",
       "slug": "turkce",
       "permalink": "/turkce",
-      "isCategory": true
+      "path": "Türkçe"
     },
-    "postDir": "Hepsi Buymuş",
     "tags": [
       "kendim",
       "düşünceler",
@@ -81,15 +101,15 @@
     "mediumUrl": "crescent-hdr-medium.png",
     "thumbnailUrl": "crescent-hdr-thumbnail.png",
     "exif": "",
+    "path": "Photography/A Photo/index.hbs",
     "type": "photo-post",
     "title": "A Photo",
     "category": {
       "name": "Photography",
       "slug": "photography",
       "permalink": "/photography",
-      "isCategory": true
+      "path": "Photography"
     },
-    "postDir": "A Photo",
     "tags": [
       "helsinki"
     ],
@@ -102,15 +122,15 @@
     "mediumUrl": "orion-medium.png",
     "thumbnailUrl": "orion-thumbnail.png",
     "exif": "",
+    "path": "Photography/Another Photo/index.hbs",
     "type": "photo-post",
     "title": "Another Photo",
     "category": {
       "name": "Photography",
       "slug": "photography",
       "permalink": "/photography",
-      "isCategory": true
+      "path": "Photography"
     },
-    "postDir": "Another Photo",
     "tags": [
       "national",
       "geographic",
@@ -122,15 +142,15 @@
   },
   {
     "musiclist": "",
+    "path": "Code/ProgressCar/index.hbs",
     "type": "text-post",
     "title": "ProgressCar",
     "category": {
       "name": "Code",
       "slug": "code",
       "permalink": "/code",
-      "isCategory": true
+      "path": "Code"
     },
-    "postDir": "ProgressCar",
     "tags": [
       "codepen"
     ],
@@ -140,15 +160,15 @@
   },
   {
     "musiclist": "",
+    "path": "Türkçe/İlk Şey/index.hbs",
     "type": "text-post",
     "title": "İlk Şey",
     "category": {
       "name": "Türkçe",
       "slug": "turkce",
       "permalink": "/turkce",
-      "isCategory": true
+      "path": "Türkçe"
     },
-    "postDir": "İlk Şey",
     "tags": [
       "kendim",
       "düşünceler",

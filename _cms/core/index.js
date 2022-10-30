@@ -1,42 +1,56 @@
 const Rendering = require('./rendering')
+const Indexer = require('./indexer')
 const {
   compilePosts,
   compileHomepage,
   compileCategoryPages,
-  compileCustomTemplates,
+  compileSubPages,
   compilePostsJSON
 } = require('./targets')
 const {
-  getCategories,
   createSiteDir,
   copyPaths,
   sluggifyTree
 } = require('./helpers/fs')
 
 const createCompiler = (options) => {
-  const categories = getCategories()
   createSiteDir()
   copyPaths()
   Rendering.init()
 
   return {
     compileAll() {
-      compileCustomTemplates()
+      console.log('indexing')
+      const {
+        assets,
+        subPages,
+        categories,
+        posts,
+        categoryTree
+      } = Indexer.indexSite()
 
-      const { posts, sortedPosts } = compilePosts(categories)
+      console.log('compiling subpages')
+      compileSubPages(subPages)
 
+      console.log('compiling posts')
+      compilePosts(categoryTree)
+
+      console.log('compiling categories')
       compileCategoryPages({
+        categories,
+        categoryTree
+      })
+
+      console.log('compiling homepage')
+      compileHomepage({
         categories,
         posts
       })
 
-      compileHomepage({
-        categories,
-        posts: sortedPosts
-      })
+      console.log('compiling posts.json')
+      compilePostsJSON(posts)
 
-      compilePostsJSON(sortedPosts)
-
+      console.log('sluggifying paths')
       sluggifyTree()
     }
   }

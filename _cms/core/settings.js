@@ -6,7 +6,6 @@ const defaultSettings = {
     description: 'My new blog'
   },
   exportDirectory: '_site',
-  categoryFile: 'category',
   ignorePaths: []
 }
 
@@ -19,7 +18,6 @@ const EXCLUDED_PATHS = new RegExp(settings.ignorePaths.join('|'))
 module.exports = {
   settings,
   SITE_DIR,
-  CATEGORY_FILE,
   POSTS_JSON_PATH,
   EXCLUDED_PATHS
 }

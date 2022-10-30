@@ -35,7 +35,9 @@ const render = ({ content, path, data }) => {
 
 const READ_MORE_DIVIDER = '{{seeMore}}'
 const INDEX_TEMPLATE_FILE_NAME = format({ name: 'index', ext: '.hbs'})
+const SUBFOLDER_POST_FILE_NAME = format({ name: 'post', ext: '.hbs'})
 const isTemplate = path => extname(path) === '.hbs'
+const getPostNameFromTemplateFileName = fileName => fileName.replace(extname(fileName), '')
 const isIndexTemplate = path => basename(path) === INDEX_TEMPLATE_FILE_NAME
 const getOutputPath = path => path.replace(new RegExp(extname(path) + '\$'), '.html')
 const getMetaBlock = content => content.match(/\{\{.*\n.*=".*"\n\}\}/gs)[0]
@@ -74,7 +76,9 @@ module.exports = {
   isTemplate,
   READ_MORE_DIVIDER,
   INDEX_TEMPLATE_FILE_NAME,
+  SUBFOLDER_POST_FILE_NAME,
   isIndexTemplate,
+  getPostNameFromTemplateFileName,
   getOutputPath,
   getMetaBlock,
   getContent,
