@@ -5,14 +5,6 @@ const createPostsJSON = (posts) => {
   return posts.map(({ content, output, ...rest }) => rest)
 }
 
-const getPublishedAt = (date) => {
-  return new Date(date).toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'short',
-    day: 'numeric'
-  })
-}
-
 const getPostSummary = (content) => {
   const indexOfReadMore = content.indexOf(READ_MORE_DIVIDER)
   if (indexOfReadMore === -1) {
@@ -41,36 +33,52 @@ const attachPaging = (post, postIndex, posts) => {
   }
 }
 
+const attachDates = ({ date, ...rest }) => {
+  const locale = 'en-US'
+  const publishedAt = new Date(date)
+  const publishedAtFull = publishedAt.toLocaleString(locale, { dateStyle: 'full' })
+  const publishedAtLong = publishedAt.toLocaleString(locale, { dateStyle: 'long' })
+  const publishedAtMedium = publishedAt.toLocaleString(locale, { dateStyle: 'medium' })
+  const publishedAtShort = publishedAt.toLocaleString(locale, { dateStyle: 'short' })
+  return {
+    ...rest,
+    publishedAt,
+    publishedAtFull,
+    publishedAtLong,
+    publishedAtMedium,
+    publishedAtShort
+  }
+}
+
 const sortPosts = (a, b) => {
   return new Date(b.publishedAt) - new Date(a.publishedAt)
 }
 
-const createSubPage = (subPageObject) => {
-  if (!subPageObject.content) {
-    return subPageObject
+const createSubPage = (subPageFile) => {
+  if (!subPageFile.content) {
+    return subPageFile
   }
-  const metadataResult = parseTemplate(subPageObject.content)
+  const metadataResult = parseTemplate(subPageFile.content)
   const { type, metadata } = metadataResult
   const result = {
-    ...subPageObject,
+    ...subPageFile,
     ...metadata,
-    title: subPageObject.name,
+    ...attachDates(metadata),
+    title: subPageFile.name,
     type,
     tags: metadata.tags.split(',').map(t => t.trim()),
-    publishedAt: getPublishedAt(metadata.date),
   }
   return result
 }
 
-const createPost = (postObject) => {
-  const post = parseTemplate(postObject.content)
+const createPost = (postFile) => {
+  const post = parseTemplate(postFile.content)
   return {
-    ...postObject,
+    ...postFile,
     ...post.metadata,
-    title: postObject.name,
+    title: postFile.name,
     type: post.type,
     tags: post.metadata.tags.split(',').map(t => t.trim()),
-    publishedAt: getPublishedAt(post.metadata.date),
     summary: getPostSummary(post.content),
     site: settings.site,
   }
@@ -80,6 +88,7 @@ const createCategoriesWithPosts = (categories) => {
   categories.forEach(category => {
     category.posts = category.posts
       .map(createPost)
+      .map(attachDates)
       .sort(sortPosts)
       .map(attachPaging)
   })
@@ -92,16 +101,15 @@ const createPosts = (categoriesWithPosts) => {
 }
 
 const parseIndex = (siteIndex) => {
-  const { assets, subPages, categories } = siteIndex
-  const categoriesWithPosts = createCategoriesWithPosts(categories)
+  const categories = createCategoriesWithPosts(siteIndex.categories)
+  const posts = createPosts(categories)
+  const postsJSON = createPostsJSON(posts)
   return {
-    assets,
-    subPages: subPages.map(createSubPage),
-    categories: categoriesWithPosts,
-    posts: createPosts(categoriesWithPosts),
-    get postsJSON() {
-      return createPostsJSON(this.posts)
-    }
+    assets: siteIndex.assets,
+    subPages: siteIndex.subPages.map(createSubPage).map(attachDates),
+    categories,
+    posts,
+    postsJSON
   }
 }
 

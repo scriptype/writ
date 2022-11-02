@@ -37,7 +37,7 @@ const fetchSubPages = (pagesPath, pages = []) => {
       const name = removeExtension(path.replace(/pages\//, ''))
       const slug = getSlug(name)
       const src = path
-      const pageObject = {
+      const pageFile = {
         name,
         slug,
         permalink: `/${slug}`,
@@ -45,11 +45,11 @@ const fetchSubPages = (pagesPath, pages = []) => {
       }
       if (isTemplate(path)) {
         return {
-          ...pageObject,
+          ...pageFile,
           content: readFileContent(src)
         }
       }
-      return pageObject
+      return pageFile
     })
 }
 
