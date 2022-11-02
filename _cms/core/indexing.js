@@ -86,7 +86,7 @@ const fetchDirectoriesWithPosts = (parentPath) => {
     ))
 }
 
-const collectSubFolderPosts = (category) => {
+const fetchSubFolderPosts = (category) => {
   return fetchDirectoriesWithPosts(category.name)
     .map(dir => {
       const fileName = dir.paths.find(p => {
@@ -109,7 +109,7 @@ const collectSubFolderPosts = (category) => {
     })
 }
 
-const collectFilePosts = (category) => {
+const fetchFilePosts = (category) => {
   return fs.readdirSync(category.name)
     .filter(isTemplate)
     .map(fileName => {
@@ -131,8 +131,8 @@ const collectFilePosts = (category) => {
 const fetchPostsOfCategory = (category) => {
   const paths = fs.readdirSync(category.name)
   const posts = []
-  posts.push(...collectSubFolderPosts(category))
-  posts.push(...collectFilePosts(category))
+  posts.push(...fetchSubFolderPosts(category))
+  posts.push(...fetchFilePosts(category))
   return posts
 }
 
