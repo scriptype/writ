@@ -1,39 +1,33 @@
 const fs = require('fs')
 const { join } = require('path')
-const { settings, SITE_DIR } = require('../settings')
-const { readFileContent } = require('../helpers/fs')
-const { getSubPageOutputPath, getOutputPath, getTemplateMetadata } = require('../helpers/rendering')
+const { settings, paths } = require('../settings')
+const { getSubPageOutputPath } = require('../helpers/rendering')
 const { render } = require('../rendering')
 
-const getTemplateData = (content) => {
-  const { date, ...customMetadata } = getTemplateMetadata(content)
-  return {
-    ...customMetadata,
-    publishedAt: new Date(date).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'short',
-      day: 'numeric'
-    }),
-  }
-}
-
-const compileSubPages = (subPagePaths) => {
-  subPagePaths.forEach(path => {
-    const content = readFileContent(path)
-    const templateData = getTemplateData(content)
-    const outputPath = join(SITE_DIR, getSubPageOutputPath(path))
+const compileSubPage = (subPage) => {
+  const outPath = join(paths.SITE, getSubPageOutputPath(subPage.src))
+  if (subPage.content) {
     render({
-      content,
-      path: outputPath,
+      content: subPage.content,
+      path: outPath,
       data: {
+        ...subPage,
         site: settings.site,
-        ...templateData
       }
     })
-    console.log('subpage rendered:', outputPath)
-  })
+  } else {
+    fs.cpSync(join(paths.SITE, subPage.src), outPath)
+  }
+  fs.rmSync(join(paths.SITE, subPage.src))
+}
+
+const cleanSubPagesFolder = () => {
+  fs.rmdirSync(join(paths.SITE, settings.pagesDirectory))
 }
 
 module.exports = {
-  compile: compileSubPages
+  compile: (subPages) => {
+    subPages.forEach(compileSubPage)
+    cleanSubPagesFolder()
+  },
 }

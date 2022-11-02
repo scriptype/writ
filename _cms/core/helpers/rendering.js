@@ -12,10 +12,6 @@ const isIndexTemplate = (path) => {
   return basename(path) === INDEX_TEMPLATE_FILE_NAME
 }
 
-const getPostNameFromTemplateFileName = (fileName) => {
-  return fileName.replace(extname(fileName), '')
-}
-
 const getOutputPath = (path) => {
   let newPath = path
   if (basename(path) === SUBFOLDER_POST_FILE_NAME) {
@@ -71,7 +67,6 @@ module.exports = {
   INDEX_TEMPLATE_FILE_NAME,
   SUBFOLDER_POST_FILE_NAME,
   isIndexTemplate,
-  getPostNameFromTemplateFileName,
   getOutputPath,
   getSubPageOutputPath,
   getMetaBlock,

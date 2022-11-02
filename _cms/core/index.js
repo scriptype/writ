@@ -1,5 +1,6 @@
-const Rendering = require('./rendering')
-const Indexer = require('./indexer')
+const Renderer = require('./rendering')
+const Indexer = require('./indexing')
+const Parser = require('./parsing')
 const {
   compilePosts,
   compileHomepage,
@@ -16,41 +17,36 @@ const {
 const createCompiler = (options) => {
   createSiteDir()
   copyPaths()
-  Rendering.init()
+  Renderer.init()
 
   return {
     compileAll() {
-      console.log('indexing')
+      const siteIndex = Indexer.indexSite()
       const {
         assets,
         subPages,
         categories,
         posts,
+        postsJSON,
         categoryTree
-      } = Indexer.indexSite()
+      } = Parser.parseIndex(siteIndex)
 
-      console.log('compiling subpages')
       compileSubPages(subPages)
 
-      console.log('compiling posts')
       compilePosts(categoryTree)
 
-      console.log('compiling categories')
       compileCategoryPages({
         categories,
         categoryTree
       })
 
-      console.log('compiling homepage')
       compileHomepage({
         categories,
         posts
       })
 
-      console.log('compiling posts.json')
-      compilePostsJSON(posts)
+      compilePostsJSON(postsJSON)
 
-      console.log('sluggifying paths')
       sluggifyTree()
     }
   }

@@ -1,22 +1,37 @@
+const _ = require('lodash')
 const settingsJSON = require('../settings.json')
 
+const defaultPaths = {
+  exportDirectory: '_site',
+  categoriesDirectory: '.',
+  assetsDirectory: 'assets',
+  pagesDirectory: 'pages',
+  ignorePaths: []
+}
+
+// Allow paths to be defined without a parent "paths" object in settings.json
 const defaultSettings = {
+  ...defaultPaths,
   site: {
     title: 'Blog',
     description: 'My new blog'
   },
-  exportDirectory: '_site',
-  ignorePaths: []
 }
 
 const settings = Object.assign({}, defaultSettings, settingsJSON)
-const SITE_DIR = settings.exportDirectory
-const POSTS_JSON_PATH = `${SITE_DIR}/posts.json`
-const EXCLUDED_PATHS = new RegExp(settings.ignorePaths.join('|'))
+
+const paths = {
+  SITE: settings.exportDirectory,
+  POSTS_JSON: `${settings.exportDirectory}/posts.json`,
+  CATEGORIES: settings.categoriesDirectory,
+  ASSETS: settings.assetsDirectory,
+  SUBPAGES: settings.pagesDirectory,
+  IGNORE: settings.ignorePaths,
+  IGNORE_REG_EXP: new RegExp((settings.ignorePaths).join('|'))
+}
 
 module.exports = {
-  settings,
-  SITE_DIR,
-  POSTS_JSON_PATH,
-  EXCLUDED_PATHS
+  // Avoid having duplicate of paths
+  settings: _.omit(settings, Object.keys(defaultPaths)),
+  paths
 }

@@ -1,11 +1,12 @@
 const fs = require('fs')
-const { POSTS_JSON_PATH } = require('../settings')
+const { paths } = require('../settings')
 
-const compilePostsJSON = (posts) => {
-  const path = POSTS_JSON_PATH
-  const postsJSON = posts.map(({ content, output, ...rest }) => rest)
-  fs.writeFileSync(path, JSON.stringify(postsJSON, null, 2))
-  console.log('created:', path)
+const compilePostsJSON = (postsJSON) => {
+  fs.writeFileSync(
+    paths.POSTS_JSON,
+    JSON.stringify(postsJSON, null, 2)
+  )
+  console.log('created:', paths.POSTS_JSON)
 }
 
 module.exports = {

@@ -1,11 +1,11 @@
-const path = require('path')
-const { settings, SITE_DIR } = require('../settings')
+const { join } = require('path')
+const { settings, paths } = require('../settings')
 const { render } = require('../rendering')
 
 const compileHomePage = ({ categories, posts }) => {
   render({
     content: '{{>index}}',
-    path: path.join(SITE_DIR, 'index.html'),
+    path: join(paths.SITE, 'index.html'),
     data: {
       site: settings.site,
       posts,
