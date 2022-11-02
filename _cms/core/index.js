@@ -27,26 +27,14 @@ const createCompiler = (options) => {
         subPages,
         categories,
         posts,
-        postsJSON,
-        categoryTree
+        postsJSON
       } = Parser.parseIndex(siteIndex)
 
       compileSubPages(subPages)
-
-      compilePosts(categoryTree)
-
-      compileCategoryPages({
-        categories,
-        categoryTree
-      })
-
-      compileHomepage({
-        categories,
-        posts
-      })
-
+      compilePosts(posts)
+      compileCategoryPages(categories)
+      compileHomepage({ categories, posts })
       compilePostsJSON(postsJSON)
-
       sluggifyTree()
     }
   }

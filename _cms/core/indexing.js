@@ -136,29 +136,20 @@ const fetchPostsOfCategory = (category) => {
   return posts
 }
 
-const createCategoryTree = (categories) => {
-  const tree = {}
-  categories.forEach(category => {
-    const posts = fetchPostsOfCategory(category)
-    tree[category.slug] = posts
-  })
-  return tree
-}
-
 const indexSite = () => {
   const assets = fetchAssets(settings.paths.ASSETS)
   const subPages = fetchSubPages(settings.paths.SUBPAGES)
   const categories = fetchCategories(settings.paths.CATEGORIES, {
     excludePaths: [settings.paths.ASSETS, settings.paths.SUBPAGES]
   })
-  const posts = [].concat(...categories.map(fetchPostsOfCategory))
-  const categoryTree = createCategoryTree(categories)
+  .map(category => ({
+    ...category,
+    posts: fetchPostsOfCategory(category)
+  }))
   return {
     assets,
     subPages,
     categories,
-    posts,
-    categoryTree
   }
 }
 

@@ -2,7 +2,7 @@ const { join } = require('path')
 const { settings, paths } = require('../settings')
 const { render } = require('../rendering')
 
-const compileCategoryPages = ({ categories, categoryTree }) => {
+const compileCategoryPages = (categories) => {
   categories.forEach(category => {
     render({
       content: '{{>category}}',
@@ -10,7 +10,7 @@ const compileCategoryPages = ({ categories, categoryTree }) => {
       data: {
         site: settings.site,
         category,
-        posts: categoryTree[category.slug]
+        posts: category.posts
       }
     })
   })

@@ -22,7 +22,7 @@ const compileSubPage = (subPage) => {
 }
 
 const cleanSubPagesFolder = () => {
-  fs.rmdirSync(join(paths.SITE, settings.pagesDirectory))
+  fs.rmdirSync(join(paths.SITE, paths.SUBPAGES))
 }
 
 module.exports = {
