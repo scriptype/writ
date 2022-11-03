@@ -13,6 +13,7 @@ const {
   INDEX_TEMPLATE_FILE_NAME,
   SUBFOLDER_POST_FILE_NAME
 } = require('./helpers/rendering')
+const { UNCATEGORIZED } = require('./constants')
 const settings = require('./settings')
 
 const fetchAssets = (assetsPath) => {
@@ -57,6 +58,7 @@ const fetchCategories = (parentPath, { excludePaths }) => {
   return fs.readdirSync(parentPath)
     .filter(shouldIncludeDirectory)
     .filter(dir => !excludePaths.includes(dir))
+    .concat(UNCATEGORIZED)
     .map(name => {
       const slug = getSlug(name)
       const permalink = `/${slug}`
@@ -94,38 +96,57 @@ const fetchSubFolderPosts = (category) => {
           new RegExp(`${INDEX_TEMPLATE_FILE_NAME}|${SUBFOLDER_POST_FILE_NAME}`)
         )
       })
-      const slug = getSlug(dir.name)
-      const permalink = `/${category.slug}/${slug}`
-      const src = join(category.name, dir.name, fileName)
-      const content = readFileContent(src)
-      return {
-        name: dir.name,
-        slug,
-        permalink,
-        category,
-        src,
-        content,
-      }
+      return createPostFile(fileName, category, dir.name)
     })
 }
 
 const fetchFilePosts = (category) => {
   return fs.readdirSync(category.name)
     .filter(isTemplate)
-    .map(fileName => {
-      const slug = getSlug(fileName)
-      const permalink = getOutputPath(`/${category.slug}/${slug}`)
-      const src = join(category.name, fileName)
-      const content = readFileContent(src)
-      return {
-        name: removeExtension(fileName),
-        slug,
-        permalink,
-        category,
-        src,
-        content,
-      }
-    })
+    .map(fileName => createPostFile(fileName, category))
+}
+
+const fetchUnCategorizedPosts = (categoryOfUncategorizedPosts) => {
+  return fs.readdirSync('.')
+    .filter(isTemplate)
+    .map(fileName => createPostFile(fileName, categoryOfUncategorizedPosts))
+}
+
+const getPostPermalink = (fileNameSlug, categorySlug, folderSlug) => {
+  if (categorySlug === getSlug(UNCATEGORIZED)) {
+    return join('/', fileNameSlug)
+  }
+  if (folderSlug) {
+    return join('/', categorySlug, folderSlug)
+  }
+  return join('/', categorySlug, fileNameSlug)
+}
+
+const getPostSrcPath = (fileName, category, folderName) => {
+  return [
+    category.name === UNCATEGORIZED ?  '' : category.name,
+    folderName || '',
+    fileName
+  ]
+}
+
+const createPostFile = (fileName, category, folderName) => {
+  const fileNameSlug = getSlug(fileName)
+  const categorySlug = getSlug(category.name)
+  const folderSlug = getSlug(folderName || '')
+  const name = folderName || fileName
+  const slug = getSlug(name)
+  const permalink = getPostPermalink(fileNameSlug, categorySlug, folderSlug)
+  const src = join(...getPostSrcPath(fileName, category, folderName))
+  const content = readFileContent(src)
+  return {
+    name: removeExtension(folderName || fileName),
+    slug,
+    permalink: folderName ? permalink : getOutputPath(permalink),
+    category,
+    src,
+    content,
+  }
 }
 
 const fetchPostsOfCategory = (category) => {
@@ -144,8 +165,11 @@ const indexSite = () => {
   })
   .map(category => ({
     ...category,
-    posts: fetchPostsOfCategory(category)
+    posts: category.name === UNCATEGORIZED ?
+      fetchUnCategorizedPosts(category) :
+      fetchPostsOfCategory(category)
   }))
+  .filter(category => category.posts.length)
   return {
     assets,
     subPages,

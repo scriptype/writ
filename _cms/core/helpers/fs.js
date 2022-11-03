@@ -55,7 +55,10 @@ const sluggifyTree = (directory = paths.SITE) => {
 const copyPaths = () => {
   fs.readdirSync('.')
     .filter(p => !p.match(paths.IGNORE_REG_EXP))
-    .forEach(path => execSync(`cp -R ${path} ${paths.SITE}`))
+    .forEach(path => {
+      const pathSlug = path.split(' ').join('\\ ')
+      execSync(`cp -R ${pathSlug} ${paths.SITE}`)
+    })
 }
 
 const shouldIncludeDirectory = (path) => {

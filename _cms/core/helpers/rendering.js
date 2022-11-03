@@ -12,9 +12,13 @@ const isIndexTemplate = (path) => {
   return basename(path) === INDEX_TEMPLATE_FILE_NAME
 }
 
+const isSubfolderPost = (path) => {
+  return new RegExp(`^${SUBFOLDER_POST_FILE_NAME}|${INDEX_TEMPLATE_FILE_NAME}$`).test(basename(path))
+}
+
 const getOutputPath = (path) => {
   let newPath = path
-  if (basename(path) === SUBFOLDER_POST_FILE_NAME) {
+  if (isSubfolderPost(path)) {
     newPath = path.replace(new RegExp(basename(path)), 'index.html')
   }
   return newPath.replace(new RegExp(extname(path) + '\$'), '.html')
