@@ -1,37 +1,79 @@
 const _ = require('lodash')
-const settingsJSON = require('../settings.json')
 
-const defaultPaths = {
-  exportDirectory: '_site',
-  categoriesDirectory: '.',
-  assetsDirectory: 'assets',
-  pagesDirectory: 'pages',
-  ignorePaths: []
-}
-
-// Allow paths to be defined without a parent "paths" object in settings.json
-const defaultSettings = {
-  ...defaultPaths,
-  site: {
-    title: 'Blog',
-    description: 'My new blog'
+const Settings = {
+  _settings: {
+    site: {
+      title: 'Blog',
+      description: 'My new blog'
+    },
   },
+  get settings() { return this._settings },
+
+  _paths: {
+    exportDirectory: '_site',
+    categoriesDirectory: '.',
+    assetsDirectory: 'assets',
+    pagesDirectory: 'pages',
+    ignorePaths: []
+  },
+  get paths() { return this._paths },
+
+  setPaths(settings) {
+    const keysToExclude = Object.keys(this._settings)
+    const paths = _.omit(settings, keysToExclude)
+    const {
+      exportDirectory,
+      categoriesDirectory,
+      assetsDirectory,
+      pagesDirectory,
+      ignorePaths
+    } = {
+      ...this._paths,
+      ...paths
+    }
+    this._paths = {
+      SITE: exportDirectory,
+      POSTS_JSON: `${exportDirectory}/posts.json`,
+      CATEGORIES: categoriesDirectory,
+      ASSETS: assetsDirectory,
+      SUBPAGES: pagesDirectory,
+      IGNORE: ignorePaths,
+      IGNORE_REG_EXP: new RegExp((ignorePaths).join('|'))
+    }
+  },
+
+  // Return the relevant settings from whatever object is passed,
+  // And default to the current this.settings
+  setSettings(settings) {
+    const { site } = {
+      ...this._settings,
+      ...settings
+    }
+    this._settings = {
+      site
+    }
+  },
+
+  /* Take in a settings object in the form of:
+   * {
+   *   "site": {
+   *     "title": "",
+   *     "description": ""
+   *   },
+   *   "exportDirectory": "",
+   *   "categoriesDirectory": '.',
+   *   "assetsDirectory": 'assets',
+   *   "pagesDirectory": 'pages',
+   *   "ignorePaths": []
+   * }
+   *
+   * and create settings and paths object out of it.
+   */
+  init(settings) {
+    this.setSettings(settings)
+    this.setPaths(settings)
+    return this
+  }
 }
 
-const settings = Object.assign({}, defaultSettings, settingsJSON)
-
-const paths = {
-  SITE: settings.exportDirectory,
-  POSTS_JSON: `${settings.exportDirectory}/posts.json`,
-  CATEGORIES: settings.categoriesDirectory,
-  ASSETS: settings.assetsDirectory,
-  SUBPAGES: settings.pagesDirectory,
-  IGNORE: settings.ignorePaths,
-  IGNORE_REG_EXP: new RegExp((settings.ignorePaths).join('|'))
-}
-
-module.exports = {
-  // Avoid having duplicate of paths
-  settings: _.omit(settings, Object.keys(defaultPaths)),
-  paths
-}
+module.exports = Settings

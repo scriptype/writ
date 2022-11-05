@@ -1,1 +1,1 @@
-require('../_cms/core')().compileAll()
+require('../_cms/core')(require('./writ-settings.json'))

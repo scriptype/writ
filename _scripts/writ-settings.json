@@ -1,7 +1,7 @@
 {
   "site": {
-    "title": "Blog",
-    "description": "Welcome to my blog"
+    "title": "A Blog website",
+    "description": "A future work"
   },
   "exportDirectory": "_cms/site",
   "ignorePaths": [
@@ -12,7 +12,7 @@
     ".gitignore",
     ".DS_Store",
     "_.*",
-    "settings.json",
+    "writ-settings.json",
     "README.md"
   ]
 }
