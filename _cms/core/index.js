@@ -1,6 +1,4 @@
-/*
- * We need to init Settings before everything.
- * */
+// We need to init Settings before everything.
 const setup = (settings) => {
   const Settings = require('./settings')
   Settings.init(settings)
@@ -23,27 +21,27 @@ const createCompiler = ({
   Targets,
   Settings
 }) => {
-  /* Create target folder structure */
+  // Create target folder structure
   Scaffolder.scaffoldSite()
 
-  /* Set up rendering engine */
+  // Set up rendering engine
   Renderer.init()
 
-  /* Build an index of file system objects */
+  // Build an index of file system objects
   const siteIndex = Indexer.indexSite()
 
-  /* Parse content and metadata */
+  // Parse content and metadata
   const contentModel = Parser.parseIndex(siteIndex)
   const { assets, subPages, categories, posts, postsJSON } = contentModel
 
-  /* Compile contentModel into processed file system objects */
+  // Compile contentModel into processed file system objects
   Targets.compileSubPages(subPages)
   Targets.compilePosts(posts)
   Targets.compileCategoryPages(categories)
   Targets.compileHomepage({ categories, posts })
   Targets.compilePostsJSON(postsJSON)
 
-  /* Finalize the target folder */
+  // Finalize the target folder
   Scaffolder.finalizeSite()
 }
 
