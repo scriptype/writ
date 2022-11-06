@@ -12,5 +12,8 @@
     "type": "git",
     "url": "git+https://github.com/scriptype/writ.git"
   },
-  "homepage": "https://github.com/scriptype/writ#readme"
+  "homepage": "https://github.com/scriptype/writ#readme",
+  "devDependencies": {
+    "browser-sync": "^2.27.4"
+  }
 }

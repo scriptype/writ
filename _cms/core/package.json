@@ -12,7 +12,6 @@
   },
   "homepage": "https://github.com/scriptype/writ-cms#readme",
   "devDependencies": {
-    "handlebars": "4.7.7",
-    "browser-sync": "^2.27.4"
+    "handlebars": "4.7.7"
   }
 }
