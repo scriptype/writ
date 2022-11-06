@@ -1,19 +1,20 @@
 const { execSync } = require('child_process')
 const bs = require('browser-sync').create()
-const settings = require('../settings.json')
-
-const ignored = new RegExp([
-  settings.exportDirectory,
-  'node_modules',
-  '.git',
-  '.DS_Store',
-  'package.json',
-  'package-lock.json'
-].join('|'))
+const writSettings = require('./writ-settings.json')
 
 const watchOptions = {
-  ignored,
-  ignoreInitial: true
+  ignoreInitial: true,
+  ignored: new RegExp(
+    [
+      writSettings.exportDirectory,
+      'node_modules',
+      '.git',
+      '.DS_Store',
+      'package.json',
+      'package-lock.json',
+      '_scripts'
+    ].join('|')
+  )
 }
 
 bs.watch('.', watchOptions, (e, file) => {
@@ -21,12 +22,11 @@ bs.watch('.', watchOptions, (e, file) => {
   execSync('node ./_scripts/build.js', {
     stdio: [process.stdin, process.stdout, process.stderr]
   })
-  console.log('Rebuilt.')
   bs.reload()
 });
 
 bs.init({
-  server: '_site',
+  server: writSettings.exportDirectory,
   watch: true,
   ui: false
 });
