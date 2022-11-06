@@ -7,13 +7,9 @@ const {
   shouldIncludeDirectory,
   removeExtension
 } = require('./helpers/fs')
-const {
-  isTemplate,
-  getOutputPath,
-  INDEX_TEMPLATE_FILE_NAME,
-  SUBFOLDER_POST_FILE_NAME
-} = require('./helpers/rendering')
+const { isSubfolderPost, getOutputPath } = require('./helpers/rendering')
 const { UNCATEGORIZED } = require('./constants')
+const { templateParser } = require('./rendering')
 const settings = require('./settings')
 
 const fetchAssets = (assetsPath) => {
@@ -44,7 +40,7 @@ const fetchSubPages = (pagesPath, pages = []) => {
         permalink: `/${slug}`,
         src
       }
-      if (isTemplate(path)) {
+      if (templateParser.isTemplate(path)) {
         return {
           ...pageFile,
           content: readFileContent(src)
@@ -82,33 +78,26 @@ const fetchDirectoriesWithPosts = (parentPath) => {
       name: dir,
       paths: fs.readdirSync(join(parentPath, dir))
     }))
-    .filter(({ paths }) => (
-      paths.includes(INDEX_TEMPLATE_FILE_NAME) ||
-      paths.includes(SUBFOLDER_POST_FILE_NAME)
-    ))
+    .filter(({ paths }) => paths.some(isSubfolderPost))
 }
 
 const fetchSubFolderPosts = (category) => {
   return fetchDirectoriesWithPosts(category.name)
     .map(dir => {
-      const fileName = dir.paths.find(p => {
-        return p.match(
-          new RegExp(`${INDEX_TEMPLATE_FILE_NAME}|${SUBFOLDER_POST_FILE_NAME}`)
-        )
-      })
+      const fileName = dir.paths.find(isSubfolderPost)
       return createPostFile(fileName, category, dir.name)
     })
 }
 
 const fetchFilePosts = (category) => {
   return fs.readdirSync(category.name)
-    .filter(isTemplate)
+    .filter(templateParser.isTemplate)
     .map(fileName => createPostFile(fileName, category))
 }
 
 const fetchUnCategorizedPosts = (categoryOfUncategorizedPosts) => {
   return fs.readdirSync('.')
-    .filter(isTemplate)
+    .filter(templateParser.isTemplate)
     .map(fileName => createPostFile(fileName, categoryOfUncategorizedPosts))
 }
 

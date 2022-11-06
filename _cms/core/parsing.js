@@ -1,17 +1,5 @@
 const { settings, paths } = require('./settings')
-const { parseTemplate, READ_MORE_DIVIDER } = require('./helpers/rendering')
-
-const createPostsJSON = (posts) => {
-  return posts.map(({ content, output, ...rest }) => rest)
-}
-
-const getPostSummary = (content) => {
-  const indexOfReadMore = content.indexOf(READ_MORE_DIVIDER)
-  if (indexOfReadMore === -1) {
-    return content
-  }
-  return content.substring(0, indexOfReadMore)
-}
+const { templateParser } = require('./rendering')
 
 const attachPaging = (post, postIndex, posts) => {
   const paging = {}
@@ -58,7 +46,7 @@ const createSubPage = (subPageFile) => {
   if (!subPageFile.content) {
     return subPageFile
   }
-  const metadataResult = parseTemplate(subPageFile.content)
+  const metadataResult = templateParser.parseTemplate(subPageFile.content)
   const { type, metadata } = metadataResult
   const result = {
     ...subPageFile,
@@ -72,14 +60,14 @@ const createSubPage = (subPageFile) => {
 }
 
 const createPost = (postFile) => {
-  const post = parseTemplate(postFile.content)
+  const post = templateParser.parseTemplate(postFile.content)
   return {
     ...postFile,
     ...post.metadata,
     title: postFile.name,
     type: post.type,
     tags: post.metadata.tags.split(',').map(t => t.trim()),
-    summary: getPostSummary(post.content),
+    summary: post.summary,
     site: settings.site,
   }
 }
@@ -98,6 +86,10 @@ const createCategoriesWithPosts = (categories) => {
 const createPosts = (categoriesWithPosts) => {
   const posts = [].concat(...categoriesWithPosts.map(({ posts }) => posts))
   return posts.sort(sortPosts)
+}
+
+const createPostsJSON = (posts) => {
+  return posts.map(({ content, output, ...rest }) => rest)
 }
 
 const parseIndex = (siteIndex) => {
