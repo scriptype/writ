@@ -56,15 +56,15 @@ const Settings = {
 
   /* Take in a settings object in the form of:
    * {
-   *   "site": {
-   *     "title": "",
-   *     "description": ""
+   *   site?: {
+   *     title?: String,
+   *     description?: String
    *   },
-   *   "exportDirectory": "",
-   *   "categoriesDirectory": "",
-   *   "assetsDirectory": "",
-   *   "pagesDirectory": "",
-   *   "ignorePaths": []
+   *   exportDirectory?: String,
+   *   categoriesDirectory?: String,
+   *   assetsDirectory?: String,
+   *   pagesDirectory?: String,
+   *   ignorePaths?: String[]
    * }
    *
    * and create settings and paths object out of it.
