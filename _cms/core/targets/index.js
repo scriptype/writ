@@ -1,7 +1,7 @@
 module.exports = {
-  compilePosts: require('./posts').compile,
+  compilePosts: require('./post').compile,
   compileHomepage: require('./homepage').compile,
-  compileCategoryPages: require('./category-pages').compile,
-  compileSubPages: require('./subpages').compile,
+  compileCategoryPages: require('./category-page').compile,
+  compileSubPages: require('./subpage').compile,
   compilePostsJSON: require('./posts-json').compile
 }
