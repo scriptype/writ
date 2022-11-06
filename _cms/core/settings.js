@@ -61,9 +61,9 @@ const Settings = {
    *     "description": ""
    *   },
    *   "exportDirectory": "",
-   *   "categoriesDirectory": '.',
-   *   "assetsDirectory": 'assets',
-   *   "pagesDirectory": 'pages',
+   *   "categoriesDirectory": "",
+   *   "assetsDirectory": "",
+   *   "pagesDirectory": "",
    *   "ignorePaths": []
    * }
    *
