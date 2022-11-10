@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "My blog",
   "scripts": {
-    "start": "node _cms/start.js",
-    "publish": "git subtree push --prefix _cms/site origin gh-pages"
+    "start": "node start.js",
+    "publish": "git subtree push --prefix site origin gh-pages"
   },
   "repository": {
     "type": "git",

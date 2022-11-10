@@ -3,7 +3,9 @@
     "title": "A Blog website",
     "description": "A future work"
   },
-  "exportDirectory": "_cms/site",
+  "assetsDirectory": "assets",
+  "exportDirectory": "site",
+  "pagesDirectory": "pages",
   "ignorePaths": [
     "node_modules",
     "package.json",
@@ -12,6 +14,9 @@
     ".gitignore",
     ".DS_Store",
     "_.*",
+    "settings.json",
+    "start.js",
+    "site",
     "README.md"
   ]
 }
