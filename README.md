@@ -1,17 +1,17 @@
 # Writ şeysi
 
-This is my new blog attempt and, along with it, my static site generator.
+This is my new blog attempt that uses my new cms attempt.
 
 ```sh
 # Setup
 npm install
 
-# Dev
-npm start
-npx http-server _site
+# First time dev
+# First, clone writ-cms to parent directory. And then:
+npm link writ-cms ../writ-cms
 
-# Quickly commit and push stuff
-npm run save
+# Continuing the dev
+npm start
 
 # Publish new content on gh-pages
 npm run publish
