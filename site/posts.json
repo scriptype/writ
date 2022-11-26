@@ -1,5 +1,45 @@
 [
   {
+    "name": "Öle böle.hbs",
+    "path": "Öle böle.hbs",
+    "depth": 0,
+    "extension": ".hbs",
+    "type": "post",
+    "data": {
+      "date": "2022-11-26, 15:28",
+      "tags": [
+        "öyle"
+      ],
+      "musiclist": "",
+      "publishedAt": "2022-11-26T13:28:00.000Z",
+      "publishedAtFull": "Saturday, November 26, 2022",
+      "publishedAtLong": "November 26, 2022",
+      "publishedAtMedium": "Nov 26, 2022",
+      "publishedAtShort": "11/26/22",
+      "type": "text-post",
+      "content": "  <p>Öyle</p>\n  {{seeMore}}\n  <p>Öyle ya da böyle</p>\n",
+      "summary": "  <p>Öyle</p>\n  ",
+      "title": "Öle böle",
+      "slug": "ole-bole",
+      "permalink": "/ole-bole",
+      "category": {
+        "name": "Uncategorized",
+        "permalink": "/uncategorized"
+      },
+      "site": {
+        "title": "A Blog website",
+        "description": "A future work"
+      },
+      "links": {
+        "prevPost": {
+          "title": "Son Şey",
+          "permalink": "/son-sey"
+        },
+        "relevantPosts": []
+      }
+    }
+  },
+  {
     "name": "Son Şey.hbs",
     "path": "Son Şey.hbs",
     "depth": 0,
@@ -31,6 +71,10 @@
         "description": "A future work"
       },
       "links": {
+        "nextPost": {
+          "title": "Öle böle",
+          "permalink": "/ole-bole"
+        },
         "relevantPosts": []
       }
     }
