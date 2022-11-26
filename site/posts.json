@@ -1,340 +1,617 @@
 [
   {
-    "name": "Son Şey",
-    "slug": "son-sey.hbs",
-    "permalink": "/son-sey.html",
-    "category": {
-      "name": "Uncategorized",
-      "slug": "uncategorized",
-      "permalink": "/uncategorized",
-      "src": "Uncategorized"
-    },
-    "src": "Son Şey.hbs",
-    "tags": [
-      "son"
-    ],
-    "musiclist": "",
-    "title": "Son Şey",
-    "type": "text-post",
-    "summary": "  <p>Sondan bir önceki paragraf.</p>\n  ",
-    "site": {
-      "title": "A Blog website",
-      "description": "A future work"
-    },
-    "publishedAt": "2022-11-03T02:25:00.000Z",
-    "publishedAtFull": "Thursday, November 3, 2022",
-    "publishedAtLong": "November 3, 2022",
-    "publishedAtMedium": "Nov 3, 2022",
-    "publishedAtShort": "11/3/22"
-  },
-  {
-    "name": "Herhangi bir text post",
-    "slug": "herhangi-bir-text-post.hbs",
-    "permalink": "/turkce/herhangi-bir-text-post.html",
-    "category": {
-      "name": "Türkçe",
-      "slug": "turkce",
-      "permalink": "/turkce",
-      "src": "Türkçe"
-    },
-    "src": "Türkçe/Herhangi bir text post.hbs",
-    "tags": [
-      "random",
-      "bir",
-      "post"
-    ],
-    "musiclist": "",
-    "title": "Herhangi bir text post",
-    "type": "text-post",
-    "summary": "  <p>Herhangi bir random post</p>\n  ",
-    "site": {
-      "title": "A Blog website",
-      "description": "A future work"
-    },
-    "publishedAt": "2022-10-19T18:44:00.000Z",
-    "publishedAtFull": "Wednesday, October 19, 2022",
-    "publishedAtLong": "October 19, 2022",
-    "publishedAtMedium": "Oct 19, 2022",
-    "publishedAtShort": "10/19/22",
-    "prevPost": {
-      "title": "Bu andaydım",
-      "permalink": "/turkce/bu-andaydim.html"
+    "name": "Son Şey.hbs",
+    "path": "Son Şey.hbs",
+    "depth": 0,
+    "extension": ".hbs",
+    "type": "post",
+    "data": {
+      "date": "2022-11-03, 04:25",
+      "tags": [
+        "son"
+      ],
+      "musiclist": "",
+      "publishedAt": "2022-11-03T02:25:00.000Z",
+      "publishedAtFull": "Thursday, November 3, 2022",
+      "publishedAtLong": "November 3, 2022",
+      "publishedAtMedium": "Nov 3, 2022",
+      "publishedAtShort": "11/3/22",
+      "type": "text-post",
+      "content": "  <p>Sondan bir önceki paragraf.</p>\n  {{seeMore}}\n  <p>Son paragraf.</p>\n",
+      "summary": "  <p>Sondan bir önceki paragraf.</p>\n  ",
+      "title": "Son Şey",
+      "slug": "son-sey",
+      "permalink": "/son-sey",
+      "category": {
+        "name": "Uncategorized",
+        "permalink": "/uncategorized"
+      },
+      "site": {
+        "title": "A Blog website",
+        "description": "A future work"
+      },
+      "links": {
+        "relevantPosts": []
+      }
     }
   },
   {
-    "name": "In your eyes",
-    "slug": "in-your-eyes.hbs",
-    "permalink": "/writings/in-your-eyes.html",
-    "category": {
-      "name": "Writings",
-      "slug": "writings",
-      "permalink": "/writings",
-      "src": "Writings"
-    },
-    "src": "Writings/In your eyes.hbs",
-    "tags": [
-      "memories"
-    ],
-    "musiclist": "",
-    "title": "In your eyes",
-    "type": "text-post",
-    "summary": "  <p>This song from The Weeknd, \"In Your Eyes\", has had an interesting effect on me, maybe a bit of a nostalgic, but somehow a tickling, problematic feeling, if that makes sense at all. It's hard to explain at first, so bear with me until I figure out how to put it.</p>\n  ",
-    "site": {
-      "title": "A Blog website",
-      "description": "A future work"
-    },
-    "publishedAt": "2021-06-10T19:17:00.000Z",
-    "publishedAtFull": "Thursday, June 10, 2021",
-    "publishedAtLong": "June 10, 2021",
-    "publishedAtMedium": "Jun 10, 2021",
-    "publishedAtShort": "6/10/21"
-  },
-  {
-    "name": "Bu andaydım",
-    "slug": "bu-andaydim.hbs",
-    "permalink": "/turkce/bu-andaydim.html",
-    "category": {
-      "name": "Türkçe",
-      "slug": "turkce",
-      "permalink": "/turkce",
-      "src": "Türkçe"
-    },
-    "src": "Türkçe/Bu andaydım.hbs",
-    "tags": [
-      "kendim",
-      "düşünceler"
-    ],
-    "musiclist": "",
-    "title": "Bu andaydım",
-    "type": "text-post",
-    "summary": "  <p>İşte tam bu andaydım. Düşündüm. Evimde kendime düşünmek için bir alan ayırmıştım ve orada uzanmış düşünüyordum.</p>\n  <p>Bazen Zindan Adası filmi aklıma geliyor.</p>\n  <p>Birliktelikten güçlük doğar.</p>\n  <p>Öykünmeler, öyle ya da böyle sanmalar ve sanılmalar. Bekleni.</p>\n  <p>Tembel bi adam olduğumu fırsat buldukça dile getirmek hoşuma gidiyor. Altı üstü bi doğrama tahtasını yağlamak, tahtaya masaj çekmek filan bana göre değil, ben tembel biriyim. Arada bi, kullandıktan sonra falan, yıkamaya okeyim yalnız.</p>\n  <p>Müzik zevkim gittikçe soyut olandan yana tavır alıyor. Beni karşısına almış. Müzik zevkimle yüzleşiyorum.</p>\n  <p>Birliktelik. Güçsüzlükten doğan ama güçlüklere evrilen. Sadece düşüncesi bile o kadar güçlü güçlükler tanıtıyor, tanımlıyor ve öyle güçsüzlük tanıları koyuyor ki. İradesiz, serbest, sarhoş gönüllülerin hayat bağını çözer.</p>\n  <p>Birlikteliksizlik güçten doğar.\n  <p>Waiting for a cup of sexy hentai superstar.</p>\n",
-    "site": {
-      "title": "A Blog website",
-      "description": "A future work"
-    },
-    "publishedAt": "2021-05-17T23:41:00.000Z",
-    "publishedAtFull": "Tuesday, May 18, 2021",
-    "publishedAtLong": "May 18, 2021",
-    "publishedAtMedium": "May 18, 2021",
-    "publishedAtShort": "5/18/21",
-    "nextPost": {
+    "name": "Herhangi bir text post.hbs",
+    "path": "Türkçe/Herhangi bir text post.hbs",
+    "depth": 1,
+    "extension": ".hbs",
+    "type": "post",
+    "data": {
+      "date": "2022-10-19, 21:44",
+      "tags": [
+        "random",
+        "bir",
+        "post"
+      ],
+      "musiclist": "",
+      "publishedAt": "2022-10-19T18:44:00.000Z",
+      "publishedAtFull": "Wednesday, October 19, 2022",
+      "publishedAtLong": "October 19, 2022",
+      "publishedAtMedium": "Oct 19, 2022",
+      "publishedAtShort": "10/19/22",
+      "type": "text-post",
+      "content": "  <p>Herhangi bir random post</p>\n  {{seeMore}}\n  <p>Henna bebek</p>\n",
+      "summary": "  <p>Herhangi bir random post</p>\n  ",
       "title": "Herhangi bir text post",
-      "permalink": "/turkce/herhangi-bir-text-post.html"
-    },
-    "prevPost": {
-      "title": "Kabanla Yürünen Deniz Kenarları",
-      "permalink": "/turkce/kabanla-yurunen-deniz-kenarlari.html"
+      "slug": "herhangi-bir-text-post",
+      "permalink": "/turkce/herhangi-bir-text-post",
+      "category": {
+        "name": "Türkçe",
+        "permalink": "/turkce"
+      },
+      "site": {
+        "title": "A Blog website",
+        "description": "A future work"
+      },
+      "links": {
+        "prevPost": {
+          "title": "Bu andaydım",
+          "permalink": "/turkce/bu-andaydim"
+        },
+        "relevantPosts": []
+      }
     }
   },
   {
-    "name": "Kabanla Yürünen Deniz Kenarları",
-    "slug": "kabanla-yurunen-deniz-kenarlari.hbs",
-    "permalink": "/turkce/kabanla-yurunen-deniz-kenarlari.html",
-    "category": {
-      "name": "Türkçe",
-      "slug": "turkce",
-      "permalink": "/turkce",
-      "src": "Türkçe"
-    },
-    "src": "Türkçe/Kabanla Yürünen Deniz Kenarları.hbs",
-    "tags": [
-      "kendim",
-      "düşünceler",
-      "sarhoş"
-    ],
-    "musiclist": "",
-    "title": "Kabanla Yürünen Deniz Kenarları",
-    "type": "text-post",
-    "summary": "  <p>Aklımda tuttuğum onca yazı fikri hep bu anlarda yok oluyor. Yeni eve taşınmama 12 gün kalmış.</p>\n  <p>Sevgi, öfke ve nefret arasında dalgalanıyorum. Sağlıklı kalabilmem için sevgim yavaş yavaş ölmek zorunda, kanal tedavisi gibi. Yerini hissizlik ve yeni bir ölüm almalı. Önceki ölümler gibi; onun da yasını tutarım, bir süre özlem duyarım, bir süre aklımda ölçer tartarım ve o da sonunda kabuğunu tutar.</p>\n  <p>Yazıldığı gibi kalan mesajlar vardır. Yazıldığı gibi -görülmeden– silinen mesajlar da vardır. Öfke ve nefret de vardırlar. Gururdur ve saygısızlıktandır. Sinire saplanan bir ve son iğnedir.</p>\n  <p>Aptal dalga sesleri ile mi hüzünlenmeye zorlamalı yoksa aptal Aphex Twin ile mi uyuşmaya çalışmalı? Aptal Clubhouse. Bu yazıyı kabanımla yazıyorum. Askılıkta asılı kendisi. Kabanımı seviyorum. O bir yaz kabanıdır. Deniz kenarında yürürkendir tüm karmaşası ve hayat görüşü.</p>\n  <p>Bu kez pek bi' zorunlu aptallık.</p>\n",
-    "site": {
-      "title": "A Blog website",
-      "description": "A future work"
-    },
-    "publishedAt": "2021-04-17T19:24:00.000Z",
-    "publishedAtFull": "Saturday, April 17, 2021",
-    "publishedAtLong": "April 17, 2021",
-    "publishedAtMedium": "Apr 17, 2021",
-    "publishedAtShort": "4/17/21",
-    "nextPost": {
+    "name": "In your eyes.hbs",
+    "path": "Writings/In your eyes.hbs",
+    "depth": 1,
+    "extension": ".hbs",
+    "type": "post",
+    "data": {
+      "date": "2021-06-10, 22:17",
+      "tags": [
+        "memories"
+      ],
+      "musiclist": "",
+      "publishedAt": "2021-06-10T19:17:00.000Z",
+      "publishedAtFull": "Thursday, June 10, 2021",
+      "publishedAtLong": "June 10, 2021",
+      "publishedAtMedium": "Jun 10, 2021",
+      "publishedAtShort": "6/10/21",
+      "type": "text-post",
+      "content": "  <p>This song from The Weeknd, \"In Your Eyes\", has had an interesting effect on me, maybe a bit of a nostalgic, but somehow a tickling, problematic feeling, if that makes sense at all. It's hard to explain at first, so bear with me until I figure out how to put it.</p>\n  {{seeMore}}\n  <p>When I heard it the first time, it didn't mean much. The second time, I started remembering. I hadn't understood yet what I was remembering -because the feelings come to me before the actual memories that created those feelings- but I knew it wasn't the kind of memory that I'd been used to recall often. Well, I'm not exactly proud of my memory, anyway. It had finally struck me on the third time, <em>then</em> I realized why it gave me this mixture of feelings, most prominently, a half-baked kind of pain. I believe certain songs have this exact effect on people, making them feel uncomfortable all of a sudden, giving a certain memory a personality, and later, potentially, driving people obsessed about it.</p>\n  <p>It was this time when we used to attend to classes at Nikos Karelias (Later they changed the name, for obvious reasons. I mean, tobacco company owner's name for a school?) back in 2017 in Kalamata. I know, such a memory, right? But everybody has to have some -utterly cheesy- memories from high school, and here's one of mine.</p>\n  <p>5 months of summer, and the rest is mild, the area had its rural charm with the vast olive gardens starting just around the outskirts of suburbs, mostly a certain, familiar type of middle class people exchanging some bucks with the ingredients of a decent and usual dinner in a small but useful market near the city hall. And it had a pleasantly ordinary seashore. There, if you tried hard enough, you could get the taste of salt from the wind. Mostly an indifferent place compared to other coastal cities of the country.<p>\n  <p>I had to walk back and forth between my home and the school everyday, as they weren't too far apart. When I occasionally took the main road, just for a change, I used to see groups of seasonal workers being carried over to the gardens in so-so trucks, that had been used for the last 2 centuries, of garden owners. And the gardens looked at least a ten thousand years old. What different story could anyone ever tell about them anyway? They were just a bunch of ten or eleven or twelve thousand year old olive gardens. Well, I guess I also liked the olives. Everybody liked the olives, no doubt about it.</p>\n",
+      "summary": "  <p>This song from The Weeknd, \"In Your Eyes\", has had an interesting effect on me, maybe a bit of a nostalgic, but somehow a tickling, problematic feeling, if that makes sense at all. It's hard to explain at first, so bear with me until I figure out how to put it.</p>\n  ",
+      "title": "In your eyes",
+      "slug": "in-your-eyes",
+      "permalink": "/writings/in-your-eyes",
+      "category": {
+        "name": "Writings",
+        "permalink": "/writings"
+      },
+      "site": {
+        "title": "A Blog website",
+        "description": "A future work"
+      },
+      "links": {
+        "relevantPosts": []
+      }
+    }
+  },
+  {
+    "name": "Bu andaydım.hbs",
+    "path": "Türkçe/Bu andaydım.hbs",
+    "depth": 1,
+    "extension": ".hbs",
+    "type": "post",
+    "data": {
+      "date": "2021-05-18, 02:41",
+      "tags": [
+        "kendim",
+        "düşünceler"
+      ],
+      "musiclist": "",
+      "publishedAt": "2021-05-17T23:41:00.000Z",
+      "publishedAtFull": "Tuesday, May 18, 2021",
+      "publishedAtLong": "May 18, 2021",
+      "publishedAtMedium": "May 18, 2021",
+      "publishedAtShort": "5/18/21",
+      "type": "text-post",
+      "content": "  <p>İşte tam bu andaydım. Düşündüm. Evimde kendime düşünmek için bir alan ayırmıştım ve orada uzanmış düşünüyordum.</p>\n  <p>Bazen Zindan Adası filmi aklıma geliyor.</p>\n  <p>Birliktelikten güçlük doğar.</p>\n  <p>Öykünmeler, öyle ya da böyle sanmalar ve sanılmalar. Bekleni.</p>\n  <p>Tembel bi adam olduğumu fırsat buldukça dile getirmek hoşuma gidiyor. Altı üstü bi doğrama tahtasını yağlamak, tahtaya masaj çekmek filan bana göre değil, ben tembel biriyim. Arada bi, kullandıktan sonra falan, yıkamaya okeyim yalnız.</p>\n  <p>Müzik zevkim gittikçe soyut olandan yana tavır alıyor. Beni karşısına almış. Müzik zevkimle yüzleşiyorum.</p>\n  <p>Birliktelik. Güçsüzlükten doğan ama güçlüklere evrilen. Sadece düşüncesi bile o kadar güçlü güçlükler tanıtıyor, tanımlıyor ve öyle güçsüzlük tanıları koyuyor ki. İradesiz, serbest, sarhoş gönüllülerin hayat bağını çözer.</p>\n  <p>Birlikteliksizlik güçten doğar.\n  <p>Waiting for a cup of sexy hentai superstar.</p>\n",
+      "summary": "  <p>İşte tam bu andaydım. Düşündüm. Evimde kendime düşünmek için bir alan ayırmıştım ve orada uzanmış düşünüyordum.</p>\n  <p>Bazen Zindan Adası filmi aklıma geliyor.</p>\n  <p>Birliktelikten güçlük doğar.</p>\n  <p>Öykünmeler, öyle ya da böyle sanmalar ve sanılmalar. Bekleni.</p>\n  <p>Tembel bi adam olduğumu fırsat buldukça dile getirmek hoşuma gidiyor. Altı üstü bi doğrama tahtasını yağlamak, tahtaya masaj çekmek filan bana göre değil, ben tembel biriyim. Arada bi, kullandıktan sonra falan, yıkamaya okeyim yalnız.</p>\n  <p>Müzik zevkim gittikçe soyut olandan yana tavır alıyor. Beni karşısına almış. Müzik zevkimle yüzleşiyorum.</p>\n  <p>Birliktelik. Güçsüzlükten doğan ama güçlüklere evrilen. Sadece düşüncesi bile o kadar güçlü güçlükler tanıtıyor, tanımlıyor ve öyle güçsüzlük tanıları koyuyor ki. İradesiz, serbest, sarhoş gönüllülerin hayat bağını çözer.</p>\n  <p>Birlikteliksizlik güçten doğar.\n  <p>Waiting for a cup of sexy hentai superstar.</p>\n",
       "title": "Bu andaydım",
-      "permalink": "/turkce/bu-andaydim.html"
-    },
-    "prevPost": {
-      "title": "Hepsi Buymuş",
-      "permalink": "/turkce/hepsi-buymus"
+      "slug": "bu-andaydim",
+      "permalink": "/turkce/bu-andaydim",
+      "category": {
+        "name": "Türkçe",
+        "permalink": "/turkce"
+      },
+      "site": {
+        "title": "A Blog website",
+        "description": "A future work"
+      },
+      "links": {
+        "nextPost": {
+          "title": "Herhangi bir text post",
+          "permalink": "/turkce/herhangi-bir-text-post"
+        },
+        "prevPost": {
+          "title": "Kabanla Yürünen Deniz Kenarları",
+          "permalink": "/turkce/kabanla-yurunen-deniz-kenarlari"
+        },
+        "relevantPosts": [
+          {
+            "title": "Kabanla Yürünen Deniz Kenarları",
+            "permalink": "/turkce/kabanla-yurunen-deniz-kenarlari",
+            "category": {
+              "name": "Türkçe",
+              "permalink": "/turkce"
+            },
+            "relevancyScore": 2
+          },
+          {
+            "title": "Hepsi Buymuş",
+            "permalink": "/turkce/hepsi-buymus",
+            "category": {
+              "name": "Türkçe",
+              "permalink": "/turkce"
+            },
+            "relevancyScore": 2
+          },
+          {
+            "title": "İlk Şey",
+            "permalink": "/turkce/ilk-sey",
+            "category": {
+              "name": "Türkçe",
+              "permalink": "/turkce"
+            },
+            "relevancyScore": 2
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "Kabanla Yürünen Deniz Kenarları.hbs",
+    "path": "Türkçe/Kabanla Yürünen Deniz Kenarları.hbs",
+    "depth": 1,
+    "extension": ".hbs",
+    "type": "post",
+    "data": {
+      "date": "2021-04-17, 22:24",
+      "tags": [
+        "kendim",
+        "düşünceler",
+        "sarhoş"
+      ],
+      "musiclist": "",
+      "publishedAt": "2021-04-17T19:24:00.000Z",
+      "publishedAtFull": "Saturday, April 17, 2021",
+      "publishedAtLong": "April 17, 2021",
+      "publishedAtMedium": "Apr 17, 2021",
+      "publishedAtShort": "4/17/21",
+      "type": "text-post",
+      "content": "  <p>Aklımda tuttuğum onca yazı fikri hep bu anlarda yok oluyor. Yeni eve taşınmama 12 gün kalmış.</p>\n  <p>Sevgi, öfke ve nefret arasında dalgalanıyorum. Sağlıklı kalabilmem için sevgim yavaş yavaş ölmek zorunda, kanal tedavisi gibi. Yerini hissizlik ve yeni bir ölüm almalı. Önceki ölümler gibi; onun da yasını tutarım, bir süre özlem duyarım, bir süre aklımda ölçer tartarım ve o da sonunda kabuğunu tutar.</p>\n  <p>Yazıldığı gibi kalan mesajlar vardır. Yazıldığı gibi -görülmeden– silinen mesajlar da vardır. Öfke ve nefret de vardırlar. Gururdur ve saygısızlıktandır. Sinire saplanan bir ve son iğnedir.</p>\n  <p>Aptal dalga sesleri ile mi hüzünlenmeye zorlamalı yoksa aptal Aphex Twin ile mi uyuşmaya çalışmalı? Aptal Clubhouse. Bu yazıyı kabanımla yazıyorum. Askılıkta asılı kendisi. Kabanımı seviyorum. O bir yaz kabanıdır. Deniz kenarında yürürkendir tüm karmaşası ve hayat görüşü.</p>\n  <p>Bu kez pek bi' zorunlu aptallık.</p>\n",
+      "summary": "  <p>Aklımda tuttuğum onca yazı fikri hep bu anlarda yok oluyor. Yeni eve taşınmama 12 gün kalmış.</p>\n  <p>Sevgi, öfke ve nefret arasında dalgalanıyorum. Sağlıklı kalabilmem için sevgim yavaş yavaş ölmek zorunda, kanal tedavisi gibi. Yerini hissizlik ve yeni bir ölüm almalı. Önceki ölümler gibi; onun da yasını tutarım, bir süre özlem duyarım, bir süre aklımda ölçer tartarım ve o da sonunda kabuğunu tutar.</p>\n  <p>Yazıldığı gibi kalan mesajlar vardır. Yazıldığı gibi -görülmeden– silinen mesajlar da vardır. Öfke ve nefret de vardırlar. Gururdur ve saygısızlıktandır. Sinire saplanan bir ve son iğnedir.</p>\n  <p>Aptal dalga sesleri ile mi hüzünlenmeye zorlamalı yoksa aptal Aphex Twin ile mi uyuşmaya çalışmalı? Aptal Clubhouse. Bu yazıyı kabanımla yazıyorum. Askılıkta asılı kendisi. Kabanımı seviyorum. O bir yaz kabanıdır. Deniz kenarında yürürkendir tüm karmaşası ve hayat görüşü.</p>\n  <p>Bu kez pek bi' zorunlu aptallık.</p>\n",
+      "title": "Kabanla Yürünen Deniz Kenarları",
+      "slug": "kabanla-yurunen-deniz-kenarlari",
+      "permalink": "/turkce/kabanla-yurunen-deniz-kenarlari",
+      "category": {
+        "name": "Türkçe",
+        "permalink": "/turkce"
+      },
+      "site": {
+        "title": "A Blog website",
+        "description": "A future work"
+      },
+      "links": {
+        "nextPost": {
+          "title": "Bu andaydım",
+          "permalink": "/turkce/bu-andaydim"
+        },
+        "prevPost": {
+          "title": "Hepsi Buymuş",
+          "permalink": "/turkce/hepsi-buymus"
+        },
+        "relevantPosts": [
+          {
+            "title": "Hepsi Buymuş",
+            "permalink": "/turkce/hepsi-buymus",
+            "category": {
+              "name": "Türkçe",
+              "permalink": "/turkce"
+            },
+            "relevancyScore": 3
+          },
+          {
+            "title": "İlk Şey",
+            "permalink": "/turkce/ilk-sey",
+            "category": {
+              "name": "Türkçe",
+              "permalink": "/turkce"
+            },
+            "relevancyScore": 3
+          },
+          {
+            "title": "Bu andaydım",
+            "permalink": "/turkce/bu-andaydim",
+            "category": {
+              "name": "Türkçe",
+              "permalink": "/turkce"
+            },
+            "relevancyScore": 2
+          }
+        ]
+      }
     }
   },
   {
     "name": "Hepsi Buymuş",
-    "slug": "hepsi-buymus",
-    "permalink": "/turkce/hepsi-buymus",
-    "category": {
-      "name": "Türkçe",
-      "slug": "turkce",
-      "permalink": "/turkce",
-      "src": "Türkçe"
-    },
-    "src": "Türkçe/Hepsi Buymuş/post.hbs",
-    "tags": [
-      "kendim",
-      "düşünceler",
-      "sarhoş"
-    ],
-    "musiclist": "",
-    "title": "Hepsi Buymuş",
-    "type": "text-post",
-    "summary": "  <p>Vim'de blog yazıyorum:</p>\n  <div><img src=\"/turkce/hepsi-buymus/vim.png\" alt=\"Vim'de blog yazdığımın ekran görüntüsü.\"></div>\n  <p>Ne zamandır ikinci yazımı yazmak istiyordum. Şimdi ikna ettim kendimi ama aklıma bir şey gelmiyor.</p>\n  <p>Şunlardan bahsetmek istemiştim: Daft Punk'ın ayrılması, Teoman'ın yeni albüm çıkarması. Sanki hayatım müzik endeskliymiş gibi (değil (ama öyle gibi görünüyor (yine de değil))).</p>\n  ",
-    "site": {
-      "title": "A Blog website",
-      "description": "A future work"
-    },
-    "publishedAt": "2021-04-10T22:38:00.000Z",
-    "publishedAtFull": "Sunday, April 11, 2021",
-    "publishedAtLong": "April 11, 2021",
-    "publishedAtMedium": "Apr 11, 2021",
-    "publishedAtShort": "4/11/21",
-    "nextPost": {
-      "title": "Kabanla Yürünen Deniz Kenarları",
-      "permalink": "/turkce/kabanla-yurunen-deniz-kenarlari.html"
-    },
-    "prevPost": {
-      "title": "İlk Şey",
-      "permalink": "/turkce/ilk-sey.html"
+    "path": "Türkçe/Hepsi Buymuş",
+    "depth": 1,
+    "type": "post",
+    "foldered": true,
+    "extension": ".hbs",
+    "data": {
+      "date": "2021-04-11, 01:38",
+      "tags": [
+        "kendim",
+        "düşünceler",
+        "sarhoş"
+      ],
+      "musiclist": "",
+      "publishedAt": "2021-04-10T22:38:00.000Z",
+      "publishedAtFull": "Sunday, April 11, 2021",
+      "publishedAtLong": "April 11, 2021",
+      "publishedAtMedium": "Apr 11, 2021",
+      "publishedAtShort": "4/11/21",
+      "type": "text-post",
+      "content": "  <p>Vim'de blog yazıyorum:</p>\n  <div><img src=\"/turkce/hepsi-buymus/vim.png\" alt=\"Vim'de blog yazdığımın ekran görüntüsü.\"></div>\n  <p>Ne zamandır ikinci yazımı yazmak istiyordum. Şimdi ikna ettim kendimi ama aklıma bir şey gelmiyor.</p>\n  <p>Şunlardan bahsetmek istemiştim: Daft Punk'ın ayrılması, Teoman'ın yeni albüm çıkarması. Sanki hayatım müzik endeskliymiş gibi (değil (ama öyle gibi görünüyor (yine de değil))).</p>\n  {{seeMore}}\n  <p>İlk yazı şu andan bakıldığında aynı zamanda son yazı, yani hem ilk hem de son yazı, yani ilk ve son yazı. İlk ve son yazıyı yazdığım sırada bu blog tek bir HTML dosyasından ibaretti. HTML kodu düzenleyerek yeni div'ler p'ler ekleyerek ilk yazıyı yazmıştım. CSS yoktu. Aradan geçen zamanda bu HTML dosyasını bir statik site oluşturucuya çevirdim.</p>\n  <p>Kendi geçmiş halime zaman yolculuğu yapma fikri üzerinde gereğinden fazla düşünüyorum. Diyorum ki, geçmiş bir zamandaki benlerden birine dönüş yapabilme imkanım olsa, tamamen o ben haline dönüşeceğim için, ve etraftaki her şey de o benin etrafındaki şeylerin aynısı olacağı için, olaylar birebir aynı şekilde seyrederdi ve (bir süre sonra) kendimi yine bu anda bu yazıyı yazarken bulurdum. Yani kendi geçmişime dönüş yapmış olsam ve yine bu ana gelmiş olsam bunun farkında olma imkanım bile olmazdı. Belki bu anı 816'ncı yaşayışım ama farkında değilim (o halde gelecekteki benin 816 defa aynı şeyi denemesine yol açan kafayı istiyorum).</p>\n  <p>Bu blogu daha iyileştirmeyi düşünüyorum.</p>\n  <p>Ha unutmadan, bu aralar yine FIFA 2005'e sardım:</p>\n  <div><img src=\"/turkce/hepsi-buymus/fifa2005.png\" alt=\"FIFA 2005 kariyer modu ekran görüntüsü\"></div>\n",
+      "summary": "  <p>Vim'de blog yazıyorum:</p>\n  <div><img src=\"/turkce/hepsi-buymus/vim.png\" alt=\"Vim'de blog yazdığımın ekran görüntüsü.\"></div>\n  <p>Ne zamandır ikinci yazımı yazmak istiyordum. Şimdi ikna ettim kendimi ama aklıma bir şey gelmiyor.</p>\n  <p>Şunlardan bahsetmek istemiştim: Daft Punk'ın ayrılması, Teoman'ın yeni albüm çıkarması. Sanki hayatım müzik endeskliymiş gibi (değil (ama öyle gibi görünüyor (yine de değil))).</p>\n  ",
+      "title": "Hepsi Buymuş",
+      "slug": "hepsi-buymus",
+      "permalink": "/turkce/hepsi-buymus",
+      "category": {
+        "name": "Türkçe",
+        "permalink": "/turkce"
+      },
+      "localAssets": [
+        {
+          "name": "fifa2005.png",
+          "path": "Türkçe/Hepsi Buymuş/fifa2005.png",
+          "depth": 2,
+          "extension": ".png",
+          "type": "localAsset"
+        },
+        {
+          "name": "vim.png",
+          "path": "Türkçe/Hepsi Buymuş/vim.png",
+          "depth": 2,
+          "extension": ".png",
+          "type": "localAsset"
+        }
+      ],
+      "site": {
+        "title": "A Blog website",
+        "description": "A future work"
+      },
+      "links": {
+        "nextPost": {
+          "title": "Kabanla Yürünen Deniz Kenarları",
+          "permalink": "/turkce/kabanla-yurunen-deniz-kenarlari"
+        },
+        "prevPost": {
+          "title": "İlk Şey",
+          "permalink": "/turkce/ilk-sey"
+        },
+        "relevantPosts": [
+          {
+            "title": "Kabanla Yürünen Deniz Kenarları",
+            "permalink": "/turkce/kabanla-yurunen-deniz-kenarlari",
+            "category": {
+              "name": "Türkçe",
+              "permalink": "/turkce"
+            },
+            "relevancyScore": 3
+          },
+          {
+            "title": "İlk Şey",
+            "permalink": "/turkce/ilk-sey",
+            "category": {
+              "name": "Türkçe",
+              "permalink": "/turkce"
+            },
+            "relevancyScore": 3
+          },
+          {
+            "title": "Bu andaydım",
+            "permalink": "/turkce/bu-andaydim",
+            "category": {
+              "name": "Türkçe",
+              "permalink": "/turkce"
+            },
+            "relevancyScore": 2
+          }
+        ]
+      }
     }
   },
   {
     "name": "Another Photo",
-    "slug": "another-photo",
-    "permalink": "/photography/another-photo",
-    "category": {
-      "name": "Photography",
-      "slug": "photography",
-      "permalink": "/photography",
-      "src": "Photography"
-    },
-    "src": "Photography/Another Photo/index.hbs",
-    "tags": [
-      "national",
-      "geographic",
-      "apod"
-    ],
-    "originalUrl": "orion.png",
-    "mediumUrl": "orion-medium.png",
-    "thumbnailUrl": "orion-thumbnail.png",
-    "exif": "",
-    "title": "Another Photo",
-    "type": "photo-post",
-    "summary": "  <p>A good photo.</p>\n",
-    "site": {
-      "title": "A Blog website",
-      "description": "A future work"
-    },
-    "publishedAt": "2021-03-17T00:06:00.000Z",
-    "publishedAtFull": "Wednesday, March 17, 2021",
-    "publishedAtLong": "March 17, 2021",
-    "publishedAtMedium": "Mar 17, 2021",
-    "publishedAtShort": "3/17/21",
-    "prevPost": {
-      "title": "A Photo",
-      "permalink": "/photography/a-photo"
+    "path": "Photography/Another Photo",
+    "depth": 1,
+    "type": "post",
+    "foldered": true,
+    "extension": ".hbs",
+    "data": {
+      "date": "2021-03-17, 02:06",
+      "tags": [
+        "national",
+        "geographic",
+        "apod"
+      ],
+      "originalUrl": "orion.png",
+      "mediumUrl": "orion-medium.png",
+      "thumbnailUrl": "orion-thumbnail.png",
+      "exif": "",
+      "publishedAt": "2021-03-17T00:06:00.000Z",
+      "publishedAtFull": "Wednesday, March 17, 2021",
+      "publishedAtLong": "March 17, 2021",
+      "publishedAtMedium": "Mar 17, 2021",
+      "publishedAtShort": "3/17/21",
+      "type": "photo-post",
+      "content": "  <p>A good photo.</p>\n",
+      "summary": "  <p>A good photo.</p>\n",
+      "title": "Another Photo",
+      "slug": "another-photo",
+      "permalink": "/photography/another-photo",
+      "category": {
+        "name": "Photography",
+        "permalink": "/photography"
+      },
+      "localAssets": [
+        {
+          "name": "orion-medium.png",
+          "path": "Photography/Another Photo/orion-medium.png",
+          "depth": 2,
+          "extension": ".png",
+          "type": "localAsset"
+        },
+        {
+          "name": "orion-thumbnail.png",
+          "path": "Photography/Another Photo/orion-thumbnail.png",
+          "depth": 2,
+          "extension": ".png",
+          "type": "localAsset"
+        },
+        {
+          "name": "orion.png",
+          "path": "Photography/Another Photo/orion.png",
+          "depth": 2,
+          "extension": ".png",
+          "type": "localAsset"
+        }
+      ],
+      "site": {
+        "title": "A Blog website",
+        "description": "A future work"
+      },
+      "links": {
+        "prevPost": {
+          "title": "A Photo",
+          "permalink": "/photography/a-photo"
+        },
+        "relevantPosts": [
+          {
+            "title": "A Photo",
+            "permalink": "/photography/a-photo",
+            "category": {
+              "name": "Photography",
+              "permalink": "/photography"
+            },
+            "relevancyScore": 1
+          }
+        ]
+      }
     }
   },
   {
     "name": "A Photo",
-    "slug": "a-photo",
-    "permalink": "/photography/a-photo",
-    "category": {
-      "name": "Photography",
-      "slug": "photography",
-      "permalink": "/photography",
-      "src": "Photography"
-    },
-    "src": "Photography/A Photo/post.hbs",
-    "tags": [
-      "helsinki"
-    ],
-    "originalUrl": "crescent-hdr.png",
-    "mediumUrl": "crescent-hdr-medium.png",
-    "thumbnailUrl": "crescent-hdr-thumbnail.png",
-    "exif": "",
-    "title": "A Photo",
-    "type": "photo-post",
-    "summary": "  <p>A photo that I took while walking in the streets of Ullanlinna, Helsinki.</p>\n",
-    "site": {
-      "title": "A Blog website",
-      "description": "A future work"
-    },
-    "publishedAt": "2021-03-16T22:51:00.000Z",
-    "publishedAtFull": "Wednesday, March 17, 2021",
-    "publishedAtLong": "March 17, 2021",
-    "publishedAtMedium": "Mar 17, 2021",
-    "publishedAtShort": "3/17/21",
-    "nextPost": {
-      "title": "Another Photo",
-      "permalink": "/photography/another-photo"
+    "path": "Photography/A Photo",
+    "depth": 1,
+    "type": "post",
+    "foldered": true,
+    "extension": ".hbs",
+    "data": {
+      "date": "2021-03-17, 00:51",
+      "tags": [
+        "helsinki"
+      ],
+      "originalUrl": "crescent-hdr.png",
+      "mediumUrl": "crescent-hdr-medium.png",
+      "thumbnailUrl": "crescent-hdr-thumbnail.png",
+      "exif": "",
+      "publishedAt": "2021-03-16T22:51:00.000Z",
+      "publishedAtFull": "Wednesday, March 17, 2021",
+      "publishedAtLong": "March 17, 2021",
+      "publishedAtMedium": "Mar 17, 2021",
+      "publishedAtShort": "3/17/21",
+      "type": "photo-post",
+      "content": "  <p>A photo that I took while walking in the streets of Ullanlinna, Helsinki.</p>\n",
+      "summary": "  <p>A photo that I took while walking in the streets of Ullanlinna, Helsinki.</p>\n",
+      "title": "A Photo",
+      "slug": "a-photo",
+      "permalink": "/photography/a-photo",
+      "category": {
+        "name": "Photography",
+        "permalink": "/photography"
+      },
+      "localAssets": [
+        {
+          "name": "crescent-hdr-medium.png",
+          "path": "Photography/A Photo/crescent-hdr-medium.png",
+          "depth": 2,
+          "extension": ".png",
+          "type": "localAsset"
+        },
+        {
+          "name": "crescent-hdr-thumbnail.png",
+          "path": "Photography/A Photo/crescent-hdr-thumbnail.png",
+          "depth": 2,
+          "extension": ".png",
+          "type": "localAsset"
+        },
+        {
+          "name": "crescent-hdr.png",
+          "path": "Photography/A Photo/crescent-hdr.png",
+          "depth": 2,
+          "extension": ".png",
+          "type": "localAsset"
+        }
+      ],
+      "site": {
+        "title": "A Blog website",
+        "description": "A future work"
+      },
+      "links": {
+        "nextPost": {
+          "title": "Another Photo",
+          "permalink": "/photography/another-photo"
+        },
+        "relevantPosts": [
+          {
+            "title": "Another Photo",
+            "permalink": "/photography/another-photo",
+            "category": {
+              "name": "Photography",
+              "permalink": "/photography"
+            },
+            "relevancyScore": 1
+          }
+        ]
+      }
     }
   },
   {
-    "name": "ProgressCar",
-    "slug": "progresscar.hbs",
-    "permalink": "/code/progresscar.html",
-    "category": {
-      "name": "Code",
-      "slug": "code",
-      "permalink": "/code",
-      "src": "Code"
-    },
-    "src": "Code/ProgressCar.hbs",
-    "tags": [
-      "codepen"
-    ],
-    "musiclist": "",
-    "title": "ProgressCar",
-    "type": "text-post",
-    "summary": "<p class=\"codepen\" data-height=\"265\" data-theme-id=\"light\" data-default-tab=\"html,result\" data-user=\"pavlovsk\" data-slug-hash=\"YzppeYX\" style=\"height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;\" data-pen-title=\"ProgressCar with Custom CSS Properties\">\n  <span>See the Pen <a href=\"https://codepen.io/pavlovsk/pen/YzppeYX\">\n  ProgressCar with Custom CSS Properties</a> by Mustafa Enes (<a href=\"https://codepen.io/pavlovsk\">@pavlovsk</a>)\n  on <a href=\"https://codepen.io\">CodePen</a>.</span>\n</p>\n<script async src=\"https://cpwebassets.codepen.io/assets/embed/ei.js\"></script>\n",
-    "site": {
-      "title": "A Blog website",
-      "description": "A future work"
-    },
-    "publishedAt": "2021-03-10T21:31:00.000Z",
-    "publishedAtFull": "Wednesday, March 10, 2021",
-    "publishedAtLong": "March 10, 2021",
-    "publishedAtMedium": "Mar 10, 2021",
-    "publishedAtShort": "3/10/21"
+    "name": "ProgressCar.hbs",
+    "path": "Code/ProgressCar.hbs",
+    "depth": 1,
+    "extension": ".hbs",
+    "type": "post",
+    "data": {
+      "date": "2021-03-10, 23:31",
+      "tags": [
+        "codepen"
+      ],
+      "musiclist": "",
+      "publishedAt": "2021-03-10T21:31:00.000Z",
+      "publishedAtFull": "Wednesday, March 10, 2021",
+      "publishedAtLong": "March 10, 2021",
+      "publishedAtMedium": "Mar 10, 2021",
+      "publishedAtShort": "3/10/21",
+      "type": "text-post",
+      "content": "<p class=\"codepen\" data-height=\"265\" data-theme-id=\"light\" data-default-tab=\"html,result\" data-user=\"pavlovsk\" data-slug-hash=\"YzppeYX\" style=\"height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;\" data-pen-title=\"ProgressCar with Custom CSS Properties\">\n  <span>See the Pen <a href=\"https://codepen.io/pavlovsk/pen/YzppeYX\">\n  ProgressCar with Custom CSS Properties</a> by Mustafa Enes (<a href=\"https://codepen.io/pavlovsk\">@pavlovsk</a>)\n  on <a href=\"https://codepen.io\">CodePen</a>.</span>\n</p>\n<script async src=\"https://cpwebassets.codepen.io/assets/embed/ei.js\"></script>\n",
+      "summary": "<p class=\"codepen\" data-height=\"265\" data-theme-id=\"light\" data-default-tab=\"html,result\" data-user=\"pavlovsk\" data-slug-hash=\"YzppeYX\" style=\"height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;\" data-pen-title=\"ProgressCar with Custom CSS Properties\">\n  <span>See the Pen <a href=\"https://codepen.io/pavlovsk/pen/YzppeYX\">\n  ProgressCar with Custom CSS Properties</a> by Mustafa Enes (<a href=\"https://codepen.io/pavlovsk\">@pavlovsk</a>)\n  on <a href=\"https://codepen.io\">CodePen</a>.</span>\n</p>\n<script async src=\"https://cpwebassets.codepen.io/assets/embed/ei.js\"></script>\n",
+      "title": "ProgressCar",
+      "slug": "progresscar",
+      "permalink": "/code/progresscar",
+      "category": {
+        "name": "Code",
+        "permalink": "/code"
+      },
+      "site": {
+        "title": "A Blog website",
+        "description": "A future work"
+      },
+      "links": {
+        "relevantPosts": []
+      }
+    }
   },
   {
-    "name": "İlk Şey",
-    "slug": "ilk-sey.hbs",
-    "permalink": "/turkce/ilk-sey.html",
-    "category": {
-      "name": "Türkçe",
-      "slug": "turkce",
-      "permalink": "/turkce",
-      "src": "Türkçe"
-    },
-    "src": "Türkçe/İlk Şey.hbs",
-    "tags": [
-      "kendim",
-      "düşünceler",
-      "ilk",
-      "sarhoş"
-    ],
-    "musiclist": "",
-    "title": "İlk Şey",
-    "type": "text-post",
-    "summary": "  <p>İlk paragraf.</p>\n  <p>HTML yazmak neden istememeliyiz ki? Soyutlamamaya karar verirsem pekala HTML ile blog oluşturabilirim. Neyse artık.</p>\n  <p>16 yaşımdaydım galiba, buna benzer bir özel günlük yazmaya başlamıştım düz HTML ile.</p>\n  <p>Gafamın dönmeye başlamak üzere olduğunu hissediyorum. Dışarıda kar fırtınasına yakın bir şey var. Tek sorun: kar yağmıyor. Epey rüzgarlı sadece. Sigaradan sigaraya çıkıyorum dışarı.</p>\n  ",
-    "site": {
-      "title": "A Blog website",
-      "description": "A future work"
-    },
-    "publishedAt": "2021-03-06T23:44:00.000Z",
-    "publishedAtFull": "Sunday, March 7, 2021",
-    "publishedAtLong": "March 7, 2021",
-    "publishedAtMedium": "Mar 7, 2021",
-    "publishedAtShort": "3/7/21",
-    "nextPost": {
-      "title": "Hepsi Buymuş",
-      "permalink": "/turkce/hepsi-buymus"
+    "name": "İlk Şey.hbs",
+    "path": "Türkçe/İlk Şey.hbs",
+    "depth": 1,
+    "extension": ".hbs",
+    "type": "post",
+    "data": {
+      "date": "2021-03-07, 01:44",
+      "tags": [
+        "kendim",
+        "düşünceler",
+        "ilk",
+        "sarhoş"
+      ],
+      "musiclist": "",
+      "publishedAt": "2021-03-06T23:44:00.000Z",
+      "publishedAtFull": "Sunday, March 7, 2021",
+      "publishedAtLong": "March 7, 2021",
+      "publishedAtMedium": "Mar 7, 2021",
+      "publishedAtShort": "3/7/21",
+      "type": "text-post",
+      "content": "  <p>İlk paragraf.</p>\n  <p>HTML yazmak neden istememeliyiz ki? Soyutlamamaya karar verirsem pekala HTML ile blog oluşturabilirim. Neyse artık.</p>\n  <p>16 yaşımdaydım galiba, buna benzer bir özel günlük yazmaya başlamıştım düz HTML ile.</p>\n  <p>Gafamın dönmeye başlamak üzere olduğunu hissediyorum. Dışarıda kar fırtınasına yakın bir şey var. Tek sorun: kar yağmıyor. Epey rüzgarlı sadece. Sigaradan sigaraya çıkıyorum dışarı.</p>\n  {{seeMore}}\n  <p>Bu gönderiyi yazdığım sırada henüz burası için CSS bile yazmış değilim. Micro pause, git kenara!</p>\n  <p>Yine de aklımdaki belli bir kurguya göre class'lar kullandım. Günün birinde buraya CSS yazmalıyım düşüncesi ile.</p>\n  <p>Gelecekteki ben. Burayı okuduğun zaman ne zaman olacak acaba. Nasıl biri olacaksın acaba. Biliyorum, burayı yazan bana benzeyen biri olacaksın, en azından belli açılardan (artık x yıl önceki halinden eser kalmayacak yaşı geçtiğime göre). Sen (gelecekteki ben), şu an bunu yazan benim alacağım kararların mahkumusun. Bana saygı duy veya benden nefret et ama senin var olma nedenin benim. Daha doğrusu, akla ilk gelen neden benim. Benim (şu anki benim) akla ilk gelen var olma nedenim, mesela, 16 saat önceki benim. Hatta 1 saat önceki benim.</p>\n  <p>Şu anki benim var olmamda akla gelen ilk neden, şu andan sonsuz miktarda kısa zaman önceki benim. Mikrosaniyeler veya nanosaniyeler yeterli olmayabilir bu zaman dilimini tarif etmek için. Zaman ölçeği uzamsal değişikliklerin çerçevesini belirliyor. Şöyle ki, bundan 1 saniye önce benim parmaklarım tamamen farklı konumlarda olabiliyorken, dünya kendi ekseni etrafında yalnızda 1 yay saniyesi kadar daha az dönmüş durumdaydı. Herhangi bir gökadanın 1 saniye önceki fotoğrafı ile şu anki fotoğrafı arasında (fotoğrafın çekildiği ortam şartları sayılmazsa) kabaca hiçbir fark yok. Kabaca dememin sebebi ise fotoğrafın çözünürluğü ile ilgili. Eğer bu gökadanın herhangi bir sarmal kolunda yer alan bir yıldızın yörüngesindeki yaşama elverişli bir gezegenin yüzeyinin her bir nanometresini çözebilen bir fotoğraftan bahsediyorsak, tabii ki 1 saniye bu iki fotoğraf arasında büyük farklara neden olabilir.</p>\n  <p>1 saniyelik zaman dilimi, nanometrelik ölçekte, var olmak veya yok olmak arasındaki farkı belirleyecek kadar büyük bir zaman. Milimetreler ve santimetreler için bile 1 saniye oldukça geniş bir zaman dilimi. Aslında söz konusu varlığın uzaydaki yer değiştirme hızına göre değişiyor zaman ölçeğinin etkisi. Uzayda asla yer değiştirmeyen bir varlık sonsuza dek aynı kalacakken ışık hızında hareket eden bir varlık için nanosaniyeler bile büyük zaman dilimleri olabilir.</p>\n  <p>İşte bu yüzden senin (gelecekteki ben) akla gelen <em>ilk</em> var olma nedenin benim. Ben süregelen bir varlığım. Benim bu anki varlığım ile senin aranda ben var olmaya devam edeceğim. O zaman dilimindeki tüm benlerin var olmalarının akla ilk gelen nedeni benim. Senin var olmanla sonuçlanacak olan süreçte rol oynayan tüm benlerin mimarı benim. Henüz nasıl benler yaratacağımı bilmiyorum. Sen halihazırda biliyorsun şu anki benden sana gelen süreçte ne gibi benlerin var olduğunu. Kabul ediyorum, o yaptığın hatanın sorumlusu benim. Evet, o güzel anı benim sayemde yaşadın. Bana saygı duy veya benden nefret et, önemsiz.</p>\n",
+      "summary": "  <p>İlk paragraf.</p>\n  <p>HTML yazmak neden istememeliyiz ki? Soyutlamamaya karar verirsem pekala HTML ile blog oluşturabilirim. Neyse artık.</p>\n  <p>16 yaşımdaydım galiba, buna benzer bir özel günlük yazmaya başlamıştım düz HTML ile.</p>\n  <p>Gafamın dönmeye başlamak üzere olduğunu hissediyorum. Dışarıda kar fırtınasına yakın bir şey var. Tek sorun: kar yağmıyor. Epey rüzgarlı sadece. Sigaradan sigaraya çıkıyorum dışarı.</p>\n  ",
+      "title": "İlk Şey",
+      "slug": "ilk-sey",
+      "permalink": "/turkce/ilk-sey",
+      "category": {
+        "name": "Türkçe",
+        "permalink": "/turkce"
+      },
+      "site": {
+        "title": "A Blog website",
+        "description": "A future work"
+      },
+      "links": {
+        "nextPost": {
+          "title": "Hepsi Buymuş",
+          "permalink": "/turkce/hepsi-buymus"
+        },
+        "relevantPosts": [
+          {
+            "title": "Kabanla Yürünen Deniz Kenarları",
+            "permalink": "/turkce/kabanla-yurunen-deniz-kenarlari",
+            "category": {
+              "name": "Türkçe",
+              "permalink": "/turkce"
+            },
+            "relevancyScore": 3
+          },
+          {
+            "title": "Hepsi Buymuş",
+            "permalink": "/turkce/hepsi-buymus",
+            "category": {
+              "name": "Türkçe",
+              "permalink": "/turkce"
+            },
+            "relevancyScore": 3
+          },
+          {
+            "title": "Bu andaydım",
+            "permalink": "/turkce/bu-andaydim",
+            "category": {
+              "name": "Türkçe",
+              "permalink": "/turkce"
+            },
+            "relevancyScore": 2
+          }
+        ]
+      }
     }
   }
 ]
