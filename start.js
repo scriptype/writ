@@ -18,11 +18,11 @@ const watchOptions = {
   )
 }
 
-compile(settings)
+let compilePromise = compile(settings)
 
 bs.watch('.', watchOptions, (e, file) => {
   console.log('Changed:', file)
-  compile(settings)
+  compilePromise = compilePromise.then(() => compile(settings))
   bs.reload()
 });
 
