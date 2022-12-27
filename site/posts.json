@@ -5,7 +5,8 @@
     "summary": "<p>Öyle</p>\n<p>",
     "date": "2022-11-26, 15:28",
     "tags": [
-      "öyle"
+      "öyle",
+      "test"
     ],
     "musiclist": [
       "Say what your soul sings to you"
@@ -27,7 +28,7 @@
     }
   },
   {
-    "title": "hello",
+    "title": "hello test",
     "type": "text-post",
     "summary": "<p>hello</p>\n<p>trying txt</p>\n",
     "tags": [],
@@ -36,8 +37,8 @@
     "publishedAtLong": "November 12, 2022",
     "publishedAtMedium": "Nov 12, 2022",
     "publishedAtShort": "11/12/22",
-    "slug": "hello",
-    "permalink": "/hello",
+    "slug": "hello-test",
+    "permalink": "/hello-test",
     "category": {
       "name": "Uncategorized",
       "permalink": "/uncategorized"
@@ -53,7 +54,8 @@
     "summary": "<p>Sondan bir önceki paragraf.</p>\n",
     "date": "2022-11-03, 04:25",
     "tags": [
-      "son"
+      "son",
+      "test"
     ],
     "musiclist": [
       "Thievery Corporation"
@@ -82,7 +84,8 @@
     "tags": [
       "howto",
       "guide",
-      "tutorial"
+      "tutorial",
+      "test"
     ],
     "musiclist": [
       "I want you"
