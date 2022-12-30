@@ -1,6 +1,6 @@
 ---
 type: text-post
-date: 2022-12-27, 20:50
+date: 2022-12-31, 00:43
 tags: deneme
 musiclist:
  - Boards of Canada - Sunshine Recorder
