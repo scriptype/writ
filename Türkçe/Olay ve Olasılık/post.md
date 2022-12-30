@@ -15,6 +15,7 @@ musiclist:
 
 Ağaçlarda kendimizi görebiliriz. Sınırsız şekillerde dallar her göz için farklı kesişir.
 Akla basit gelen bir dizi genetik kuralın sonucu olarak bu ağaçlar bizi farklı düşlere koyar.
+{{seeMore}}
 
 İnsan kendi kader ağacını gerçek bir agaçta gözlemleyebilir. Hayat içinde bir ağaç gibi
 ilerlemenin neye benzediğini düşünür.
