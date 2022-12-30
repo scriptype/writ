@@ -12,6 +12,7 @@
   },
   "homepage": "https://github.com/scriptype/writ#readme",
   "devDependencies": {
-    "browser-sync": "^2.27.4"
+    "browser-sync": "^2.27.4",
+    "lodash": "^4.17.21"
   }
 }
