@@ -72,5 +72,5 @@ hallerine elveren narin önkoşulların ortadan kalkışını korkusuzca izle.
 
 Hazırcevaplardan kurtul. Olasılıklarını kendi eline al. Sürekli tanıklık et.
 
-Erken cevap vermekten kaç. Büyük soruyu kendi dallarına yönelt. Mantıksız yeni dallar
-sorgula. Bir ağaç kadar ol ve soru sor. Cevapları tanı, oku.
+Erken cevap vermekten kaç. Büyük soruyu kendi dallarına yönelt. Mantıksız ve sayılamaz
+yeni dallar sorgula. Bir ağaç kadar ol ve soru sor. Cevapları tanı, oku.
