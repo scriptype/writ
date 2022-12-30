@@ -27,6 +27,13 @@
     },
     "localAssets": [
       {
+        "name": "ben.jpg",
+        "path": "Türkçe/Olay ve Olasılık/ben.jpg",
+        "depth": 2,
+        "extension": ".jpg",
+        "type": "localAsset"
+      },
+      {
         "name": "sorgular.jpg",
         "path": "Türkçe/Olay ve Olasılık/sorgular.jpg",
         "depth": 2,

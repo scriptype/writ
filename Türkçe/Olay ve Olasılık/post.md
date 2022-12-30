@@ -52,6 +52,8 @@ Güneş enerjisini düşün. Portakal kabuğu üstündeki mikrobiyolojiyi andır
 Sağanak ve süreğen enerji yağmuru ve zamandaki bolluğun ne cevaplar ortaya çıkardığına bak.
 Bazı cevapların ihtiyaç duyduğu narin önkoşulları değerlendir.
 
+![Benlik ışıkları](/turkce/olay-ve-olasilik/ben.jpg)
+
 Hayat, güneş sisteminin yerküreye yönelttiği büyük bir sorunun andaki cevabıdır.
 Yerküre maruz kaldığı sorunun üslubunu gözönünde bulundurur ve bazen kestirme
 ve estetik duran cevaplar önerir. Kutup ışıkları, gök gürlemeleri böyledir. Merak
