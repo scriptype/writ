@@ -17,7 +17,7 @@ Ağaçlarda kendimizi görebiliriz. Sınırsız şekillerde dallar her göz içi
 Akla basit gelen bir dizi genetik kuralın sonucu olarak bu ağaçlar bizi farklı düşlere koyar.
 {{seeMore}}
 
-İnsan kendi kader ağacını gerçek bir agaçta gözlemleyebilir. Hayat içinde bir ağaç gibi
+İnsan kendi kader ağacını gerçek bir ağaçta gözlemleyebilir. Hayat içinde bir ağaç gibi
 ilerlemenin neye benzediğini düşünür.
 
 Her dal bir sorudur. Bir ağaçsan, hayat boyu doğaya soru sorarsın: O dal mı yoksa bu mu?
@@ -64,9 +64,7 @@ ve ilham uyandırır; artık başka nitelikte, daha da karmaşık cevaplar düş
 olasılıklar bahçesinde yapılan ekme biçmedir, tarımdır. Soru sorar, cevap buluruz;
 fayda sezdiğimizde erken davranırız, sormayı ve okumayı bırakırız. Cevaplarımızı
 plastik etiketlere basarız, yalancı bir özgüven inşa eder, derinliksiz cevaplar
-üstünde bina diker, uçak uçururuz.
-
-Eksik cevaplar üstüne kumar oynar, yanlışımızı doğaya ödetiriz.
+üstünde bina yapar, uçak uçururuz. Kumar oynarız.
 
 Şimdi biraz duralım. Korkularını düşün. Senliğini koruma altında tutan zihni
 manyetosfer ve onun hoş kuzey ışıkları. Bundan kurtulmanın içinde kaybol. Bazı karmaşık
@@ -75,4 +73,4 @@ hallerine elveren narin önkoşulların ortadan kalkışını korkusuzca izle.
 Hazırcevaplardan kurtul. Olasılıklarını kendi eline al. Sürekli tanıklık et.
 
 Erken cevap vermekten kaç. Büyük soruyu kendi dallarına yönelt. Mantıksız ve sayılamaz
-yeni dallar sorgula. Bir ağaç kadar ol ve soru sor. Cevapları tanı. Oku.
+yeni dallar dene. Bir ağaç kadar ol ve soru sor. Cevapları tanı. Oku.
