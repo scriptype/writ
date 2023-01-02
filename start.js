@@ -1,8 +1,13 @@
 const bs = require('browser-sync').create()
+const bodyParser = require('body-parser')
+const frontMatter = require('front-matter')
+const TurndownService = require('turndown')
 const _ = require('lodash')
 const { execSync } = require('child_process')
 const compile = require('writ-cms')
 const settings = require('./settings.json')
+
+const turndownService = new TurndownService()
 
 const watchOptions = {
   ignoreInitial: true,
@@ -28,6 +33,7 @@ bs.watch('.', watchOptions, _.debounce((e, file) => {
 }, 100));
 
 const serverMiddlewares = [
+  bodyParser.json(),
   {
     route: "/cms/refresh",
     handle(req, res, next) {
@@ -114,18 +120,36 @@ const serverMiddlewares = [
 
       const posts = await getPaths(join(rootDirectory, category))
       const post = posts.find(({ path }) => getSlug(path) === postSlug)
+      const html = req.body.html
 
+      let fullPath
       if (post.isDirectory) {
         const postDirectoryPaths = await getPaths(join(rootDirectory, category, post.path))
         const postFile = postDirectoryPaths.find(({ path, isDirectory }) => {
           return !isDirectory && isTemplate(path) && /^(index|post)/.test(path)
         })
 
-        const fullPath = join(rootDirectory, category, post.path, postFile.path)
-        console.log('folder post update by slug', fullPath)
+        fullPath = join(rootDirectory, category, post.path, postFile.path)
       } else {
-        const fullPath = join(rootDirectory, category, post.path)
-        console.log('file post update by slug', fullPath)
+        fullPath = join(rootDirectory, category, post.path)
+      }
+
+      const extension = extname(fullPath)
+      const isMarkdown = /\.(md|markdown)$/i.test(extension)
+
+      if (isMarkdown) {
+        const md = turndownService.turndown(html)
+        console.log('path', fullPath)
+        console.log('output', md)
+        const fileContent = await fs.readFile(fullPath, 'utf-8')
+        const front = frontMatter(fileContent)
+        const newFileContent = [
+          '---',
+          front.frontmatter.trim(),
+          '---',
+          md.trim()
+        ].join('\n')
+        await fs.writeFile(fullPath, newFileContent)
       }
 
       return res.end()
