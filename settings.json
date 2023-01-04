@@ -5,7 +5,7 @@
   },
   "theme": "default",
   "assetsDirectory": "assets",
-  "exportDirectory": "site",
+  "exportDirectory": "docs",
   "pagesDirectory": "pages",
   "ignorePaths": [
     ".git",
@@ -13,10 +13,9 @@
     ".DS_Store",
     "_.*",
     "settings.json",
-    "site",
+    "docs",
     "build",
     "dev",
-    "publish",
     "README.md"
   ]
 }

@@ -1,0 +1,496 @@
+[
+  {
+    "title": "Olay ve Olasılık",
+    "type": "text-post",
+    "summary": "<p><img src=\"/turkce/olay-ve-olasilik/sorgular.jpg\" alt=\"Ağaçlar olasılıklarını dallarıyla olaya döker\"></p>\n<h3 id=\"ağaç-sorguları\">Ağaç sorguları</h3>\n<p>Ağaçlarda kendimizi görebiliriz. Sınırsız şekillerde dallar her göz için farklı kesişir.\nAkla basit gelen bir dizi genetik kuralın sonucu olarak bu ağaçlar bizi farklı düşlere koyar.\n",
+    "date": "2022-12-31, 00:43",
+    "tags": [
+      "deneme"
+    ],
+    "musiclist": [
+      "Boards of Canada - Sunshine Recorder",
+      "Massive Attack - False Spring",
+      "Massive Attack - I Against I",
+      "Duman - Dibine Kadar"
+    ],
+    "publishedAt": "2022-12-30T22:43:00.000Z",
+    "publishedAtFull": "Saturday, December 31, 2022",
+    "publishedAtLong": "December 31, 2022",
+    "publishedAtMedium": "Dec 31, 2022",
+    "publishedAtShort": "12/31/22",
+    "foldered": true,
+    "slug": "olay-ve-olasilik",
+    "permalink": "/turkce/olay-ve-olasilik",
+    "category": {
+      "name": "Türkçe",
+      "permalink": "/turkce"
+    },
+    "localAssets": [
+      {
+        "name": "ben.jpg",
+        "path": "Türkçe/Olay ve Olasılık/ben.jpg",
+        "depth": 2,
+        "extension": ".jpg",
+        "type": "localAsset"
+      },
+      {
+        "name": "sorgular.jpg",
+        "path": "Türkçe/Olay ve Olasılık/sorgular.jpg",
+        "depth": 2,
+        "extension": ".jpg",
+        "type": "localAsset"
+      }
+    ],
+    "site": {
+      "title": "A Blog website",
+      "description": "A future work"
+    }
+  },
+  {
+    "title": "Öle böle",
+    "type": "text-post",
+    "summary": "<p>Öyle</p>\n<p>",
+    "date": "2022-11-26, 15:28",
+    "tags": [
+      "öyle",
+      "test"
+    ],
+    "musiclist": [
+      "Say what your soul sings to you"
+    ],
+    "publishedAt": "2022-11-26T13:28:00.000Z",
+    "publishedAtFull": "Saturday, November 26, 2022",
+    "publishedAtLong": "November 26, 2022",
+    "publishedAtMedium": "Nov 26, 2022",
+    "publishedAtShort": "11/26/22",
+    "slug": "ole-bole",
+    "permalink": "/ole-bole",
+    "category": {
+      "name": "Uncategorized",
+      "permalink": "/uncategorized"
+    },
+    "site": {
+      "title": "A Blog website",
+      "description": "A future work"
+    }
+  },
+  {
+    "title": "hello test",
+    "type": "text-post",
+    "summary": "<p>hello</p>\n<p>trying txt</p>\n",
+    "tags": [],
+    "publishedAt": "2022-11-12T00:04:00.000Z",
+    "publishedAtFull": "Saturday, November 12, 2022",
+    "publishedAtLong": "November 12, 2022",
+    "publishedAtMedium": "Nov 12, 2022",
+    "publishedAtShort": "11/12/22",
+    "slug": "hello-test",
+    "permalink": "/hello-test",
+    "category": {
+      "name": "Uncategorized",
+      "permalink": "/uncategorized"
+    },
+    "site": {
+      "title": "A Blog website",
+      "description": "A future work"
+    }
+  },
+  {
+    "title": "Son Şey",
+    "type": "text-post",
+    "summary": "<p>Sondan bir önceki paragraf.</p>\n",
+    "date": "2022-11-03, 04:25",
+    "tags": [
+      "son",
+      "test"
+    ],
+    "musiclist": [
+      "Thievery Corporation"
+    ],
+    "publishedAt": "2022-11-03T02:25:00.000Z",
+    "publishedAtFull": "Thursday, November 3, 2022",
+    "publishedAtLong": "November 3, 2022",
+    "publishedAtMedium": "Nov 3, 2022",
+    "publishedAtShort": "11/3/22",
+    "slug": "son-sey",
+    "permalink": "/son-sey",
+    "category": {
+      "name": "Uncategorized",
+      "permalink": "/uncategorized"
+    },
+    "site": {
+      "title": "A Blog website",
+      "description": "A future work"
+    }
+  },
+  {
+    "title": "How to",
+    "type": "text-post",
+    "summary": "<p>Here&#39;s some little thing: a thing.</p>\n<p>A new paragraph. Sometime later, a good paragraph.</p>\n<p><img src=\"https://enes.in/assets/orbit-fallback.gif\" alt=\"orbit.gif\"></p>\n<p>",
+    "date": "2022-11-03, 04:25",
+    "tags": [
+      "howto",
+      "guide",
+      "tutorial",
+      "test"
+    ],
+    "musiclist": [
+      "I want you"
+    ],
+    "publishedAt": "2022-11-03T02:25:00.000Z",
+    "publishedAtFull": "Thursday, November 3, 2022",
+    "publishedAtLong": "November 3, 2022",
+    "publishedAtMedium": "Nov 3, 2022",
+    "publishedAtShort": "11/3/22",
+    "slug": "how-to",
+    "permalink": "/tutorials/how-to",
+    "category": {
+      "name": "Tutorials",
+      "permalink": "/tutorials"
+    },
+    "site": {
+      "title": "A Blog website",
+      "description": "A future work"
+    }
+  },
+  {
+    "title": "Herhangi bir text post",
+    "type": "text-post",
+    "summary": "<p>Herhangi bir random post</p>\n",
+    "date": "2022-10-19, 21:44",
+    "tags": [
+      "random",
+      "bir",
+      "post",
+      "test"
+    ],
+    "musiclist": [
+      "Shakira - She Wolf"
+    ],
+    "publishedAt": "2022-10-19T18:44:00.000Z",
+    "publishedAtFull": "Wednesday, October 19, 2022",
+    "publishedAtLong": "October 19, 2022",
+    "publishedAtMedium": "Oct 19, 2022",
+    "publishedAtShort": "10/19/22",
+    "slug": "herhangi-bir-text-post",
+    "permalink": "/turkce/herhangi-bir-text-post",
+    "category": {
+      "name": "Türkçe",
+      "permalink": "/turkce"
+    },
+    "site": {
+      "title": "A Blog website",
+      "description": "A future work"
+    }
+  },
+  {
+    "title": "In your eyes",
+    "type": "text-post",
+    "summary": "<p>This song from The Weeknd, \"In Your Eyes\", has had an interesting effect on me, maybe a bit of a nostalgic, but somehow a tickling, problematic feeling, if that makes sense at all. It's hard to explain at first, so bear with me until I figure out how to put it.</p>\n",
+    "date": "2021-06-10, 22:17",
+    "tags": [
+      "memories"
+    ],
+    "musiclist": [
+      "The Weeknd - In Your Eyes"
+    ],
+    "publishedAt": "2021-06-10T19:17:00.000Z",
+    "publishedAtFull": "Thursday, June 10, 2021",
+    "publishedAtLong": "June 10, 2021",
+    "publishedAtMedium": "Jun 10, 2021",
+    "publishedAtShort": "6/10/21",
+    "slug": "in-your-eyes",
+    "permalink": "/writings/in-your-eyes",
+    "category": {
+      "name": "Writings",
+      "permalink": "/writings"
+    },
+    "site": {
+      "title": "A Blog website",
+      "description": "A future work"
+    }
+  },
+  {
+    "title": "Bu andaydım",
+    "type": "text-post",
+    "summary": "<p>İşte tam bu andaydım. Düşündüm. Evimde kendime düşünmek için bir alan ayırmıştım ve orada uzanmış düşünüyordum.</p>\n<p>Bazen Zindan Adası filmi aklıma geliyor.</p>\n<p>Birliktelikten güçlük doğar.</p>\n<p>Öykünmeler, öyle ya da böyle sanmalar ve sanılmalar. Bekleni.</p>\n<p>Tembel bi adam olduğumu fırsat buldukça dile getirmek hoşuma gidiyor. Altı üstü bi doğrama tahtasını yağlamak, tahtaya masaj çekmek filan bana göre değil, ben tembel biriyim. Arada bi, kullandıktan sonra falan, yıkamaya okeyim yalnız.</p>\n<p>Müzik zevkim gittikçe soyut olandan yana tavır alıyor. Beni karşısına almış. Müzik zevkimle yüzleşiyorum.</p>\n<p>Birliktelik. Güçsüzlükten doğan ama güçlüklere evrilen. Sadece düşüncesi bile o kadar güçlü güçlükler tanıtıyor, tanımlıyor ve öyle güçsüzlük tanıları koyuyor ki. İradesiz, serbest, sarhoş gönüllülerin hayat bağını çözer.</p>\n<p>Birlikteliksizlik güçten doğar.</p>\n<p>Waiting for a cup of sexy hentai superstar.</p>\n",
+    "date": "2021-05-18, 02:41",
+    "tags": [
+      "kendim",
+      "düşünceler"
+    ],
+    "musiclist": [
+      "Boards of Canada - Music Has the Right to Children (album)",
+      "Boards of Canada Random 35 Tracks Full Tape",
+      "Underworld - The Hump"
+    ],
+    "publishedAt": "2021-05-17T23:41:00.000Z",
+    "publishedAtFull": "Tuesday, May 18, 2021",
+    "publishedAtLong": "May 18, 2021",
+    "publishedAtMedium": "May 18, 2021",
+    "publishedAtShort": "5/18/21",
+    "slug": "bu-andaydim",
+    "permalink": "/turkce/bu-andaydim",
+    "category": {
+      "name": "Türkçe",
+      "permalink": "/turkce"
+    },
+    "site": {
+      "title": "A Blog website",
+      "description": "A future work"
+    }
+  },
+  {
+    "title": "Kabanla Yürünen Deniz Kenarları",
+    "type": "text-post",
+    "summary": "<p>Aklımda tuttuğum onca yazı fikri hep bu anlarda yok oluyor.\nYeni eve taşınmama 12 gün kalmış.</p>\n<p>Sevgi, öfke ve nefret arasında dalgalanıyorum. Sağlıklı kalabilmem için sevgim\nyavaş yavaş ölmek zorunda, kanal tedavisi gibi. Yerini hissizlik ve yeni bir ölüm\nalmalı.  Önceki ölümler gibi; onun da yasını tutarım, bir süre özlem duyarım, bir\nsüre aklımda ölçer tartarım ve o da sonunda kabuğunu tutar.</p>\n<p>Yazıldığı gibi kalan mesajlar vardır. Yazıldığı gibi -görülmeden– silinen\nmesajlar da vardır. Öfke ve nefret de vardırlar. Gururdur ve saygısızlıktandır.\nSinire saplanan bir ve son iğnedir.</p>\n<p>Aptal dalga sesleri ile mi hüzünlenmeye zorlamalı yoksa aptal Aphex Twin ile mi\nuyuşmaya çalışmalı? Aptal Clubhouse. Bu yazıyı kabanımla yazıyorum. Askılıkta\nasılı kendisi. Kabanımı seviyorum. O bir yaz kabanıdır. Deniz kenarında\nyürürkendir tüm karmaşası ve hayat görüşü.</p>\n<p>Bu kez pek bi&#39; zorunlu aptallık.</p>\n",
+    "date": "2021-04-17, 22:24",
+    "tags": [
+      "kendim",
+      "düşünceler",
+      "sarhoş"
+    ],
+    "musiclist": [
+      "Björk - Hyperballad, Human Behavior, Jóga, Army of Me, Hidden Place",
+      "Aphex Twin - Surfing on Sine Waves 2",
+      "AFX - 1 P String"
+    ],
+    "publishedAt": "2021-04-17T19:24:00.000Z",
+    "publishedAtFull": "Saturday, April 17, 2021",
+    "publishedAtLong": "April 17, 2021",
+    "publishedAtMedium": "Apr 17, 2021",
+    "publishedAtShort": "4/17/21",
+    "slug": "kabanla-yurunen-deniz-kenarlari",
+    "permalink": "/turkce/kabanla-yurunen-deniz-kenarlari",
+    "category": {
+      "name": "Türkçe",
+      "permalink": "/turkce"
+    },
+    "site": {
+      "title": "A Blog website",
+      "description": "A future work"
+    }
+  },
+  {
+    "title": "Hepsi Buymuş",
+    "type": "text-post",
+    "summary": "<p>Vim'de blog yazıyorum:</p>\n<div><img src=\"/turkce/hepsi-buymus/vim.png\" alt=\"Vim'de blog yazdığımın ekran görüntüsü.\"></div>\n<p>Ne zamandır ikinci yazımı yazmak istiyordum. Şimdi ikna ettim kendimi ama aklıma bir şey gelmiyor.</p>\n<p>Şunlardan bahsetmek istemiştim: Daft Punk'ın ayrılması, Teoman'ın yeni albüm çıkarması. Sanki hayatım müzik endeskliymiş gibi (değil (ama öyle gibi görünüyor (yine de değil))).</p>\n",
+    "date": "2021-04-11, 01:38",
+    "tags": [
+      "kendim",
+      "düşünceler",
+      "sarhoş"
+    ],
+    "musiclist": [
+      "Teoman - Hepsi Buymuş",
+      "Sneaker Pimps - Tesco Suicide",
+      "Sneaker Pimps - Spin Spin Sugar"
+    ],
+    "publishedAt": "2021-04-10T22:38:00.000Z",
+    "publishedAtFull": "Sunday, April 11, 2021",
+    "publishedAtLong": "April 11, 2021",
+    "publishedAtMedium": "Apr 11, 2021",
+    "publishedAtShort": "4/11/21",
+    "foldered": true,
+    "slug": "hepsi-buymus",
+    "permalink": "/turkce/hepsi-buymus",
+    "category": {
+      "name": "Türkçe",
+      "permalink": "/turkce"
+    },
+    "localAssets": [
+      {
+        "name": "fifa2005.png",
+        "path": "Türkçe/Hepsi Buymuş/fifa2005.png",
+        "depth": 2,
+        "extension": ".png",
+        "type": "localAsset"
+      },
+      {
+        "name": "vim.png",
+        "path": "Türkçe/Hepsi Buymuş/vim.png",
+        "depth": 2,
+        "extension": ".png",
+        "type": "localAsset"
+      }
+    ],
+    "site": {
+      "title": "A Blog website",
+      "description": "A future work"
+    }
+  },
+  {
+    "title": "Another Photo",
+    "type": "photo-post",
+    "summary": "<p>A good photo.</p>\n",
+    "date": "2021-03-17, 02:06",
+    "tags": [
+      "national",
+      "geographic",
+      "apod"
+    ],
+    "originalUrl": "orion.png",
+    "mediumUrl": "orion-medium.png",
+    "thumbnailUrl": "orion-thumbnail.png",
+    "exif": " Camera: Canon EOS 1100D\n Lens: Lens: EF 85mm f/2\n Shot: Shot: 85mm f/2 1/100 ISO800\n",
+    "musiclist": [
+      "The Killers"
+    ],
+    "publishedAt": "2021-03-17T00:06:00.000Z",
+    "publishedAtFull": "Wednesday, March 17, 2021",
+    "publishedAtLong": "March 17, 2021",
+    "publishedAtMedium": "Mar 17, 2021",
+    "publishedAtShort": "3/17/21",
+    "foldered": true,
+    "slug": "another-photo",
+    "permalink": "/photography/another-photo",
+    "category": {
+      "name": "Photography",
+      "permalink": "/photography"
+    },
+    "localAssets": [
+      {
+        "name": "orion-medium.png",
+        "path": "Photography/Another Photo/orion-medium.png",
+        "depth": 2,
+        "extension": ".png",
+        "type": "localAsset"
+      },
+      {
+        "name": "orion-thumbnail.png",
+        "path": "Photography/Another Photo/orion-thumbnail.png",
+        "depth": 2,
+        "extension": ".png",
+        "type": "localAsset"
+      },
+      {
+        "name": "orion.png",
+        "path": "Photography/Another Photo/orion.png",
+        "depth": 2,
+        "extension": ".png",
+        "type": "localAsset"
+      }
+    ],
+    "site": {
+      "title": "A Blog website",
+      "description": "A future work"
+    }
+  },
+  {
+    "title": "A Photo",
+    "type": "photo-post",
+    "summary": "<p>A photo that I took while walking in the streets of Ullanlinna, Helsinki.</p>\n",
+    "date": "2021-03-17, 00:51",
+    "tags": [
+      "helsinki"
+    ],
+    "originalUrl": "crescent-hdr.png",
+    "mediumUrl": "crescent-hdr-medium.png",
+    "thumbnailUrl": "crescent-hdr-thumbnail.png",
+    "exif": " Camera: Canon EOS 1100D\n Lens: EF 50mm f/1.8 II\n Shot: 50mm f/3.2 1/100 ISO400\n",
+    "musiclist": [
+      "The Killers"
+    ],
+    "publishedAt": "2021-03-16T22:51:00.000Z",
+    "publishedAtFull": "Wednesday, March 17, 2021",
+    "publishedAtLong": "March 17, 2021",
+    "publishedAtMedium": "Mar 17, 2021",
+    "publishedAtShort": "3/17/21",
+    "foldered": true,
+    "slug": "a-photo",
+    "permalink": "/photography/a-photo",
+    "category": {
+      "name": "Photography",
+      "permalink": "/photography"
+    },
+    "localAssets": [
+      {
+        "name": "crescent-hdr-medium.png",
+        "path": "Photography/A Photo/crescent-hdr-medium.png",
+        "depth": 2,
+        "extension": ".png",
+        "type": "localAsset"
+      },
+      {
+        "name": "crescent-hdr-thumbnail.png",
+        "path": "Photography/A Photo/crescent-hdr-thumbnail.png",
+        "depth": 2,
+        "extension": ".png",
+        "type": "localAsset"
+      },
+      {
+        "name": "crescent-hdr.png",
+        "path": "Photography/A Photo/crescent-hdr.png",
+        "depth": 2,
+        "extension": ".png",
+        "type": "localAsset"
+      }
+    ],
+    "site": {
+      "title": "A Blog website",
+      "description": "A future work"
+    }
+  },
+  {
+    "title": "ProgressCar",
+    "type": "text-post",
+    "summary": "<p class=\"codepen\" data-height=\"265\" data-theme-id=\"light\" data-default-tab=\"html,result\" data-user=\"pavlovsk\" data-slug-hash=\"YzppeYX\" style=\"height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;\" data-pen-title=\"ProgressCar with Custom CSS Properties\">\n  <span>See the Pen <a href=\"https://codepen.io/pavlovsk/pen/YzppeYX\">\n  ProgressCar with Custom CSS Properties</a> by Mustafa Enes (<a href=\"https://codepen.io/pavlovsk\">@pavlovsk</a>)\n  on <a href=\"https://codepen.io\">CodePen</a>.</span>\n</p>\n<script async src=\"https://cpwebassets.codepen.io/assets/embed/ei.js\"></script>\n",
+    "date": "2021-03-10, 23:31",
+    "tags": [
+      "codepen"
+    ],
+    "musiclist": [
+      "Metallica - Harvester of Sorrow"
+    ],
+    "publishedAt": "2021-03-10T21:31:00.000Z",
+    "publishedAtFull": "Wednesday, March 10, 2021",
+    "publishedAtLong": "March 10, 2021",
+    "publishedAtMedium": "Mar 10, 2021",
+    "publishedAtShort": "3/10/21",
+    "slug": "progresscar",
+    "permalink": "/code/progresscar",
+    "category": {
+      "name": "Code",
+      "permalink": "/code"
+    },
+    "site": {
+      "title": "A Blog website",
+      "description": "A future work"
+    }
+  },
+  {
+    "title": "İlk Şey",
+    "type": "text-post",
+    "summary": "<p>İlk paragraf.</p>\n<p>HTML yazmak neden istememeliyiz ki? Soyutlamamaya karar verirsem pekala HTML ile blog oluşturabilirim. Neyse artık.</p>\n<p>16 yaşımdaydım galiba, buna benzer bir özel günlük yazmaya başlamıştım düz HTML ile.</p>\n<p>Gafamın dönmeye başlamak üzere olduğunu hissediyorum. Dışarıda kar fırtınasına yakın bir şey var. Tek sorun: kar yağmıyor. Epey rüzgarlı sadece. Sigaradan sigaraya çıkıyorum dışarı.</p>\n",
+    "date": "2021-03-07, 01:44",
+    "tags": [
+      "kendim",
+      "düşünceler",
+      "ilk",
+      "sarhoş"
+    ],
+    "musiclist": [
+      "UnderWorld - Born slippery,",
+      "Underworld - Pinetum,",
+      "Underworld & Iggy Pop - Bells & Circles",
+      "Daft Punk - Alive 2027",
+      "Depeche Mode - It's No Good",
+      "22 Pistepirkko - Birdy"
+    ],
+    "publishedAt": "2021-03-06T23:44:00.000Z",
+    "publishedAtFull": "Sunday, March 7, 2021",
+    "publishedAtLong": "March 7, 2021",
+    "publishedAtMedium": "Mar 7, 2021",
+    "publishedAtShort": "3/7/21",
+    "slug": "ilk-sey",
+    "permalink": "/turkce/ilk-sey",
+    "category": {
+      "name": "Türkçe",
+      "permalink": "/turkce"
+    },
+    "site": {
+      "title": "A Blog website",
+      "description": "A future work"
+    }
+  }
+]
