@@ -1,0 +1,2 @@
+#!/bin/sh
+NODE_ENV=build node -p "require('../writ-cms')(require('./settings.json')).compile()"

@@ -8,16 +8,15 @@
   "exportDirectory": "site",
   "pagesDirectory": "pages",
   "ignorePaths": [
-    "node_modules",
-    "package.json",
-    "package-lock.json",
     ".git",
     ".gitignore",
     ".DS_Store",
     "_.*",
     "settings.json",
-    "start.js",
     "site",
+    "build",
+    "dev",
+    "publish",
     "README.md"
   ]
 }
