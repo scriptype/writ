@@ -2,17 +2,13 @@
 
 This is my new blog attempt that uses my new cms attempt.
 
-```sh
-# Setup
-npm install
+## Requirements
 
-# First time dev
-# First, clone writ-cms to parent directory. And then:
-npm link writ-cms ../writ-cms
+- Node.js, npm, git
+- `../writ-cms`: `git clone git@github.com:scriptype/writ-cms.git`
 
-# Continuing the dev
-npm start
+## Executables:
 
-# Publish new content on gh-pages
-npm run publish
-```
+`dev`: Live preview & editing in local environment
+`build`: Finish after generating the site
+`publish`: Finish after generating the site
