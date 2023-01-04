@@ -74,5 +74,3 @@ Hazırcevaplardan kurtul. Olasılıklarını kendi eline al. Sürekli tanıklık
 
 Erken cevap vermekten kaç. Büyük soruyu kendi dallarına yönelt. Mantıksız ve sayılamaz
 yeni dallar dene. Bir ağaç kadar ol ve soru sor. Cevapları tanı. Oku.
-
-.
