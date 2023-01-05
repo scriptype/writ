@@ -10,5 +10,7 @@ This is my new blog attempt that uses my new cms attempt.
 ## Executables:
 
 `dev`: Live preview & editing in local environment
+
 `build`: Finish after generating the site
+
 `publish`: Finish after generating the site
