@@ -2,7 +2,7 @@
   {
     "title": "Olay ve Olasılık",
     "type": "text-post",
-    "summary": "<p><img src=\"/turkce/olay-ve-olasilik/sorgular.jpg\" alt=\"Ağaçlar olasılıklarını dallarıyla olaya döker\"></p>\n<h3 id=\"ağaç-sorguları\">Ağaç sorguları</h3>\n<p>Ağaçlarda kendimizi görebiliriz. Sınırsız şekillerde dallar her göz için farklı kesişir.\nAkla basit gelen bir dizi genetik kuralın sonucu olarak bu ağaçlar bizi farklı düşlere koyar.\n",
+    "summary": "<p><img src=\"/turkce/olay-ve-olasilik/sorgular.jpg\" alt=\"Ağaçlar olasılıklarını dallarıyla olaya döker\"></p>\n<h3>Ağaç sorguları</h3>\n<p>Ağaçlarda kendimizi görebiliriz. Sınırsız şekillerde dallar her göz için farklı kesişir.\nAkla basit gelen bir dizi genetik kuralın sonucu olarak bu ağaçlar bizi farklı düşlere koyar.\n",
     "date": "2022-12-31, 00:43",
     "tags": [
       "deneme"
@@ -44,12 +44,13 @@
     "site": {
       "title": "A Blog website",
       "description": "A future work"
-    }
+    },
+    "path": "Türkçe/Olay ve Olasılık/post.md"
   },
   {
     "title": "Öle böle",
     "type": "text-post",
-    "summary": "<p>Öyle</p>\n<p>",
+    "summary": "<p>Öyle</p>\n",
     "date": "2022-11-26, 15:28",
     "tags": [
       "öyle",
@@ -63,8 +64,8 @@
     "publishedAtLong": "November 26, 2022",
     "publishedAtMedium": "Nov 26, 2022",
     "publishedAtShort": "11/26/22",
-    "slug": "ole-bole",
-    "permalink": "/ole-bole",
+    "slug": "ole-bole.md",
+    "permalink": "/ole-bole.html",
     "category": {
       "name": "Uncategorized",
       "permalink": "/uncategorized"
@@ -72,7 +73,8 @@
     "site": {
       "title": "A Blog website",
       "description": "A future work"
-    }
+    },
+    "path": "Öle böle.md"
   },
   {
     "title": "hello test",
@@ -84,8 +86,8 @@
     "publishedAtLong": "November 12, 2022",
     "publishedAtMedium": "Nov 12, 2022",
     "publishedAtShort": "11/12/22",
-    "slug": "hello-test",
-    "permalink": "/hello-test",
+    "slug": "hello-test.txt",
+    "permalink": "/hello-test.html",
     "category": {
       "name": "Uncategorized",
       "permalink": "/uncategorized"
@@ -93,7 +95,8 @@
     "site": {
       "title": "A Blog website",
       "description": "A future work"
-    }
+    },
+    "path": "hello test.txt"
   },
   {
     "title": "Son Şey",
@@ -112,8 +115,8 @@
     "publishedAtLong": "November 3, 2022",
     "publishedAtMedium": "Nov 3, 2022",
     "publishedAtShort": "11/3/22",
-    "slug": "son-sey",
-    "permalink": "/son-sey",
+    "slug": "son-sey.hbs",
+    "permalink": "/son-sey.html",
     "category": {
       "name": "Uncategorized",
       "permalink": "/uncategorized"
@@ -121,12 +124,13 @@
     "site": {
       "title": "A Blog website",
       "description": "A future work"
-    }
+    },
+    "path": "Son Şey.hbs"
   },
   {
     "title": "How to",
     "type": "text-post",
-    "summary": "<p>Here&#39;s some little thing: a thing.</p>\n<p>A new paragraph. Sometime later, a good paragraph.</p>\n<p><img src=\"https://enes.in/assets/orbit-fallback.gif\" alt=\"orbit.gif\"></p>\n<p>",
+    "summary": "<p>Here&#39;s some little thing: a thing.</p>\n<p>A new paragraph. Sometime later, a good paragraph.</p>\n<p><img src=\"https://enes.in/assets/orbit-fallback.gif\" alt=\"orbit.gif\"></p>\n",
     "date": "2022-11-03, 04:25",
     "tags": [
       "howto",
@@ -142,8 +146,8 @@
     "publishedAtLong": "November 3, 2022",
     "publishedAtMedium": "Nov 3, 2022",
     "publishedAtShort": "11/3/22",
-    "slug": "how-to",
-    "permalink": "/tutorials/how-to",
+    "slug": "how-to.md",
+    "permalink": "/tutorials/how-to.html",
     "category": {
       "name": "Tutorials",
       "permalink": "/tutorials"
@@ -151,7 +155,8 @@
     "site": {
       "title": "A Blog website",
       "description": "A future work"
-    }
+    },
+    "path": "Tutorials/How to.md"
   },
   {
     "title": "Herhangi bir text post",
@@ -172,8 +177,8 @@
     "publishedAtLong": "October 19, 2022",
     "publishedAtMedium": "Oct 19, 2022",
     "publishedAtShort": "10/19/22",
-    "slug": "herhangi-bir-text-post",
-    "permalink": "/turkce/herhangi-bir-text-post",
+    "slug": "herhangi-bir-text-post.hbs",
+    "permalink": "/turkce/herhangi-bir-text-post.html",
     "category": {
       "name": "Türkçe",
       "permalink": "/turkce"
@@ -181,7 +186,8 @@
     "site": {
       "title": "A Blog website",
       "description": "A future work"
-    }
+    },
+    "path": "Türkçe/Herhangi bir text post.hbs"
   },
   {
     "title": "In your eyes",
@@ -199,8 +205,8 @@
     "publishedAtLong": "June 10, 2021",
     "publishedAtMedium": "Jun 10, 2021",
     "publishedAtShort": "6/10/21",
-    "slug": "in-your-eyes",
-    "permalink": "/writings/in-your-eyes",
+    "slug": "in-your-eyes.hbs",
+    "permalink": "/writings/in-your-eyes.html",
     "category": {
       "name": "Writings",
       "permalink": "/writings"
@@ -208,7 +214,8 @@
     "site": {
       "title": "A Blog website",
       "description": "A future work"
-    }
+    },
+    "path": "Writings/In your eyes.hbs"
   },
   {
     "title": "Bu andaydım",
@@ -229,8 +236,8 @@
     "publishedAtLong": "May 18, 2021",
     "publishedAtMedium": "May 18, 2021",
     "publishedAtShort": "5/18/21",
-    "slug": "bu-andaydim",
-    "permalink": "/turkce/bu-andaydim",
+    "slug": "bu-andaydim.markdown",
+    "permalink": "/turkce/bu-andaydim.html",
     "category": {
       "name": "Türkçe",
       "permalink": "/turkce"
@@ -238,7 +245,8 @@
     "site": {
       "title": "A Blog website",
       "description": "A future work"
-    }
+    },
+    "path": "Türkçe/Bu andaydım.markdown"
   },
   {
     "title": "Kabanla Yürünen Deniz Kenarları",
@@ -260,8 +268,8 @@
     "publishedAtLong": "April 17, 2021",
     "publishedAtMedium": "Apr 17, 2021",
     "publishedAtShort": "4/17/21",
-    "slug": "kabanla-yurunen-deniz-kenarlari",
-    "permalink": "/turkce/kabanla-yurunen-deniz-kenarlari",
+    "slug": "kabanla-yurunen-deniz-kenarlari.txt",
+    "permalink": "/turkce/kabanla-yurunen-deniz-kenarlari.html",
     "category": {
       "name": "Türkçe",
       "permalink": "/turkce"
@@ -269,7 +277,8 @@
     "site": {
       "title": "A Blog website",
       "description": "A future work"
-    }
+    },
+    "path": "Türkçe/Kabanla Yürünen Deniz Kenarları.txt"
   },
   {
     "title": "Hepsi Buymuş",
@@ -317,7 +326,8 @@
     "site": {
       "title": "A Blog website",
       "description": "A future work"
-    }
+    },
+    "path": "Türkçe/Hepsi Buymuş/post.hbs"
   },
   {
     "title": "Another Photo",
@@ -374,7 +384,8 @@
     "site": {
       "title": "A Blog website",
       "description": "A future work"
-    }
+    },
+    "path": "Photography/Another Photo/index.hbs"
   },
   {
     "title": "A Photo",
@@ -429,7 +440,8 @@
     "site": {
       "title": "A Blog website",
       "description": "A future work"
-    }
+    },
+    "path": "Photography/A Photo/post.html"
   },
   {
     "title": "ProgressCar",
@@ -447,8 +459,8 @@
     "publishedAtLong": "March 10, 2021",
     "publishedAtMedium": "Mar 10, 2021",
     "publishedAtShort": "3/10/21",
-    "slug": "progresscar",
-    "permalink": "/code/progresscar",
+    "slug": "progresscar.html",
+    "permalink": "/code/progresscar.html",
     "category": {
       "name": "Code",
       "permalink": "/code"
@@ -456,7 +468,8 @@
     "site": {
       "title": "A Blog website",
       "description": "A future work"
-    }
+    },
+    "path": "Code/ProgressCar.html"
   },
   {
     "title": "İlk Şey",
@@ -482,8 +495,8 @@
     "publishedAtLong": "March 7, 2021",
     "publishedAtMedium": "Mar 7, 2021",
     "publishedAtShort": "3/7/21",
-    "slug": "ilk-sey",
-    "permalink": "/turkce/ilk-sey",
+    "slug": "ilk-sey.hbs",
+    "permalink": "/turkce/ilk-sey.html",
     "category": {
       "name": "Türkçe",
       "permalink": "/turkce"
@@ -491,6 +504,7 @@
     "site": {
       "title": "A Blog website",
       "description": "A future work"
-    }
+    },
+    "path": "Türkçe/İlk Şey.hbs"
   }
 ]

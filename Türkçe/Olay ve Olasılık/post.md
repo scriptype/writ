@@ -66,7 +66,7 @@ fayda sezdiğimizde erken davranırız, sormayı ve okumayı bırakırız. Cevap
 plastik etiketlere basarız, yalancı bir özgüven inşa eder, derinliksiz cevaplar
 üstünde bina yapar, uçak uçururuz. Kumar oynarız.
 
-Şimdi biraz duralım. Korkularını düşün. Senliğini koruma altında tutan zihni
+Şimdi biraz duralım. Korkularını düşün. Senliğini koruma altında tutan zihnî
 manyetosfer ve onun hoş kuzey ışıkları. Bundan kurtulmanın içinde kaybol. Bazı karmaşık
 hallerine elveren narin önkoşulların ortadan kalkışını korkusuzca izle.
 
