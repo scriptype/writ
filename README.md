@@ -2,18 +2,26 @@
 
 This is my new blog attempt that uses my new cms attempt.
 
-## Requirements
+## Installing requirements
 
-- `writ-cms`: `git clone git@github.com:scriptype/writ-cms.git`
+```sh
+# Install writ-cms
+git clone git@github.com:scriptype/writ-cms.git
+cd writ-cms
+npm i
 
-## Start in dev mode
-
+# Install 'writ' binary
+npm i -g .
 ```
-../writ-cms start .
+
+## Start developing and live editing
+
+```sh
+writ start
 ```
 
 ## Build for deployment
 
-```
-../writ-cms build .
+```sh
+writ build
 ```
