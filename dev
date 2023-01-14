@@ -1,2 +1,0 @@
-#!/bin/sh
-NODE_ENV=dev node -p "require('../writ-cms')(require('./settings.json')).watch()"

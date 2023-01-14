@@ -4,13 +4,16 @@ This is my new blog attempt that uses my new cms attempt.
 
 ## Requirements
 
-- Node.js, npm, git
-- `../writ-cms`: `git clone git@github.com:scriptype/writ-cms.git`
+- `writ-cms`: `git clone git@github.com:scriptype/writ-cms.git`
 
-## Executables:
+## Start in dev mode
 
-`dev`: Live preview & editing in local environment
+```
+../writ-cms start .
+```
 
-`build`: Finish after generating the site
+## Build for deployment
 
-`publish`: Finish after generating the site
+```
+../writ-cms build .
+```
