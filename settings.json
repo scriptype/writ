@@ -3,19 +3,6 @@
     "title": "A Blog website",
     "description": "A future work"
   },
-  "theme": "default",
-  "assetsDirectory": "assets",
   "exportDirectory": "docs",
-  "pagesDirectory": "pages",
-  "ignorePaths": [
-    ".git",
-    ".gitignore",
-    ".DS_Store",
-    "_.*",
-    "settings.json",
-    "docs",
-    "build",
-    "dev",
-    "README.md"
-  ]
+  "ignorePaths": ["README.md"]
 }
