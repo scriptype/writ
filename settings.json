@@ -1,8 +1,0 @@
-{
-  "site": {
-    "title": "A Blog website",
-    "description": "A future work"
-  },
-  "exportDirectory": "docs",
-  "ignorePaths": ["README.md"]
-}
