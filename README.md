@@ -16,7 +16,7 @@ Currently, a command line application such as <a href="https://iterm2.com/">iTer
 Also, these packages should be installed in your computer beforehand:
 - Git (Download here: https://git-scm.com/)
 - Node.js & npm (Download here: https://nodejs.org/en/)
-- Writ-CMS (Download here: https://github.com/scriptype/writ-cms/blob/master/readme.md#installation)
+- Writ-CMS (Download here: https://github.com/scriptype/writ-cms#installation)
 </details>
 <details>
 <summary><h3>Installation</h3></summary>
