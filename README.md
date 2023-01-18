@@ -7,7 +7,7 @@ This is my new blog attempt that uses my new cms attempt.
 <details>
 <summary><h2>Manual</h2></summary>
 
-To check the look & feel locally, follow the next chapter. Mostly though, this is for my future self.
+Follow the next chapter to check the look & feel locally. Mostly though, this is for my future self.
 
 <details>
 <summary><h3>Prerequisites</h3></summary>
