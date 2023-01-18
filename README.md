@@ -1,49 +1,47 @@
 # Writ şeysi
 
-![screenshot of writ.enes.in](https://user-images.githubusercontent.com/5516876/213273025-dc6a6337-dde1-4111-8fb8-5df28a2e041b.png)
-
-
 This is my new blog attempt that uses my new cms attempt.
+
+![screenshot of writ.enes.in](https://user-images.githubusercontent.com/5516876/213278219-4c4f604e-2c6b-45a6-a6dc-5bb9a1c5c5e8.png)
+
 <details>
-  <summary><h2>Installing requirements</h2></summary>
+<summary><h2>Manual</h2></summary>
 
-These packages should be installed in your computer beforehand:
-- Node.js & npm (Download here: https://nodejs.org/en/)
+To check the look & feel locally, follow the next chapter. Mostly though, this is for my future self.
+
+<details>
+<summary><h3>Prerequisites</h3></summary>
+Currently, a command line application such as <a href="https://iterm2.com/">iTerm2</a> or <a href="https://git-scm.com/">Git Bash</a> is needed to run this project.
+
+Also, these packages should be installed in your computer beforehand:
 - Git (Download here: https://git-scm.com/)
-
-Use the command line application that your OS provides, and follow these instructions:
+- Node.js & npm (Download here: https://nodejs.org/en/)
+- Writ-CMS (Downlaod here: https://github.com/scriptype/writ-cms/blob/master/readme.md#installation)
+</details>
+<details>
+<summary><h3>Installation</h3></summary>
 
 ```sh
-# Use git to clone writ and writ-cms
 git clone git@github.com:scriptype/writ.git
-git clone git@github.com:scriptype/writ-cms.git
-
-# Install writ-cms dependencies and the writ-cms binary (`writ`)
-cd writ-cms
-npm i
-npm i -g .
 ```
+</details>
+<details>
+<summary><h3>Create and extend</h3></summary>
 
-Now that we got `writ` recognized to our system, we should go back to blog directory:
-
-```sh
-# Go back to blog project directory
-cd ../writ
-```
-
-And,
-
-## Start developing and live editing
+In the project directory, run:
 
 ```sh
 writ start
 ```
+</details>
+<details>
+<summary><h3>Finalise for release</h3></summary>
 
-or:
-
-## Build for deployment
+In the project directory, run:
 
 ```sh
 writ build
 ```
+</details>
+
 </details>
