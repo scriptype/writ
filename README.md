@@ -14,9 +14,9 @@ Follow the next chapter to check the look & feel locally. Really though, this is
 Currently, a command line application such as <a href="https://iterm2.com/">iTerm2</a> or <a href="https://git-scm.com/">Git Bash</a> is needed to run this project.
 
 Also, these packages should be installed in your computer beforehand:
-- Git (Download here: https://git-scm.com/)
-- Node.js & npm (Download here: https://nodejs.org/en/)
-- Writ-CMS (Download here: https://github.com/scriptype/writ-cms#installation)
+- Git (<a href="https://git-scm.com">Download</a>)
+- Node.js & npm (<a href="https://nodejs.org/en">Download</a>)
+- Writ-CMS (<a href="https://github.com/scriptype/writ-cms#installation">Download</a>)
 </details>
 <details>
 <summary><h3>Installation</h3></summary>
