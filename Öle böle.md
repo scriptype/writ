@@ -1,5 +1,5 @@
 ---
-type: text-post
+type: text
 date: 2022-11-26, 15:28
 tags: öyle, test
 musiclist:

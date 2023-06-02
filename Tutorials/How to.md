@@ -1,5 +1,5 @@
 ---
-type: text-post
+type: text
 date: 2022-11-03, 04:25
 tags: howto, guide, tutorial, test
 musiclist:

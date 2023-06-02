@@ -1,5 +1,5 @@
 ---
-type: text-post
+type: text
 date: 2022-12-31, 00:43
 tags: deneme
 musiclist:

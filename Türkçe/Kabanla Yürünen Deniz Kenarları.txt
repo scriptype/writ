@@ -1,5 +1,5 @@
 ---
-type: text-post
+type: text
 date: 2021-04-17, 22:24
 tags: kendim, düşünceler, sarhoş
 musiclist:

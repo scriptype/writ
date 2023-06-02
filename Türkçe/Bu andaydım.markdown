@@ -1,5 +1,5 @@
 ---
-type: text-post
+type: text
 date: 2021-05-18, 02:41
 tags: kendim, düşünceler
 musiclist:
