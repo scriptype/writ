@@ -9,7 +9,7 @@ musiclist:
  - Duman - Dibine Kadar
 ---
 
-![Ağaçlar olasılıklarını dallarıyla olaya döker](/turkce/olay-ve-olasilik/sorgular.jpg)
+![Ağaçlar olasılıklarını dallarıyla olaya döker](sorgular.jpg)
 
 ### Ağaç sorguları
 
@@ -52,7 +52,7 @@ Güneş enerjisini düşün. Portakal kabuğu üstündeki mikrobiyolojiyi andır
 Sağanak ve süreğen enerji yağmuru ve zamandaki bolluğun ne cevaplar ortaya çıkardığına bak.
 Bazı cevapların ihtiyaç duyduğu narin önkoşulları değerlendir.
 
-![Benlik ışıkları](/turkce/olay-ve-olasilik/ben.jpg)
+![Benlik ışıkları](ben.jpg)
 
 Hayat, güneş sisteminin yerküreye yönelttiği büyük bir sorunun andaki cevabıdır.
 Yerküre maruz kaldığı sorunun üslubunu gözönünde bulundurur ve bazen kestirme
