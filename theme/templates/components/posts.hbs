@@ -18,4 +18,18 @@
     </div>
   {{/if}}
 
+  {{#if (is post.type 'audio')}}
+    <div class="post">
+        <a href="{{post.permalink}}">
+          <h2>{{post.title}}</h2>
+          {{#if post.cover}}
+            <img src="{{post.permalink}}/{{post.cover}}" alt="{{post.coverAlt}}">
+          {{/if}}
+        </a>
+        {{{post.summary}}}
+        <p><a href="{{post.category.permalink}}">{{post.category.name}}</a></p>
+        <p>{{post.publishDateMedium}}</p>
+    </div>
+  {{/if}}
+
 {{/each}}
