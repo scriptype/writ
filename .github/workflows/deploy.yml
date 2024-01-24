@@ -37,8 +37,11 @@ jobs:
         with:
           node-version: '16'
 
+      - name: Install writ
+        run: npm i -g scriptype/writ-cms
+
       - name: Build
-        run: npx scriptype/writ build
+        run: writ build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
