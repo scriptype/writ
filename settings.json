@@ -1,4 +1,5 @@
 {
   "cname": "writ.enes.in",
-  "syntaxHighlighting": "on"
+  "syntaxHighlighting": "on",
+  "exportDirectory": ".output"
 }

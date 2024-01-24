@@ -1,0 +1,42 @@
+name: Deploy to GitHub pages
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+      - uses: actions/checkout@v3
+
+      - name: Generate static files
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      - run: npm i -g scriptype/writ
+      - run: writ build
+
+      - name: Upload build artifacts
+        uses: actions/upload-pages-artifact
+        with:
+          path: .output
+
+  deploy:
+    needs: build
+
+    permissions:
+      pages: write      # to deploy to Pages
+      id-token: write   # to verify the deployment originates from an appropriate source
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
