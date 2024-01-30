@@ -1,5 +1,5 @@
 <div class="topbar">
-  <h1 class="site-title" id="dark-toggle">{{settings.site.title}}</h1>
+  {{>components/site-title}}
 
   {{#if (isEnabled "search")}}
     {{>features/search}}
