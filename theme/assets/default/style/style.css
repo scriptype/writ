@@ -123,9 +123,9 @@ body {
 .post p {
     margin-inline: auto;
     font-size: 24px;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
     text-wrap: balance;
-    word-spacing: 0.15em;
+    word-spacing: 0.12em;
 }
 
 .post img {
