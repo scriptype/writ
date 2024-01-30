@@ -2,14 +2,16 @@
 type: text
 date: 2022-12-31, 00:43
 tags: deneme
+cover: sorgular.jpg
+coverAlt: Ağaçlar olasılıklarını dallarıyla olaya döker
+coverShape: roundTop
+coverPosition: center bottom
 musiclist:
  - Boards of Canada - Sunshine Recorder
  - Massive Attack - Pray for Rain
  - Massive Attack - I Against I
  - Duman - Dibine Kadar
 ---
-
-![Ağaçlar olasılıklarını dallarıyla olaya döker](sorgular.jpg)
 
 ### Ağaç sorguları
 

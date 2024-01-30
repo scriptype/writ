@@ -8,7 +8,7 @@
     --letter-4-x: -0.097em;
     --letter-4-y: -0.071em;
     position: relative;
-    font: italic 700 16em/1 times, serif;
+    font: italic 700 min(16em, 40vmin)/1 times, serif;
     background: url("../writ.png") no-repeat center center;
     background-size: contain;
     color: transparent;
