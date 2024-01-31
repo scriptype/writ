@@ -1,38 +1,50 @@
 .site-title {
-    --letter-1-x: 0;
-    --letter-1-y: 0;
-    --letter-2-x: -0.11em;
-    --letter-2-y: -0.0272em;
-    --letter-3-x: -0.076em;
-    --letter-3-y: -0.028em;
-    --letter-4-x: -0.097em;
-    --letter-4-y: -0.071em;
-    position: relative;
-    font: italic 700 min(16em, 40vmin)/1 times, serif;
-    background: url("../writ.png") no-repeat center center;
-    background-size: contain;
-    color: transparent;
-    animation: fade-in 3s forwards;
+    overflow: hidden;
+    margin-bottom: -0.2em;
 }
 
-@supports (background-clip: text) {
-    body:not(.safari) .site-title {
-        top: 0;
-        left: 0.1em;
-        margin-bottom: -0.2em;
+.site-title-fallback-image {
+    width: min(410px, 52vmin);
+    vertical-align: middle;
+}
+
+.site-title-text {
+    position: absolute;
+    inset: 0;
+    top: -25%;
+    left: 0;
+    color: transparent;
+    font-size: 4em;
+    letter-spacing: 0em;
+    mix-blend-mode: plus-lighter;
+}
+
+.site-title-text::selection {
+    background: #F4A46066;
+}
+
+@supports (mask-image: url()) or (--webkit-mask-image: url()) {
+    .site-title {
+        transform: translateX(1.5%);
+        width: min(410px, 52vmin);
+        aspect-ratio: 1.6975;
         background:
-            radial-gradient(
-                at 0% 100%,
-                transparent 30%,
-                #111 60%
-            ),
-            url("../writ-tree.jpg");
-        -webkit-background-clip: text;
-        background-clip: text;
+            radial-gradient(at 0% 100%, transparent 30%, #111 60%),
+            url('../writ-tree.jpg') right top no-repeat;
         background-size: cover;
+        -webkit-mask-image: url(../writ-text.png);
+        -webkit-mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        mask-image: url(../writ-text.png);
+        mask-size: contain;
+        mask-repeat: no-repeat;
         animation:
             bg-position 10s linear infinite,
             reveal 3s forwards;
+    }
+
+    .site-title-fallback-image {
+        display: none;
     }
 }
 
@@ -45,15 +57,6 @@
     }
 }
 
-@keyframes fade-in {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
 @keyframes reveal {
     from {
         filter: brightness(0%);
@@ -61,38 +64,4 @@
     to {
         filter: brightness(100%);
     }
-}
-
-.site-title span {
-    position: relative;
-}
-
-.site-title span:nth-child(1) {
-    top: var(--letter-1-y);
-    left: var(--letter-1-x);
-}
-
-.site-title span:nth-child(2) {
-    top: var(--letter-2-y);
-    left: var(--letter-2-x);
-}
-
-.site-title span:nth-child(3) {
-    top: calc(
-    var(--letter-3-y) +
-    var(--letter-2-y)
-    );
-    left: calc(
-    var(--letter-3-x) +
-    var(--letter-2-x)
-    );
-}
-
-.site-title span:nth-child(4) {
-    top: var(--letter-4-y);
-    left: calc(
-    var(--letter-4-x) +
-    var(--letter-3-x) +
-    var(--letter-2-x)
-    );
 }

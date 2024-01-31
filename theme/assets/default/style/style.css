@@ -3,6 +3,10 @@ h1 {
     padding: 0;
 }
 
+a {
+    color: var(--link-color);
+}
+
 body {
     margin: 0;
     font: normal 20px/1.5 times, serif;
@@ -83,7 +87,7 @@ body {
 .categories-item {
     font-size: 24px;
     letter-spacing: -0.03em;
-    color: sienna;
+    color: var(--categories-link-color);
 }
 
 .photo-thumbnail img {
@@ -109,10 +113,6 @@ body {
     max-width: 60%;
     letter-spacing: -0.05em;
     margin-block: 3em 1em;
-}
-
-.post h2 a {
-    color: inherit;
 }
 
 .post h3 {
