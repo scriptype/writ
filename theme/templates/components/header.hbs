@@ -1,15 +1,13 @@
-<div class="topbar">
-  {{>components/site-title}}
+{{>components/site-title}}
 
-  {{#if (isEnabled "search")}}
-    {{>features/search}}
-  {{/if}}
+{{#if (isEnabled "search")}}
+  {{>features/search}}
+{{/if}}
 
-  <nav class="categories">
-      {{#each categories as |category|}}
-          <a class="categories-item" href="{{category.permalink}}">
-              {{category.name}}
-          </a>
-      {{/each}}
-  </nav>
-</div>
+<nav class="categories">
+    {{#each categories as |category|}}
+        <a class="categories-item category-link" href="{{category.permalink}}">
+            {{category.name}}
+        </a>
+    {{/each}}
+</nav>

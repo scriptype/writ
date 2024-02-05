@@ -3,7 +3,7 @@
     --container-color: #fff;
     --text-color: #333;
     --link-color: #333;
-    --categories-link-color: sienna;
+    --category-link-color: sienna;
 }
 
 body.dark {
@@ -11,5 +11,5 @@ body.dark {
     --container-color: #32363f;
     --text-color: #e0e3e6;
     --link-color: #e0e3e6;
-    --categories-link-color: hsl(19, 56.1%, 60.2%);
+    --category-link-color: hsl(19, 56.1%, 60.2%);
 }

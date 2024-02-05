@@ -1,3 +1,10 @@
+body {
+    margin: 0;
+    font: normal 20px/1.5 times, serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
 h1 {
     margin: 0;
     padding: 0;
@@ -7,11 +14,8 @@ a {
     color: var(--link-color);
 }
 
-body {
-    margin: 0;
-    font: normal 20px/1.5 times, serif;
-    background: var(--bg-color);
-    color: var(--text-color);
+.category-link {
+    color: var(--category-link-color);
 }
 
 .icon-symbols {
@@ -62,7 +66,7 @@ body {
     }
 }
 
-.topbar {
+[data-region-id="header"] {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -87,7 +91,6 @@ body {
 .categories-item {
     font-size: 24px;
     letter-spacing: -0.03em;
-    color: var(--categories-link-color);
 }
 
 .photo-thumbnail img {

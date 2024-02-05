@@ -43,10 +43,6 @@ module.exports = {
     }
   },
 
-  featSearchResults() {
-    return this.settings.search !== 'off' ? ' id="feat-search-results" ' : ''
-  },
-
   isStartMode() {
     return this.settings.mode === 'start'
   },
