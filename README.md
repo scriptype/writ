@@ -2,7 +2,7 @@
 
 This is my new blog attempt that uses my new cms attempt.
 
-![screenshot of writ.enes.in](https://user-images.githubusercontent.com/5516876/213278219-4c4f604e-2c6b-45a6-a6dc-5bb9a1c5c5e8.png)
+![screenshot of writ.enes.in](https://github.com/scriptype/writ/assets/5516876/524411f8-ce98-4954-a5d6-1d3903f7f8b5)
 
 <details>
 <summary><h2>Manual</h2></summary>
