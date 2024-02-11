@@ -1,0 +1,67 @@
+.site-title {
+    overflow: hidden;
+    margin-bottom: -0.2em;
+}
+
+.site-title-fallback-image {
+    width: min(410px, 52vmin);
+    vertical-align: middle;
+}
+
+.site-title-text {
+    position: absolute;
+    inset: 0;
+    top: -25%;
+    left: 0;
+    color: transparent;
+    font-size: 4em;
+    letter-spacing: 0em;
+    mix-blend-mode: plus-lighter;
+}
+
+.site-title-text::selection {
+    background: #F4A46066;
+}
+
+@supports (mask-image: url()) or (--webkit-mask-image: url()) {
+    .site-title {
+        transform: translateX(1.5%);
+        width: min(410px, 52vmin);
+        aspect-ratio: 1.6975;
+        background:
+            radial-gradient(at 0% 100%, transparent 30%, #111 60%),
+            url('../writ-tree.jpg') right top no-repeat;
+        background-size: cover;
+        -webkit-mask-image: url(../writ-text.png);
+        -webkit-mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        mask-image: url(../writ-text.png);
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        animation:
+            bg-position 10s linear infinite,
+            reveal 3s forwards;
+    }
+
+    .site-title-fallback-image {
+        display: none;
+    }
+}
+
+@keyframes bg-position {
+    from, to {
+        background-position: right top;
+    }
+    70% {
+        background-position: right 10%;
+    }
+}
+
+@keyframes reveal {
+    from {
+        filter: brightness(0%);
+    }
+    to {
+        filter: brightness(100%);
+    }
+}
