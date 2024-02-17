@@ -463,7 +463,7 @@
       "name": "Photography",
       "permalink": "/photography"
     },
-    "path": "Photography/Another Photo/index.hbs",
+    "path": "Photography/Another Photo/post.hbs",
     "site": {
       "title": "writ",
       "description": "A future work"
