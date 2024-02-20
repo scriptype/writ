@@ -2,6 +2,8 @@
   {
     "type": "text",
     "title": "Olay ve Olasılık",
+    "cover": "/turkce/olay-ve-olasilik/sorgular.jpg",
+    "media": "",
     "summary": "<h3>Ağaç sorguları</h3>\n<p>Ağaçlarda kendimizi görebiliriz. Sınırsız şekillerde dallar her göz için farklı kesişir.\nAkla basit gelen bir dizi genetik kuralın sonucu olarak bu ağaçlar bizi farklı düşlere koyar.\n",
     "tags": [
       {
@@ -11,7 +13,6 @@
       }
     ],
     "date": "2022-12-31, 00:43",
-    "cover": "sorgular.jpg",
     "coverAlt": "Ağaçlar olasılıklarını dallarıyla olaya döker",
     "coverShape": "roundTop",
     "coverPosition": "center bottom",
@@ -61,12 +62,16 @@
         "title": "Herhangi bir text post",
         "permalink": "/turkce/herhangi-bir-text-post.html"
       },
-      "relevantPosts": []
+      "relevantPosts": [],
+      "mentionedTo": [],
+      "mentionedBy": []
     }
   },
   {
     "type": "text",
     "title": "Herhangi bir text post",
+    "cover": "",
+    "media": "",
     "summary": "<p>Herhangi bir random post</p>\n",
     "tags": [
       {
@@ -121,12 +126,16 @@
         "title": "Bu andaydım",
         "permalink": "/turkce/bu-andaydim.html"
       },
-      "relevantPosts": []
+      "relevantPosts": [],
+      "mentionedTo": [],
+      "mentionedBy": []
     }
   },
   {
     "type": "text",
     "title": "In your eyes",
+    "cover": "",
+    "media": "",
     "summary": "<p>This song from The Weeknd, \"In Your Eyes\", has had an interesting effect on me, maybe a bit of a nostalgic, but somehow a tickling, problematic feeling, if that makes sense at all. It's hard to explain at first, so bear with me until I figure out how to put it.</p>\n",
     "tags": [
       {
@@ -158,12 +167,16 @@
     "publishDateMedium": "Jun 10, 2021",
     "publishDateShort": "6/10/21",
     "links": {
-      "relevantPosts": []
+      "relevantPosts": [],
+      "mentionedTo": [],
+      "mentionedBy": []
     }
   },
   {
     "type": "text",
     "title": "Bu andaydım",
+    "cover": "",
+    "media": "",
     "summary": "<p>İşte tam bu andaydım. Düşündüm. Evimde kendime düşünmek için bir alan ayırmıştım ve orada uzanmış düşünüyordum.</p>\n<p>Bazen Zindan Adası filmi aklıma geliyor.</p>\n<p>Birliktelikten güçlük doğar.</p>\n<p>Öykünmeler, öyle ya da böyle sanmalar ve sanılmalar. Bekleni.</p>\n<p>Tembel bi adam olduğumu fırsat buldukça dile getirmek hoşuma gidiyor. Altı üstü bi doğrama tahtasını yağlamak, tahtaya masaj çekmek filan bana göre değil, ben tembel biriyim. Arada bi, kullandıktan sonra falan, yıkamaya okeyim yalnız.</p>\n<p>Müzik zevkim gittikçe soyut olandan yana tavır alıyor. Beni karşısına almış. Müzik zevkimle yüzleşiyorum.</p>\n<p>Birliktelik. Güçsüzlükten doğan ama güçlüklere evrilen. Sadece düşüncesi bile o kadar güçlü güçlükler tanıtıyor, tanımlıyor ve öyle güçsüzlük tanıları koyuyor ki. İradesiz, serbest, sarhoş gönüllülerin hayat bağını çözer.</p>\n<p>Birlikteliksizlik güçten doğar.</p>\n<p>Waiting for a cup of sexy hentai superstar.</p>\n",
     "tags": [
       {
@@ -238,12 +251,16 @@
           },
           "relevancyScore": 2
         }
-      ]
+      ],
+      "mentionedTo": [],
+      "mentionedBy": []
     }
   },
   {
     "type": "text",
     "title": "Kabanla Yürünen Deniz Kenarları",
+    "cover": "",
+    "media": "",
     "summary": "<p>Aklımda tuttuğum onca yazı fikri hep bu anlarda yok oluyor.\nYeni eve taşınmama 12 gün kalmış.</p>\n<p>Sevgi, öfke ve nefret arasında dalgalanıyorum. Sağlıklı kalabilmem için sevgim\nyavaş yavaş ölmek zorunda, kanal tedavisi gibi. Yerini hissizlik ve yeni bir ölüm\nalmalı.  Önceki ölümler gibi; onun da yasını tutarım, bir süre özlem duyarım, bir\nsüre aklımda ölçer tartarım ve o da sonunda kabuğunu tutar.</p>\n<p>Yazıldığı gibi kalan mesajlar vardır. Yazıldığı gibi -görülmeden– silinen\nmesajlar da vardır. Öfke ve nefret de vardırlar. Gururdur ve saygısızlıktandır.\nSinire saplanan bir ve son iğnedir.</p>\n<p>Aptal dalga sesleri ile mi hüzünlenmeye zorlamalı yoksa aptal Aphex Twin ile mi\nuyuşmaya çalışmalı? Aptal Clubhouse. Bu yazıyı kabanımla yazıyorum. Askılıkta\nasılı kendisi. Kabanımı seviyorum. O bir yaz kabanıdır. Deniz kenarında\nyürürkendir tüm karmaşası ve hayat görüşü.</p>\n<p>Bu kez pek bi&#39; zorunlu aptallık.</p>\n",
     "tags": [
       {
@@ -323,12 +340,16 @@
           },
           "relevancyScore": 2
         }
-      ]
+      ],
+      "mentionedTo": [],
+      "mentionedBy": []
     }
   },
   {
     "type": "text",
     "title": "Hepsi Buymuş",
+    "cover": "",
+    "media": "",
     "summary": "<p>Vim'de blog yazıyorum:</p>\n<div><img src=\"/turkce/hepsi-buymus/vim.png\" alt=\"Vim'de blog yazdığımın ekran görüntüsü.\"></div>\n<p>Ne zamandır ikinci yazımı yazmak istiyordum. Şimdi ikna ettim kendimi ama aklıma bir şey gelmiyor.</p>\n<p>Şunlardan bahsetmek istemiştim: Daft Punk'ın ayrılması, Teoman'ın yeni albüm çıkarması. Sanki hayatım müzik endeskliymiş gibi (değil (ama öyle gibi görünüyor (yine de değil))).</p>\n",
     "tags": [
       {
@@ -425,12 +446,16 @@
           },
           "relevancyScore": 2
         }
-      ]
+      ],
+      "mentionedTo": [],
+      "mentionedBy": []
     }
   },
   {
     "type": "photo",
     "title": "Another Photo",
+    "cover": "",
+    "media": "",
     "summary": "<p>A good photo.</p>\n",
     "tags": [
       {
@@ -515,12 +540,16 @@
           },
           "relevancyScore": 1
         }
-      ]
+      ],
+      "mentionedTo": [],
+      "mentionedBy": []
     }
   },
   {
     "type": "photo",
     "title": "A Photo",
+    "cover": "",
+    "media": "",
     "summary": "<p>A photo that I took while walking in the streets of Ullanlinna, Helsinki.</p>\n",
     "tags": [
       {
@@ -595,12 +624,16 @@
           },
           "relevancyScore": 1
         }
-      ]
+      ],
+      "mentionedTo": [],
+      "mentionedBy": []
     }
   },
   {
     "type": "text",
     "title": "İlk Şey",
+    "cover": "",
+    "media": "",
     "summary": "<p>İlk paragraf.</p>\n<p>HTML yazmak neden istememeliyiz ki? Soyutlamamaya karar verirsem pekala HTML ile blog oluşturabilirim. Neyse artık.</p>\n<p>16 yaşımdaydım galiba, buna benzer bir özel günlük yazmaya başlamıştım düz HTML ile.</p>\n<p>Gafamın dönmeye başlamak üzere olduğunu hissediyorum. Dışarıda kar fırtınasına yakın bir şey var. Tek sorun: kar yağmıyor. Epey rüzgarlı sadece. Sigaradan sigaraya çıkıyorum dışarı.</p>\n",
     "tags": [
       {
@@ -684,7 +717,9 @@
           },
           "relevancyScore": 2
         }
-      ]
+      ],
+      "mentionedTo": [],
+      "mentionedBy": []
     }
   }
 ]
