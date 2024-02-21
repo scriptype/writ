@@ -29,6 +29,7 @@
       "permalink": "/turkce"
     },
     "path": "Türkçe/Olay ve Olasılık/post.md",
+    "handle": "Türkçe/Olay ve Olasılık",
     "site": {
       "title": "writ",
       "description": "A future work"
@@ -106,6 +107,7 @@
       "permalink": "/turkce"
     },
     "path": "Türkçe/Herhangi bir text post.hbs",
+    "handle": "Türkçe/Herhangi bir text post",
     "site": {
       "title": "writ",
       "description": "A future work"
@@ -155,6 +157,7 @@
       "permalink": "/writings"
     },
     "path": "Writings/In your eyes.hbs",
+    "handle": "Writings/In your eyes",
     "site": {
       "title": "writ",
       "description": "A future work"
@@ -203,6 +206,7 @@
       "permalink": "/turkce"
     },
     "path": "Türkçe/Bu andaydım.markdown",
+    "handle": "Türkçe/Bu andaydım",
     "site": {
       "title": "writ",
       "description": "A future work"
@@ -292,6 +296,7 @@
       "permalink": "/turkce"
     },
     "path": "Türkçe/Kabanla Yürünen Deniz Kenarları.txt",
+    "handle": "Türkçe/Kabanla Yürünen Deniz Kenarları",
     "site": {
       "title": "writ",
       "description": "A future work"
@@ -381,6 +386,7 @@
       "permalink": "/turkce"
     },
     "path": "Türkçe/Hepsi Buymuş/post.hbs",
+    "handle": "Türkçe/Hepsi Buymuş",
     "site": {
       "title": "writ",
       "description": "A future work"
@@ -489,6 +495,7 @@
       "permalink": "/photography"
     },
     "path": "Photography/Another Photo/post.hbs",
+    "handle": "Photography/Another Photo",
     "site": {
       "title": "writ",
       "description": "A future work"
@@ -573,6 +580,7 @@
       "permalink": "/photography"
     },
     "path": "Photography/A Photo/post.html",
+    "handle": "Photography/A Photo",
     "site": {
       "title": "writ",
       "description": "A future work"
@@ -673,6 +681,7 @@
       "permalink": "/turkce"
     },
     "path": "Türkçe/İlk Şey.hbs",
+    "handle": "Türkçe/İlk Şey",
     "site": {
       "title": "writ",
       "description": "A future work"
