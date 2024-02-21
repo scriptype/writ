@@ -1,10 +1,11 @@
-{{#>base page="home"}}
+{{#>base page="homepage"}}
   {{#>layouts/single-column}}
     <header {{region "header"}}>
       {{>components/header}}
     </header>
 
     <main {{region "main"}}>
+      {{> @partial-block }}
       {{>components/posts posts=(filterPostsByType 'text')}}
     </main>
   {{/layouts/single-column}}
