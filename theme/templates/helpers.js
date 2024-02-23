@@ -7,6 +7,18 @@ module.exports = {
     return ''
   },
 
+  map(...keyValues) {
+    return keyValues.reduce((result, keyOrValue, index) => {
+      if (index % 2 > 0) {
+        return result
+      }
+      return {
+        ...result,
+        [keyOrValue]: keyValues[index + 1]
+      }
+    }, {})
+  },
+
   mention(permalink, options) {
     const pattern = new RegExp('^(|\/)' + permalink)
     const entry = [
@@ -37,6 +49,9 @@ module.exports = {
     }
     if (this.page === 'category') {
       return `${this.category.name} / ${this.settings.site.title}`
+    }
+    if (this.page === 'tag') {
+      return `#${this.tag.tag} / ${this.settings.site.title}`
     }
     return `${this.settings.site.title}`
   },
