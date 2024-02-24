@@ -1,4 +1,5 @@
 {
   "syntaxHighlighting": "off",
-  "cname": "writ.enes.in"
+  "cname": "writ.enes.in",
+  "postsPerPage": 5
 }

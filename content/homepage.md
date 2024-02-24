@@ -1,0 +1,3 @@
+---
+exclude post types: photo
+---
