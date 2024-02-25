@@ -59,7 +59,7 @@
     "publishDateMedium": "Dec 31, 2022",
     "publishDateShort": "12/31/22",
     "links": {
-      "prevPost": {
+      "previousPost": {
         "title": "Herhangi bir text post",
         "permalink": "/turkce/herhangi-bir-text-post.html"
       },
@@ -124,7 +124,7 @@
         "title": "Olay ve Olasılık",
         "permalink": "/turkce/olay-ve-olasilik"
       },
-      "prevPost": {
+      "previousPost": {
         "title": "Bu andaydım",
         "permalink": "/turkce/bu-andaydim.html"
       },
@@ -223,7 +223,7 @@
         "title": "Herhangi bir text post",
         "permalink": "/turkce/herhangi-bir-text-post.html"
       },
-      "prevPost": {
+      "previousPost": {
         "title": "Kabanla Yürünen Deniz Kenarları",
         "permalink": "/turkce/kabanla-yurunen-deniz-kenarlari.html"
       },
@@ -313,7 +313,7 @@
         "title": "Bu andaydım",
         "permalink": "/turkce/bu-andaydim.html"
       },
-      "prevPost": {
+      "previousPost": {
         "title": "Hepsi Buymuş",
         "permalink": "/turkce/hepsi-buymus"
       },
@@ -420,7 +420,7 @@
         "title": "Kabanla Yürünen Deniz Kenarları",
         "permalink": "/turkce/kabanla-yurunen-deniz-kenarlari.html"
       },
-      "prevPost": {
+      "previousPost": {
         "title": "İlk Şey",
         "permalink": "/turkce/ilk-sey.html"
       },
@@ -533,7 +533,7 @@
     "publishDateMedium": "Mar 17, 2021",
     "publishDateShort": "3/17/21",
     "links": {
-      "prevPost": {
+      "previousPost": {
         "title": "A Photo",
         "permalink": "/photography/a-photo"
       },
