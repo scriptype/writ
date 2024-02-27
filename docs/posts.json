@@ -30,10 +30,6 @@
     },
     "path": "Türkçe/Olay ve Olasılık/post.md",
     "handle": "Türkçe/Olay ve Olasılık",
-    "site": {
-      "title": "writ",
-      "description": "A future work"
-    },
     "foldered": true,
     "localAssets": [
       {
@@ -108,10 +104,6 @@
     },
     "path": "Türkçe/Herhangi bir text post.hbs",
     "handle": "Türkçe/Herhangi bir text post",
-    "site": {
-      "title": "writ",
-      "description": "A future work"
-    },
     "foldered": false,
     "localAssets": [],
     "publishDate": "2022-10-19T18:44:00.000Z",
@@ -158,10 +150,6 @@
     },
     "path": "Writings/In your eyes.hbs",
     "handle": "Writings/In your eyes",
-    "site": {
-      "title": "writ",
-      "description": "A future work"
-    },
     "foldered": false,
     "localAssets": [],
     "publishDate": "2021-06-10T19:17:00.000Z",
@@ -207,10 +195,6 @@
     },
     "path": "Türkçe/Bu andaydım.markdown",
     "handle": "Türkçe/Bu andaydım",
-    "site": {
-      "title": "writ",
-      "description": "A future work"
-    },
     "foldered": false,
     "localAssets": [],
     "publishDate": "2021-05-17T23:41:00.000Z",
@@ -297,10 +281,6 @@
     },
     "path": "Türkçe/Kabanla Yürünen Deniz Kenarları.txt",
     "handle": "Türkçe/Kabanla Yürünen Deniz Kenarları",
-    "site": {
-      "title": "writ",
-      "description": "A future work"
-    },
     "foldered": false,
     "localAssets": [],
     "publishDate": "2021-04-17T19:24:00.000Z",
@@ -387,10 +367,6 @@
     },
     "path": "Türkçe/Hepsi Buymuş/post.hbs",
     "handle": "Türkçe/Hepsi Buymuş",
-    "site": {
-      "title": "writ",
-      "description": "A future work"
-    },
     "foldered": true,
     "localAssets": [
       {
@@ -496,10 +472,6 @@
     },
     "path": "Photography/Another Photo/post.hbs",
     "handle": "Photography/Another Photo",
-    "site": {
-      "title": "writ",
-      "description": "A future work"
-    },
     "foldered": true,
     "localAssets": [
       {
@@ -581,10 +553,6 @@
     },
     "path": "Photography/A Photo/post.html",
     "handle": "Photography/A Photo",
-    "site": {
-      "title": "writ",
-      "description": "A future work"
-    },
     "foldered": true,
     "localAssets": [
       {
@@ -682,10 +650,6 @@
     },
     "path": "Türkçe/İlk Şey.hbs",
     "handle": "Türkçe/İlk Şey",
-    "site": {
-      "title": "writ",
-      "description": "A future work"
-    },
     "foldered": false,
     "localAssets": [],
     "publishDate": "2021-03-06T22:44:00.000Z",
