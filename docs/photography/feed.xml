@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Writ | Photography</title>
+        <link>https://writ.enes.in/photography</link>
+        <description>Photography category on Writ</description>
+        <lastBuildDate>Sat Mar 02 2024 11:55:29 GMT+0300 (GMT+03:00)</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>manual</generator>
+        <language>en</language>
+        <image>
+            <title>Writ</title>
+            <url>https://writ.enes.in/assets/common/writ-icon-512.png</url>
+            <link>https://writ.enes.in</link>
+        </image>
+        <copyright>All rights reserved 2024, Writ</copyright>
+        <category>Photography</category>
+        <category>Türkçe</category>
+        <category>Writings</category>
+        <atom:link href="https://writ.enes.in/photography/feed.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Another Photo]]></title>
+            <link>https://writ.enes.in/photography/another-photo</link>
+            <guid>https://writ.enes.in/photography/another-photo</guid>
+            <pubDate>Wednesday, March 17, 2021</pubDate>
+            <description><![CDATA[<p>A good photo.</p>
+]]></description>
+            <content:encoded><![CDATA[<p>A good photo.</p>
+]]></content:encoded>
+            <author>writ</author>
+        </item>
+        <item>
+            <title><![CDATA[A Photo]]></title>
+            <link>https://writ.enes.in/photography/a-photo</link>
+            <guid>https://writ.enes.in/photography/a-photo</guid>
+            <pubDate>Wednesday, March 17, 2021</pubDate>
+            <description><![CDATA[<p>A photo that I took while walking in the streets of Ullanlinna, Helsinki.</p>
+]]></description>
+            <content:encoded><![CDATA[<p>A photo that I took while walking in the streets of Ullanlinna, Helsinki.</p>
+]]></content:encoded>
+            <author>writ</author>
+        </item>
+    </channel>
+</rss>

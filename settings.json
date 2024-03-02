@@ -1,5 +1,8 @@
 {
-  "syntaxHighlighting": "off",
+  "title": "Writ",
   "cname": "writ.enes.in",
-  "postsPerPage": 5
+  "url": "https://writ.enes.in",
+  "syntaxHighlighting": "off",
+  "postsPerPage": 5,
+  "language": "en"
 }
