@@ -96,7 +96,7 @@
     "musiclist": [
       "Shakira - She Wolf"
     ],
-    "slug": "herhangi-bir-text-post.hbs",
+    "slug": "herhangi-bir-text-post",
     "permalink": "/turkce/herhangi-bir-text-post.html",
     "category": {
       "name": "Türkçe",
@@ -142,7 +142,7 @@
     "musiclist": [
       "The Weeknd - In Your Eyes"
     ],
-    "slug": "in-your-eyes.hbs",
+    "slug": "in-your-eyes",
     "permalink": "/writings/in-your-eyes.html",
     "category": {
       "name": "Writings",
@@ -187,7 +187,7 @@
       "Boards of Canada Random 35 Tracks Full Tape",
       "Underworld - The Hump"
     ],
-    "slug": "bu-andaydim.markdown",
+    "slug": "bu-andaydim",
     "permalink": "/turkce/bu-andaydim.html",
     "category": {
       "name": "Türkçe",
@@ -273,7 +273,7 @@
       "Aphex Twin - Surfing on Sine Waves 2",
       "AFX - 1 P String"
     ],
-    "slug": "kabanla-yurunen-deniz-kenarlari.txt",
+    "slug": "kabanla-yurunen-deniz-kenarlari",
     "permalink": "/turkce/kabanla-yurunen-deniz-kenarlari.html",
     "category": {
       "name": "Türkçe",
@@ -642,7 +642,7 @@
       "Depeche Mode - It's No Good",
       "22 Pistepirkko - Birdy"
     ],
-    "slug": "ilk-sey.hbs",
+    "slug": "ilk-sey",
     "permalink": "/turkce/ilk-sey.html",
     "category": {
       "name": "Türkçe",
