@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Writ | Writings</title>
         <link>https://writ.enes.in/writings</link>
         <description>Writings category on Writ</description>
-        <lastBuildDate>Mon Mar 04 2024 00:55:46 GMT+0300 (GMT+03:00)</lastBuildDate>
-        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
-        <generator>manual</generator>
         <language>en</language>
         <image>
             <title>Writ</title>
             <url>https://writ.enes.in/assets/common/writ-icon-512.png</url>
             <link>https://writ.enes.in</link>
         </image>
-        <copyright>All rights reserved 2024, Writ</copyright>
         <category>Photography</category>
         <category>Türkçe</category>
         <category>Writings</category>
-        <atom:link href="https://writ.enes.in/writings/feed.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Mon Mar 04 2024 08:44:49 GMT+0300 (GMT+03:00)</lastBuildDate>
+        <copyright>All rights reserved 2024, Writ</copyright>
+        <docs>https://www.rssboard.org/rss-specification</docs>
+        <generator>writ-cms</generator>
+        <atom:link href="https://writ.enes.in/writings/feed.xml" rel="self" type="application/rss+xml" />
         <item>
             <title><![CDATA[In your eyes]]></title>
             <link>https://writ.enes.in/writings/in-your-eyes.html</link>
             <guid>https://writ.enes.in/writings/in-your-eyes.html</guid>
-            <pubDate>Thursday, June 10, 2021</pubDate>
+            <pubDate>Thu, 10 Jun 2021 19:17:00 GMT</pubDate>
             <description><![CDATA[<p>This song from The Weeknd, "In Your Eyes", has had an interesting effect on me, maybe a bit of a nostalgic, but somehow a tickling, problematic feeling, if that makes sense at all. It's hard to explain at first, so bear with me until I figure out how to put it.</p>
 ]]></description>
             <content:encoded><![CDATA[<p>This song from The Weeknd, "In Your Eyes", has had an interesting effect on me, maybe a bit of a nostalgic, but somehow a tickling, problematic feeling, if that makes sense at all. It's hard to explain at first, so bear with me until I figure out how to put it.</p>
@@ -32,7 +32,6 @@
 <p>5 months of summer, and the rest is mild, the area had its rural charm with the vast olive gardens starting just around the outskirts of suburbs, mostly a certain, familiar type of middle class people exchanging some bucks with the ingredients of a decent and usual dinner in a small but useful market near the city hall. And it had a pleasantly ordinary seashore. There, if you tried hard enough, you could get the taste of salt from the wind. Mostly an indifferent place compared to other coastal cities of the country.</p><p>
 </p><p>I had to walk back and forth between my home and the school everyday, as they weren't too far apart. When I occasionally took the main road, just for a change, I used to see groups of seasonal workers being carried over to the gardens in so-so trucks, that had been used for the last 2 centuries, of garden owners. And the gardens looked at least a ten thousand years old. What different story could anyone ever tell about them anyway? They were just a bunch of ten or eleven or twelve thousand year old olive gardens. Well, I guess I also liked the olives. Everybody liked the olives, no doubt about it.</p>
 ]]></content:encoded>
-            <author>writ</author>
         </item>
     </channel>
 </rss>

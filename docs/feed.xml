@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Writ</title>
         <link>https://writ.enes.in</link>
         <description>A future work</description>
-        <lastBuildDate>Mon Mar 04 2024 00:55:46 GMT+0300 (GMT+03:00)</lastBuildDate>
-        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
-        <generator>manual</generator>
         <language>en</language>
         <image>
             <title>Writ</title>
             <url>https://writ.enes.in/assets/common/writ-icon-512.png</url>
             <link>https://writ.enes.in</link>
         </image>
-        <copyright>All rights reserved 2024, Writ</copyright>
         <category>Photography</category>
         <category>Türkçe</category>
         <category>Writings</category>
-        <atom:link href="https://writ.enes.in/feed.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Mon, 04 Mar 2024 05:44:49 GMT</lastBuildDate>
+        <copyright>All rights reserved 2024, Writ</copyright>
+        <docs>https://www.rssboard.org/rss-specification</docs>
+        <generator>writ-cms</generator>
+        <atom:link href="https://writ.enes.in/feed.xml" rel="self" type="application/rss+xml" />
         <item>
             <title><![CDATA[Olay ve Olasılık]]></title>
             <link>https://writ.enes.in/turkce/olay-ve-olasilik</link>
             <guid>https://writ.enes.in/turkce/olay-ve-olasilik</guid>
-            <pubDate>Saturday, December 31, 2022</pubDate>
+            <pubDate>Fri, 30 Dec 2022 21:43:00 GMT</pubDate>
             <description><![CDATA[<h3>Ağaç sorguları</h3>
 <p>Ağaçlarda kendimizi görebiliriz. Sınırsız şekillerde dallar her göz için farklı kesişir.
 Akla basit gelen bir dizi genetik kuralın sonucu olarak bu ağaçlar bizi farklı düşlere koyar.
-]]></description>
+</p>]]></description>
             <content:encoded><![CDATA[
       <div><img src="https://writ.enes.in/turkce/olay-ve-olasilik/sorgular.jpg" alt="Ağaçlar olasılıklarını dallarıyla olaya döker"></div>
       <h3>Ağaç sorguları</h3>
@@ -76,26 +76,24 @@ hallerine elveren narin önkoşulların ortadan kalkışını korkusuzca izle.</
 yeni dallar dene. Bir ağaç kadar ol ve soru sor. Cevapları tanı. Oku.</p>
 
     ]]></content:encoded>
-            <author>writ</author>
         </item>
         <item>
             <title><![CDATA[Herhangi bir text post]]></title>
             <link>https://writ.enes.in/turkce/herhangi-bir-text-post.html</link>
             <guid>https://writ.enes.in/turkce/herhangi-bir-text-post.html</guid>
-            <pubDate>Wednesday, October 19, 2022</pubDate>
+            <pubDate>Wed, 19 Oct 2022 18:44:00 GMT</pubDate>
             <description><![CDATA[<p>Herhangi bir random post</p>
 ]]></description>
             <content:encoded><![CDATA[<p>Herhangi bir random post</p>
 
 <p>Henna bebek</p>
 ]]></content:encoded>
-            <author>writ</author>
         </item>
         <item>
             <title><![CDATA[In your eyes]]></title>
             <link>https://writ.enes.in/writings/in-your-eyes.html</link>
             <guid>https://writ.enes.in/writings/in-your-eyes.html</guid>
-            <pubDate>Thursday, June 10, 2021</pubDate>
+            <pubDate>Thu, 10 Jun 2021 19:17:00 GMT</pubDate>
             <description><![CDATA[<p>This song from The Weeknd, "In Your Eyes", has had an interesting effect on me, maybe a bit of a nostalgic, but somehow a tickling, problematic feeling, if that makes sense at all. It's hard to explain at first, so bear with me until I figure out how to put it.</p>
 ]]></description>
             <content:encoded><![CDATA[<p>This song from The Weeknd, "In Your Eyes", has had an interesting effect on me, maybe a bit of a nostalgic, but somehow a tickling, problematic feeling, if that makes sense at all. It's hard to explain at first, so bear with me until I figure out how to put it.</p>
@@ -105,13 +103,12 @@ yeni dallar dene. Bir ağaç kadar ol ve soru sor. Cevapları tanı. Oku.</p>
 <p>5 months of summer, and the rest is mild, the area had its rural charm with the vast olive gardens starting just around the outskirts of suburbs, mostly a certain, familiar type of middle class people exchanging some bucks with the ingredients of a decent and usual dinner in a small but useful market near the city hall. And it had a pleasantly ordinary seashore. There, if you tried hard enough, you could get the taste of salt from the wind. Mostly an indifferent place compared to other coastal cities of the country.</p><p>
 </p><p>I had to walk back and forth between my home and the school everyday, as they weren't too far apart. When I occasionally took the main road, just for a change, I used to see groups of seasonal workers being carried over to the gardens in so-so trucks, that had been used for the last 2 centuries, of garden owners. And the gardens looked at least a ten thousand years old. What different story could anyone ever tell about them anyway? They were just a bunch of ten or eleven or twelve thousand year old olive gardens. Well, I guess I also liked the olives. Everybody liked the olives, no doubt about it.</p>
 ]]></content:encoded>
-            <author>writ</author>
         </item>
         <item>
             <title><![CDATA[Bu andaydım]]></title>
             <link>https://writ.enes.in/turkce/bu-andaydim.html</link>
             <guid>https://writ.enes.in/turkce/bu-andaydim.html</guid>
-            <pubDate>Tuesday, May 18, 2021</pubDate>
+            <pubDate>Mon, 17 May 2021 23:41:00 GMT</pubDate>
             <description><![CDATA[<p>İşte tam bu andaydım. Düşündüm. Evimde kendime düşünmek için bir alan ayırmıştım ve orada uzanmış düşünüyordum.</p>
 <p>Bazen Zindan Adası filmi aklıma geliyor.</p>
 <p>Birliktelikten güçlük doğar.</p>
@@ -132,13 +129,12 @@ yeni dallar dene. Bir ağaç kadar ol ve soru sor. Cevapları tanı. Oku.</p>
 <p>Birlikteliksizlik güçten doğar.</p>
 <p>Waiting for a cup of sexy hentai superstar.</p>
 ]]></content:encoded>
-            <author>writ</author>
         </item>
         <item>
             <title><![CDATA[Kabanla Yürünen Deniz Kenarları]]></title>
             <link>https://writ.enes.in/turkce/kabanla-yurunen-deniz-kenarlari.html</link>
             <guid>https://writ.enes.in/turkce/kabanla-yurunen-deniz-kenarlari.html</guid>
-            <pubDate>Saturday, April 17, 2021</pubDate>
+            <pubDate>Sat, 17 Apr 2021 19:24:00 GMT</pubDate>
             <description><![CDATA[<p>Aklımda tuttuğum onca yazı fikri hep bu anlarda yok oluyor.
 Yeni eve taşınmama 12 gün kalmış.</p>
 <p>Sevgi, öfke ve nefret arasında dalgalanıyorum. Sağlıklı kalabilmem için sevgim
@@ -169,15 +165,14 @@ asılı kendisi. Kabanımı seviyorum. O bir yaz kabanıdır. Deniz kenarında
 yürürkendir tüm karmaşası ve hayat görüşü.</p>
 <p>Bu kez pek bi&#39; zorunlu aptallık.</p>
 ]]></content:encoded>
-            <author>writ</author>
         </item>
         <item>
             <title><![CDATA[Hepsi Buymuş]]></title>
             <link>https://writ.enes.in/turkce/hepsi-buymus</link>
             <guid>https://writ.enes.in/turkce/hepsi-buymus</guid>
-            <pubDate>Sunday, April 11, 2021</pubDate>
+            <pubDate>Sat, 10 Apr 2021 22:38:00 GMT</pubDate>
             <description><![CDATA[<p>Vim'de blog yazıyorum:</p>
-<div><img src="/turkce/hepsi-buymus/vim.png" alt="Vim'de blog yazdığımın ekran görüntüsü."></div>
+<div><img src="https://writ.enes.in/turkce/hepsi-buymus/vim.png" alt="Vim'de blog yazdığımın ekran görüntüsü."></div>
 <p>Ne zamandır ikinci yazımı yazmak istiyordum. Şimdi ikna ettim kendimi ama aklıma bir şey gelmiyor.</p>
 <p>Şunlardan bahsetmek istemiştim: Daft Punk'ın ayrılması, Teoman'ın yeni albüm çıkarması. Sanki hayatım müzik endeskliymiş gibi (değil (ama öyle gibi görünüyor (yine de değil))).</p>
 ]]></description>
@@ -192,35 +187,32 @@ yürürkendir tüm karmaşası ve hayat görüşü.</p>
 <p>Ha unutmadan, bu aralar yine FIFA 2005'e sardım:</p>
 <div><img src="https://writ.enes.in/turkce/hepsi-buymus/fifa2005.png" alt="FIFA 2005 kariyer modu ekran görüntüsü"></div>
 ]]></content:encoded>
-            <author>writ</author>
         </item>
         <item>
             <title><![CDATA[Another Photo]]></title>
             <link>https://writ.enes.in/photography/another-photo</link>
             <guid>https://writ.enes.in/photography/another-photo</guid>
-            <pubDate>Wednesday, March 17, 2021</pubDate>
+            <pubDate>Tue, 16 Mar 2021 23:06:00 GMT</pubDate>
             <description><![CDATA[<p>A good photo.</p>
 ]]></description>
             <content:encoded><![CDATA[<p>A good photo.</p>
 ]]></content:encoded>
-            <author>writ</author>
         </item>
         <item>
             <title><![CDATA[A Photo]]></title>
             <link>https://writ.enes.in/photography/a-photo</link>
             <guid>https://writ.enes.in/photography/a-photo</guid>
-            <pubDate>Wednesday, March 17, 2021</pubDate>
+            <pubDate>Tue, 16 Mar 2021 21:51:00 GMT</pubDate>
             <description><![CDATA[<p>A photo that I took while walking in the streets of Ullanlinna, Helsinki.</p>
 ]]></description>
             <content:encoded><![CDATA[<p>A photo that I took while walking in the streets of Ullanlinna, Helsinki.</p>
 ]]></content:encoded>
-            <author>writ</author>
         </item>
         <item>
             <title><![CDATA[İlk Şey]]></title>
             <link>https://writ.enes.in/turkce/ilk-sey.html</link>
             <guid>https://writ.enes.in/turkce/ilk-sey.html</guid>
-            <pubDate>Sunday, March 7, 2021</pubDate>
+            <pubDate>Sat, 06 Mar 2021 22:44:00 GMT</pubDate>
             <description><![CDATA[<p>İlk paragraf.</p>
 <p>HTML yazmak neden istememeliyiz ki? Soyutlamamaya karar verirsem pekala HTML ile blog oluşturabilirim. Neyse artık.</p>
 <p>16 yaşımdaydım galiba, buna benzer bir özel günlük yazmaya başlamıştım düz HTML ile.</p>
@@ -238,7 +230,6 @@ yürürkendir tüm karmaşası ve hayat görüşü.</p>
 <p>1 saniyelik zaman dilimi, nanometrelik ölçekte, var olmak veya yok olmak arasındaki farkı belirleyecek kadar büyük bir zaman. Milimetreler ve santimetreler için bile 1 saniye oldukça geniş bir zaman dilimi. Aslında söz konusu varlığın uzaydaki yer değiştirme hızına göre değişiyor zaman ölçeğinin etkisi. Uzayda asla yer değiştirmeyen bir varlık sonsuza dek aynı kalacakken ışık hızında hareket eden bir varlık için nanosaniyeler bile büyük zaman dilimleri olabilir.</p>
 <p>İşte bu yüzden senin (gelecekteki ben) akla gelen <em>ilk</em> var olma nedenin benim. Ben süregelen bir varlığım. Benim bu anki varlığım ile senin aranda ben var olmaya devam edeceğim. O zaman dilimindeki tüm benlerin var olmalarının akla ilk gelen nedeni benim. Senin var olmanla sonuçlanacak olan süreçte rol oynayan tüm benlerin mimarı benim. Henüz nasıl benler yaratacağımı bilmiyorum. Sen halihazırda biliyorsun şu anki benden sana gelen süreçte ne gibi benlerin var olduğunu. Kabul ediyorum, o yaptığın hatanın sorumlusu benim. Evet, o güzel anı benim sayemde yaşadın. Bana saygı duy veya benden nefret et, önemsiz.</p>
 ]]></content:encoded>
-            <author>writ</author>
         </item>
     </channel>
 </rss>
