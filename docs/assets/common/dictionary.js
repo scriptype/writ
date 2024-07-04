@@ -3,12 +3,12 @@ const loadLocaleFile = () => {
   return fetch(`${prefix}/assets/common/dictionary.json`).then(r => r.json())
 }
 
+const loadDictionary = loadLocaleFile()
 let dictionary = {}
-;(async () => dictionary = await loadLocaleFile())()
 
 const lookup = (key, variables = {}) => {
   if (!(key in dictionary)) {
-    Debug.debugLog(`unrecognized word: ${key}`)
+    console.log(`unrecognized key: ${key}`)
     return ''
   }
   const translation = dictionary[key]
@@ -20,7 +20,15 @@ const lookup = (key, variables = {}) => {
   return result
 }
 
+const ready = (cb) => {
+  loadDictionary.then(dict => {
+    dictionary = dict
+    cb()
+  })
+}
+
 export default {
   dictionary,
-  lookup
+  lookup,
+  ready
 }

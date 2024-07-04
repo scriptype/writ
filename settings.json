@@ -3,7 +3,8 @@
   "description": "The past inside present",
   "cname": "writ.enes.in",
   "url": "https://writ.enes.in",
-  "syntaxHighlighting": "off",
+  "search": "on",
+  "rss": "on",
   "postsPerPage": 5,
   "language": "en"
 }
