@@ -1,5 +1,45 @@
 [
   {
+    "type": "what-an-update",
+    "title": "yeni writ gönderisi",
+    "cover": "",
+    "media": "",
+    "summary": "<style>\nbody {\n    font-size: 1.5em;\n}\n\npre {}\n\n.cancelled-bullet {\n    --line-angle: 1.5deg;\n    --line-thickness: 6%;\n    --line-blur: 3%;\n    --line-color: black;\n    text-decoration: none;\n    position: relative;\n}\n\n.cancelled-bullet::after {\n    --line-start: calc(50% - var(--line-thickness) / 2);\n    --line-end: calc(50% + var(--line-thickness) / 2);\n    --line-blur-start: calc(var(--line-start) - var(--line-blur));\n    --line-blur-end: calc(var(--line-end) + var(--line-blur));\n    content: \"\";\n    position: absolute;\n    width: 112%;\n    height: 100%;\n    top: 50%;\n    left: 50%;\n    translate: -50% -50%;\n    background: linear-gradient(\n        var(--line-angle),\n        transparent var(--line-blur-start),\n        var(--line-color) var(--line-start),\n        var(--line-color) var(--line-end),\n        transparent var(--line-blur-end)\n    );\n}\n\n.crossed-hash {\n    --cross-angle: 60deg;\n    --cross-thickness: 3%;\n    --cross-blur: 4%;\n    --cross-color: black;\n    position: relative;\n}\n\n.crossed-hash::after {\n    --cross-start: calc(50% - var(--cross-thickness) / 2);\n    --cross-end: calc(50% + var(--cross-thickness) / 2);\n    --cross-blur-start: calc(var(--cross-start) - var(--cross-blur));\n    --cross-blur-end: calc(var(--cross-end) + var(--cross-blur));\n    content: \"\";\n    display: inline-block;\n    width: 150%;\n    height: 100%;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    translate: -50% -50%;\n    background:\n        linear-gradient(\n            var(--cross-angle),\n            transparent var(--cross-blur-start),\n            var(--cross-color) var(--cross-start),\n            var(--cross-color) var(--cross-end),\n            transparent var(--cross-blur-end)\n        ),\n        linear-gradient(\n            calc(-1 * var(--cross-angle)),\n            transparent var(--cross-blur-start),\n            var(--cross-color) var(--cross-start),\n            var(--cross-color) var(--cross-end),\n            transparent var(--cross-blur-end)\n        );\n}\n\n.talk-space {\n    display: inline-block;\n    width: 0.3em;\n}\n\n.talk-1 {\n    font-size: 1.5em;\n    margin-top: -0.5em;\n}\n\n.talk-2 {\n    font-size: 1.8em;\n    margin-top: -.75em;\n}\n\n.talk-2 .talk-space {\n    margin-right: -0.3em;\n}\n\n.talk-3 {\n    font-size: 3em;\n    margin-top: -0.5em;\n    margin-bottom: -.8em;\n}\n</style>\n<pre>\n---\ndate: 5 Ağustos saat 2:30 falan ve 2026\ntitle: yeni writ gönderisi (RFC0023).html\ntype: what-an-update\n---\n\n- be open.\n- be punk.\n- what an update. (feel this)\n- <strike class=\"cancelled-bullet\">yaratıcı ol</strike>\n- talk Ullân.\n- talk to ullan.\n- talk PES 6.\n- talk project.\n- memory shock since crow.\n- taking notes\n- talk project\n- TALK PROJECT\n\n<div class=\"talk-1\">###<span class=\"talk-space\"></span>TALK PROJECT</div>\n<div class=\"talk-2\">##<span class=\"crossed-hash\">#</span><span class=\"talk-space\"></span>TALK PROJECT</div>\n<div class=\"talk-3\">#<span class=\"talk-space\"></span>TALK PROJECT</div>\n\n...and life\n</pre>\n",
+    "tags": [],
+    "date": "2026-08-06, 00:17",
+    "musiclist": [
+      "Vangelis - La petite fille de la mer",
+      "Boards of Canada - You Retreat In Time And Space",
+      "Boards of Canada - Naraka",
+      "Skeler - NightDrive スケラー PART III (Phonk/Wave)"
+    ],
+    "slug": "yeni-writ-gonderisi-rfc0023",
+    "permalink": "/turkce/yeni-writ-gonderisi-rfc0023.html",
+    "category": {
+      "name": "Türkçe",
+      "permalink": "/turkce"
+    },
+    "path": "Türkçe/yeni writ gönderisi (RFC0023).html",
+    "handle": "Türkçe/yeni writ gönderisi (RFC0023)",
+    "foldered": false,
+    "localAssets": [],
+    "publishDate": "2026-08-05T21:17:00.000Z",
+    "publishDateUTC": "Wed, 05 Aug 2026 21:17:00 GMT",
+    "publishDateFull": "Thursday, August 6, 2026",
+    "publishDateLong": "August 6, 2026",
+    "publishDateMedium": "Aug 6, 2026",
+    "publishDateShort": "8/6/26",
+    "links": {
+      "previousPost": {
+        "title": "Olay ve Olasılık",
+        "permalink": "/turkce/olay-ve-olasilik"
+      },
+      "relevantPosts": [],
+      "mentionedTo": [],
+      "mentionedBy": []
+    }
+  },
+  {
     "type": "text",
     "title": "Olay ve Olasılık",
     "cover": "/turkce/olay-ve-olasilik/sorgular.jpg",
@@ -56,6 +96,10 @@
     "publishDateMedium": "Dec 31, 2022",
     "publishDateShort": "12/31/22",
     "links": {
+      "nextPost": {
+        "title": "yeni writ gönderisi",
+        "permalink": "/turkce/yeni-writ-gonderisi-rfc0023.html"
+      },
       "previousPost": {
         "title": "Herhangi bir text post",
         "permalink": "/turkce/herhangi-bir-text-post.html"

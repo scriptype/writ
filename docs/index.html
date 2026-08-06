@@ -62,6 +62,139 @@
 
     <main  data-region-id="main" >
             
+      <div class="post">
+          <h2><a href="/turkce/yeni-writ-gonderisi-rfc0023.html">yeni writ gönderisi</a></h2>
+          <style>
+body {
+    font-size: 1.5em;
+}
+
+pre {}
+
+.cancelled-bullet {
+    --line-angle: 1.5deg;
+    --line-thickness: 6%;
+    --line-blur: 3%;
+    --line-color: black;
+    text-decoration: none;
+    position: relative;
+}
+
+.cancelled-bullet::after {
+    --line-start: calc(50% - var(--line-thickness) / 2);
+    --line-end: calc(50% + var(--line-thickness) / 2);
+    --line-blur-start: calc(var(--line-start) - var(--line-blur));
+    --line-blur-end: calc(var(--line-end) + var(--line-blur));
+    content: "";
+    position: absolute;
+    width: 112%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    background: linear-gradient(
+        var(--line-angle),
+        transparent var(--line-blur-start),
+        var(--line-color) var(--line-start),
+        var(--line-color) var(--line-end),
+        transparent var(--line-blur-end)
+    );
+}
+
+.crossed-hash {
+    --cross-angle: 60deg;
+    --cross-thickness: 3%;
+    --cross-blur: 4%;
+    --cross-color: black;
+    position: relative;
+}
+
+.crossed-hash::after {
+    --cross-start: calc(50% - var(--cross-thickness) / 2);
+    --cross-end: calc(50% + var(--cross-thickness) / 2);
+    --cross-blur-start: calc(var(--cross-start) - var(--cross-blur));
+    --cross-blur-end: calc(var(--cross-end) + var(--cross-blur));
+    content: "";
+    display: inline-block;
+    width: 150%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    background:
+        linear-gradient(
+            var(--cross-angle),
+            transparent var(--cross-blur-start),
+            var(--cross-color) var(--cross-start),
+            var(--cross-color) var(--cross-end),
+            transparent var(--cross-blur-end)
+        ),
+        linear-gradient(
+            calc(-1 * var(--cross-angle)),
+            transparent var(--cross-blur-start),
+            var(--cross-color) var(--cross-start),
+            var(--cross-color) var(--cross-end),
+            transparent var(--cross-blur-end)
+        );
+}
+
+.talk-space {
+    display: inline-block;
+    width: 0.3em;
+}
+
+.talk-1 {
+    font-size: 1.5em;
+    margin-top: -0.5em;
+}
+
+.talk-2 {
+    font-size: 1.8em;
+    margin-top: -.75em;
+}
+
+.talk-2 .talk-space {
+    margin-right: -0.3em;
+}
+
+.talk-3 {
+    font-size: 3em;
+    margin-top: -0.5em;
+    margin-bottom: -.8em;
+}
+</style>
+<pre>
+---
+date: 5 Ağustos saat 2:30 falan ve 2026
+title: yeni writ gönderisi (RFC0023).html
+type: what-an-update
+---
+
+- be open.
+- be punk.
+- what an update. (feel this)
+- <strike class="cancelled-bullet">yaratıcı ol</strike>
+- talk Ullân.
+- talk to ullan.
+- talk PES 6.
+- talk project.
+- memory shock since crow.
+- taking notes
+- talk project
+- TALK PROJECT
+
+<div class="talk-1">###<span class="talk-space"></span>TALK PROJECT</div>
+<div class="talk-2">##<span class="crossed-hash">#</span><span class="talk-space"></span>TALK PROJECT</div>
+<div class="talk-3">#<span class="talk-space"></span>TALK PROJECT</div>
+
+...and life
+</pre>
+
+          <p><a class="category-link" href="/turkce">Türkçe</a></p>
+          <p>Aug 6, 2026</p>
+      </div>
+  
 
     <div class="post">
         <h2><a href="/turkce/olay-ve-olasilik">Olay ve Olasılık</a></h2>
@@ -82,7 +215,6 @@ Akla basit gelen bir dizi genetik kuralın sonucu olarak bu ağaçlar bizi farkl
 
 
 
-
     <div class="post">
         <h2><a href="/turkce/herhangi-bir-text-post.html">Herhangi bir text post</a></h2>
         <p>Herhangi bir random post</p>
@@ -93,7 +225,6 @@ Akla basit gelen bir dizi genetik kuralın sonucu olarak bu ağaçlar bizi farkl
 
 
 
-
     <div class="post">
         <h2><a href="/writings/in-your-eyes.html">In your eyes</a></h2>
         <p>This song from The Weeknd, "In Your Eyes", has had an interesting effect on me, maybe a bit of a nostalgic, but somehow a tickling, problematic feeling, if that makes sense at all. It's hard to explain at first, so bear with me until I figure out how to put it.</p>
@@ -101,7 +232,6 @@ Akla basit gelen bir dizi genetik kuralın sonucu olarak bu ağaçlar bizi farkl
         <p><a class="category-link" href="/writings">Writings</a></p>
         <p>Jun 10, 2021</p>
     </div>
-
 
 
 
@@ -119,30 +249,6 @@ Akla basit gelen bir dizi genetik kuralın sonucu olarak bu ağaçlar bizi farkl
 
         <p><a class="category-link" href="/turkce">Türkçe</a></p>
         <p>May 18, 2021</p>
-    </div>
-
-
-
-
-    <div class="post">
-        <h2><a href="/turkce/kabanla-yurunen-deniz-kenarlari.html">Kabanla Yürünen Deniz Kenarları</a></h2>
-        <p>Aklımda tuttuğum onca yazı fikri hep bu anlarda yok oluyor.
-Yeni eve taşınmama 12 gün kalmış.</p>
-<p>Sevgi, öfke ve nefret arasında dalgalanıyorum. Sağlıklı kalabilmem için sevgim
-yavaş yavaş ölmek zorunda, kanal tedavisi gibi. Yerini hissizlik ve yeni bir ölüm
-almalı.  Önceki ölümler gibi; onun da yasını tutarım, bir süre özlem duyarım, bir
-süre aklımda ölçer tartarım ve o da sonunda kabuğunu tutar.</p>
-<p>Yazıldığı gibi kalan mesajlar vardır. Yazıldığı gibi -görülmeden– silinen
-mesajlar da vardır. Öfke ve nefret de vardırlar. Gururdur ve saygısızlıktandır.
-Sinire saplanan bir ve son iğnedir.</p>
-<p>Aptal dalga sesleri ile mi hüzünlenmeye zorlamalı yoksa aptal Aphex Twin ile mi
-uyuşmaya çalışmalı? Aptal Clubhouse. Bu yazıyı kabanımla yazıyorum. Askılıkta
-asılı kendisi. Kabanımı seviyorum. O bir yaz kabanıdır. Deniz kenarında
-yürürkendir tüm karmaşası ve hayat görüşü.</p>
-<p>Bu kez pek bi&#39; zorunlu aptallık.</p>
-
-        <p><a class="category-link" href="/turkce">Türkçe</a></p>
-        <p>Apr 17, 2021</p>
     </div>
 
 
