@@ -13,7 +13,7 @@
         <category>Photography</category>
         <category>Türkçe</category>
         <category>Writings</category>
-        <lastBuildDate>Fri Aug 07 2026 02:11:24 GMT+0300 (GMT+03:00)</lastBuildDate>
+        <lastBuildDate>Sat Aug 08 2026 00:52:31 GMT+0300 (GMT+03:00)</lastBuildDate>
         <copyright>All rights reserved 2024, Writ</copyright>
         <docs>https://www.rssboard.org/rss-specification</docs>
         <generator>writ-cms</generator>
@@ -29,6 +29,21 @@ body {
 }
 
 pre {}
+
+.music {
+    --background: black;
+    --color: #7cffce;
+    display: inline-block;
+    margin-bottom: 0.3em;
+    background: linear-gradient(
+        to bottom,
+        white 10%,
+        var(--background) 10%,
+        var(--background) 90%,
+        white 90%
+    );
+    color: var(--color);
+}
 
 .cancelled-bullet {
     --line-angle: 1.5deg;
@@ -157,6 +172,21 @@ body {
 
 pre {}
 
+.music {
+    --background: black;
+    --color: #7cffce;
+    display: inline-block;
+    margin-bottom: 0.3em;
+    background: linear-gradient(
+        to bottom,
+        white 10%,
+        var(--background) 10%,
+        var(--background) 90%,
+        white 90%
+    );
+    color: var(--color);
+}
+
 .cancelled-bullet {
     --line-angle: 1.5deg;
     --line-thickness: 6%;
@@ -275,6 +305,10 @@ type: what-an-update
 <div class="talk-3">#<span class="talk-space"></span>TALK PROJECT</div>
 
 ...and life
+</pre>
+
+<pre class="musiclist">
+musiclist:
 </pre>
 ]]></content:encoded>
         </item>

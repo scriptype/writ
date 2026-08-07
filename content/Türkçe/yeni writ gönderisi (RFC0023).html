@@ -17,6 +17,21 @@ body {
 
 pre {}
 
+.music {
+    --background: black;
+    --color: #7cffce;
+    display: inline-block;
+    margin-bottom: 0.3em;
+    background: linear-gradient(
+        to bottom,
+        white 10%,
+        var(--background) 10%,
+        var(--background) 90%,
+        white 90%
+    );
+    color: var(--color);
+}
+
 .cancelled-bullet {
     --line-angle: 1.5deg;
     --line-thickness: 6%;
@@ -135,4 +150,11 @@ type: what-an-update
 <div class="talk-3">#<span class="talk-space"></span>TALK PROJECT</div>
 
 ...and life
+</pre>
+{{seeMore}}
+<pre class="musiclist">
+musiclist:
+ {{#each post.musiclist as |music|}}
+ - <span class="music">{{music}}</span>
+ {{/each}}
 </pre>
